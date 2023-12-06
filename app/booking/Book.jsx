@@ -51,7 +51,7 @@ export default function Book() {
         e.preventDefault();
 
         try {
-            const res = await fetch("http://localhost:3000/api", {
+            const res = await fetch("https://cleaning-bugucam-gmailcom.vercel.app/api", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
