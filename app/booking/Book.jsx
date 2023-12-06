@@ -60,7 +60,7 @@ export default function Book() {
             });
             if (res.ok) {
                 const paymentLink = getPaymentLink();  // Call the function to get the payment link
-                router.push(paymentLink);
+                router.push(paymentLink());
             } else {
                 throw new Error("Failed to complete the booking")
             }
