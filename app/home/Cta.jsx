@@ -179,7 +179,7 @@ const Cta = () => {
                         <div className="tp-appoint col-xl-2 col-lg-12 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
 
-                                <span className='row mx-0 p-0 d-flex bg-info'>
+                                <span className='row mx-0 p-0 d-flex'>
                                     <DatePicker
                                         selected={selectedDate}
                                         onChange={(date) => {
