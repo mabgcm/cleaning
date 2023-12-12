@@ -112,7 +112,7 @@ const Cta = () => {
 
     return (
         <section className="tp-appoint-cta-area yellow-dark-bg pt-80 pb-65">
-            <div className="container">
+            <div className="container col-11">
                 <Form className="row custom-mar-20" onSubmit={handleSubmit}>
                     <div className="row custom-pad-20">
                         <div className="tp-appoint wow fadeInUp" data-wow-delay=".1s">

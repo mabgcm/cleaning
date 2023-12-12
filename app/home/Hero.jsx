@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 // import SwiperCore, { Pagination, Autoplay, A11y, EffectFade, EffectCards } from 'swiper';
 import { Carousel } from 'react-bootstrap';
 import HomeHeroSingleSlide from './HomeHeroSingleSlide';
+import HomeHeroSingleSlide2 from './HomeHeroSingleSlide2';
 
 // install Swiper modules
 // SwiperCore.use([Pagination, Autoplay, A11y, EffectFade, EffectCards]);
@@ -25,7 +26,7 @@ const HeroSection = () => {
                         </Carousel.Item>
 
                         <Carousel.Item>
-                            <HomeHeroSingleSlide setOpen={setOpen} />
+                            <HomeHeroSingleSlide2 setOpen={setOpen} />
                         </Carousel.Item>
 
                         <Carousel.Item>
