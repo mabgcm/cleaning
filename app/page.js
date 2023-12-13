@@ -3,6 +3,9 @@
 import AboutArea from "./home/About";
 import Cta from "./home/Cta";
 import HeroSection from "./home/Hero";
+import Process from "./home/Process";
+import ServiceArea from "./home/Service";
+import Testimonial from "./home/Testimonials";
 
 export default function Home() {
   return (
@@ -10,6 +13,9 @@ export default function Home() {
       <HeroSection />
       <Cta />
       <AboutArea />
+      <ServiceArea />
+      <Process />
+      <Testimonial />
     </div>
   )
 }
