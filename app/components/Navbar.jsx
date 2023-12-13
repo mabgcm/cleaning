@@ -9,17 +9,19 @@ const Header = () => {
     }, []);
 
     const linkStyle = {
-        textTransform: 'capitalize'
+        textTransform: 'capitalize',
+        color: 'yellow',
+        fontWeight: '600'
     };
 
     return (
-        <div>
+        <div className='navbar'>
             <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#075F33', width: '100%' }}>
                 <div className="d-flex align-items-center justify-content-between flex-grow-1 m-auto">
                     <div className="col-sm-10 col-md-9 col-lg-4">
                         <div>
                             <div className="header-logo text-center">
-                                <Link href="index.html">
+                                <Link href="/">
                                     <Image src="/assets/img/logo/logo.png" className="img-fluid" width='300' height='100' priority={false} alt="logo not found" />
                                 </Link>
                             </div>
@@ -41,8 +43,8 @@ const Header = () => {
                             </button>
                             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul className="navbar-nav">
-                                    <li className="nav-item">
-                                        <Link className="nav-link active" aria-current="page" href="/" style={{ color: '#ffde59', ':hover': { color: '#000' } }}>
+                                    <li className="nav-item navlink">
+                                        <Link className="nav-link active" aria-current="page" href="/" style={linkStyle}>
                                             Home
                                         </Link>
                                     </li>
@@ -57,49 +59,20 @@ const Header = () => {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" href="recruit">
+                                        <Link className="nav-link" href="/recruit" style={linkStyle}>
                                             Join Us
                                         </Link>
                                     </li>
-                                    <li className="nav-item dropdown">
-                                        <Link className="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Services
-                                        </Link>
-                                        {/* Dropdown backround */}
-                                        <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-                                            <li>
-                                                <Link className="dropdown-item" href="/sevices/onetime" >
-                                                    One-time
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link className="dropdown-item" href="/services/regular">
-                                                    Regular
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link className="dropdown-item" href="/services/seasonal">
-                                                    Seasonal
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link className="dropdown-item" href="/services/move">
-                                                    Move-in & Move-out
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link className="dropdown-item" href="commercial">
-                                                    Commercial
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </li>
+
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
+            <div className='announce'>
+                <h6>Working Hours:</h6>
+            </div>
         </div>
     );
 };

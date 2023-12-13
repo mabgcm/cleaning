@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { FaPaperPlane } from 'react-icons/fa';
 import { FaMapMarkerAlt, FaEnvelopeOpen, FaFacebookF } from 'react-icons/fa';
 import { AiOutlineGoogle } from 'react-icons/ai';
-import { BsTwitter, BsInstagram } from 'react-icons/bs';
+import { BsTwitter, BsInstagram, BsChevronRight } from 'react-icons/bs';
 
 const Footer = () => {
     return (
@@ -42,7 +42,7 @@ const Footer = () => {
                                 <div className="tp-footer-widget footer-col-1 mb-30 wow fadeInUp" data-wow-delay=".3s">
                                     <div className="tp-footer-info">
                                         <div className="tp-footer-info-logo mb-35">
-                                            <Link href="/"><img src="assets/img/logo/logo-white.png" className="img-fluid" alt="img not found" /></Link>
+                                            <Link href="/"><img src="assets/img/logo/logo.png" className="img-fluid" alt="img not found" /></Link>
                                         </div>
                                         <h4 className="mb-15"><a href="tel:02(850)2560-3">02 (850) 2560 - 3</a></h4>
                                         <h6 className="mb-15"> <i > <FaEnvelopeOpen /> </i><a href="mailto:info@basictheme.com">info@basictheme.com</a></h6>
@@ -60,11 +60,16 @@ const Footer = () => {
                                 <div className="tp-footer-widget footer-col-2 mb-30 wow fadeInUp" data-wow-delay=".6s">
                                     <h4 className="tp-footer-widget-title mb-35">Our Services</h4>
                                     <ul>
-                                        <li><a href="#">Carpet Cleaning</a></li>
-                                        <li><a href="#">Plumbing Serivices</a></li>
-                                        <li><a href="#">Park Cleaning</a></li>
-                                        <li><a href="#">Residential Services</a></li>
-                                        <li><a href="#">Toilet Cleaning</a></li>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="#">Carpet Cleaning</a></li>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="#">Plumbing Serivices</a></li>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="#">Park Cleaning</a></li>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="#">Residential Services</a></li>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="#">Toilet Cleaning</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -116,7 +121,7 @@ const Footer = () => {
                         <div className="row">
                             <div className="col-12">
                                 <div className="tp-copyright tp-copyright-two text-center">
-                                    <p className="m-0">Copyright ©2022 <span>Theme_pure</span>. All Rights Reserved Copyright</p>
+                                    <p className="m-0">Copyright ©2024 <span>Rav Link Inc.</span>. All Rights Reserved Copyright</p>
                                 </div>
                             </div>
                         </div>
