@@ -20,7 +20,7 @@ const HomeHeroSingleSlide = () => {
                                 <div className="tp-slider z-index">
 
                                     <div>
-                                        <h5 className="tp-slider-subtitle section__sm__title common-yellow-shape w-80 mb-35">Fast and efficient service</h5>
+                                        <h5 className="tp-slider-subtitle section__sm__title common-yellow-shape w-80 mb-35">Cleaning that fits your schedule</h5>
                                     </div>
 
                                     <h1 className="tp-slider-title mb-45">
@@ -30,7 +30,7 @@ const HomeHeroSingleSlide = () => {
                                             distance={200}
                                             delay={0.5}
                                             speed={1}>
-                                            <div >Cleaning</div>
+                                            <div >Efortless</div>
                                         </MotionAnimate>
 
                                         <MotionAnimate
@@ -39,7 +39,7 @@ const HomeHeroSingleSlide = () => {
                                             distance={200}
                                             delay={0.6}
                                             speed={1}>
-                                            <div >Excellence</div>
+                                            <div >Stress-Free</div>
                                         </MotionAnimate>
 
                                         <MotionAnimate
@@ -48,7 +48,7 @@ const HomeHeroSingleSlide = () => {
                                             distance={200}
                                             delay={0.7}
                                             speed={1}>
-                                            <div >Guaranteed</div>
+                                            <div >Professional</div>
                                         </MotionAnimate>
                                     </h1>
 

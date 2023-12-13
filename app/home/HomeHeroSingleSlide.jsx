@@ -20,7 +20,7 @@ const HomeHeroSingleSlide = () => {
                                 <div className="tp-slider z-index">
 
                                     <div>
-                                        <h5 className="tp-slider-subtitle section__sm__title common-yellow-shape w-80 mb-35">Fast and efficient service</h5>
+                                        <h5 className="tp-slider-subtitle section__sm__title common-yellow-shape w-80 mb-35">Experience the joy of your valuable moments</h5>
                                     </div>
 
                                     <h1 className="tp-slider-title mb-45">
@@ -30,7 +30,7 @@ const HomeHeroSingleSlide = () => {
                                             distance={200}
                                             delay={0.5}
                                             speed={1}>
-                                            <div >Cleaning</div>
+                                            <div >Save your</div>
                                         </MotionAnimate>
 
                                         <MotionAnimate
@@ -39,7 +39,7 @@ const HomeHeroSingleSlide = () => {
                                             distance={200}
                                             delay={0.6}
                                             speed={1}>
-                                            <div >Excellence</div>
+                                            <div >time with</div>
                                         </MotionAnimate>
 
                                         <MotionAnimate
@@ -48,14 +48,14 @@ const HomeHeroSingleSlide = () => {
                                             distance={200}
                                             delay={0.7}
                                             speed={1}>
-                                            <div >Guaranteed</div>
+                                            <div >Neat Guys</div>
                                         </MotionAnimate>
                                     </h1>
 
                                     <div className="tp-slider-btn">
                                         <div >
                                             <Link href="/about" className="theme-btn text-white">
-                                                <i className="flaticon-enter"></i> Learn More</Link>
+                                                <i className="flaticon-enter"></i>Book Now!</Link>
                                         </div>
                                     </div>
 

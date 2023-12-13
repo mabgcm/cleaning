@@ -11,7 +11,7 @@ const Header = () => {
     const linkStyle = {
         textTransform: 'capitalize',
         color: 'yellow',
-        fontWeight: '600'
+        fontWeight: '500',
     };
 
     return (
