@@ -15,7 +15,6 @@ import './globals.css'
 import '../public/assets/css/main.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Favicon from './favicon.ico';
 
 
 
@@ -24,7 +23,6 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'The Neat Guys',
   description: 'Home Cleaning Service',
-  icons: [{ rel: 'icon', url: Favicon.src }],
 }
 
 export default function RootLayout({ children }) {
