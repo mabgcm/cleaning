@@ -1,16 +1,16 @@
 import Link from 'next/link'
 import { MotionAnimate } from 'react-motion-animate'
 
-const HomeHeroSingleSlide2 = () => {
+const HomeHeroSingleSlide3 = () => {
 
     return (
         <>
             <div className="tp-single-slider tp-slider-height d-flex align-items-center swiper-slide" data-swiper-autoplay="5000">
                 <div className="slide-bg">
-                    <img src="assets/img/slider/slider-bg-2.jpg" alt="" />
+                    <img src="assets/img/slider/slider-bg-3.jpg" alt="" />
                 </div>
                 <div className="slider-img">
-                    <img src="assets/img/slider/slider-img-2.jpg" className="img-fluid" alt="img not found" />
+                    <img src="assets/img/slider/slider-img-3.png" className="img-fluid" alt="img not found" />
                 </div>
                 <div className="container">
                     <div className="row">
@@ -20,7 +20,7 @@ const HomeHeroSingleSlide2 = () => {
                                 <div className="tp-slider z-index">
 
                                     <div>
-                                        <h5 className="tp-slider-subtitle section__sm__title common-yellow-shape w-80 mb-35">Cleaning that fits your schedule</h5>
+                                        <h5 className="tp-slider-subtitle section__sm__title common-yellow-shape w-80 mb-35">Tailored services for a uniquely clean space</h5>
                                     </div>
 
                                     <h1 className="tp-slider-title mb-45">
@@ -30,7 +30,7 @@ const HomeHeroSingleSlide2 = () => {
                                             distance={200}
                                             delay={0.5}
                                             speed={1}>
-                                            <div >Efortless</div>
+                                            <div >Specialized</div>
                                         </MotionAnimate>
 
                                         <MotionAnimate
@@ -39,7 +39,7 @@ const HomeHeroSingleSlide2 = () => {
                                             distance={200}
                                             delay={0.6}
                                             speed={1}>
-                                            <div >Stress-Free</div>
+                                            <div >Care for</div>
                                         </MotionAnimate>
 
                                         <MotionAnimate
@@ -48,7 +48,7 @@ const HomeHeroSingleSlide2 = () => {
                                             distance={200}
                                             delay={0.7}
                                             speed={1}>
-                                            <div >Professional</div>
+                                            <div >Every Corner</div>
                                         </MotionAnimate>
                                     </h1>
 
@@ -70,4 +70,4 @@ const HomeHeroSingleSlide2 = () => {
     );
 };
 
-export default HomeHeroSingleSlide2;
+export default HomeHeroSingleSlide3;

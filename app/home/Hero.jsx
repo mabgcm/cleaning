@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import HomeHeroSingleSlide from './HomeHeroSingleSlide';
 import HomeHeroSingleSlide2 from './HomeHeroSingleSlide2';
+import HomeHeroSingleSlide3 from './HomeHeroSingleSlide3';
 
 
 const HeroSection = () => {
@@ -24,7 +25,7 @@ const HeroSection = () => {
                         </Carousel.Item>
 
                         <Carousel.Item>
-                            <HomeHeroSingleSlide setOpen={setOpen} />
+                            <HomeHeroSingleSlide3 setOpen={setOpen} />
                         </Carousel.Item>
 
                     </Carousel>

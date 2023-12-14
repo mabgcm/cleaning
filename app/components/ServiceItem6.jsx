@@ -1,16 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
-import { BsCardChecklist } from "react-icons/bs";
 
 
-const HomeServiceItem1 = ({ icon_name, title }) => {
+const HomeServiceItem6 = ({ title }) => {
     return (
         <>
             <div className="col-xl-4 col-sm-6">
                 <div className="tp-services white-bg mb-30 wow fadeInUp" data-wow-delay=".2s">
                     <div className="col mb-4">
                         <div className="tp-services-icon yellow-circle-shape">
-                            <img src="assets/img/icon/cupboard.png" alt="cupboard logo" />
+                            <img src="assets/img/icon/window.png" alt="cupboard logo" />
                         </div>
                     </div>
 
@@ -28,4 +27,4 @@ const HomeServiceItem1 = ({ icon_name, title }) => {
     );
 };
 
-export default HomeServiceItem1;
+export default HomeServiceItem6;

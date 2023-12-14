@@ -1638,6 +1638,8 @@ select {
   line-height: 1.18;
 }
 
+
+
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
 
   .tp-section-title,
@@ -3919,7 +3921,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .yellow-circle-shape {
   position: relative;
-  padding-left: 30px;
+  padding-left: 9px;
   display: inline-block;
   z-index: 1;
 }

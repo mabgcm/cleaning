@@ -1,5 +1,12 @@
 import React from 'react';
-import HomeServiceItem from '../components/ServiceItem1';
+import HomeServiceItem1 from '../components/ServiceItem1';
+import HomeServiceItem2 from '../components/ServiceItem2';
+import HomeServiceItem3 from 'app/components/ServiceItem3';
+import HomeServiceItem4 from 'app/components/ServiceItem4';
+import HomeServiceItem5 from 'app/components/ServiceItem5';
+import HomeServiceItem6 from 'app/components/ServiceItem6';
+import HomeServiceItem7 from 'app/components/ServiceItem7';
+import HomeServiceItem8 from 'app/components/ServiceItem8';
 
 const ServiceArea = () => {
     return (
@@ -17,19 +24,14 @@ const ServiceArea = () => {
                                 </div>
                             </div>
                             <div className="row">
-
-                                <HomeServiceItem icon_name="pot" title="Kitchen Cleaning" />
-
-                                <HomeServiceItem icon_name="vacuum-cleaner" title="Carpet Cleaning" />
-
-                                <HomeServiceItem icon_name="house-cleaning" title="House Cleaning" />
-
-                                <HomeServiceItem icon_name="desk" title="Office Cleaning" />
-
-                                <HomeServiceItem icon_name="cleaning" title="Road Cleaning" />
-
-                                <HomeServiceItem icon_name="window" title="Window Cleaning" />
-
+                                <HomeServiceItem1 title="Cupboards" />
+                                <HomeServiceItem2 title="Oven" />
+                                <HomeServiceItem3 title="Fridge" />
+                                <HomeServiceItem4 title="Dish Washer" />
+                                <HomeServiceItem5 title="Dish Washing" />
+                                <HomeServiceItem6 title="Windows Interior" />
+                                <HomeServiceItem7 title="Marks on the Wall" />
+                                <HomeServiceItem8 title="Baseboards" />
                             </div>
                         </div>
                     </div>
