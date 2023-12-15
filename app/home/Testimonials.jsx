@@ -11,7 +11,7 @@ const Testimonial = () => {
     const [isOpen, setOpen] = useState(true);
 
     return (
-        <section className="tp-testimonial-area position-relative">
+        <section className="tp-testimonial-area position-relative py-5" style={{ backgroundColor: "#ECF3F0" }}>
             <div className="container">
                 <div className="tp-testimonial-bg white-bg z-index">
                     <div className="row align-items-center">

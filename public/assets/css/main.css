@@ -5183,9 +5183,9 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .tp-choose-yellow-bg {
-  height: 590px;
+  height: 300px;
   position: absolute;
-  top: -255px;
+  top: 0;
   left: 0px;
   right: 0px;
   background: #fed10c;

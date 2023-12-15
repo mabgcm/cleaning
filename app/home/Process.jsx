@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Process = () => {
     return (
         <>
-            <section className="tp-choose-area position-relative pt-120 pb-90">
+            <section className="tp-choose-area position-relative pt-30">
                 <div className="tp-choose-yellow-bg"></div>
                 <div className="container">
                     <div className="row justify-content-between">
