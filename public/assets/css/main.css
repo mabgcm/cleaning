@@ -4737,6 +4737,8 @@ only screen and (min-width: 768px) and (max-width: 991px),
   position: relative;
 }
 
+
+
 .tp-quality:hover .tp-quality-text-icon a i {
   left: -120%;
 }

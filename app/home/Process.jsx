@@ -11,8 +11,8 @@ const Process = () => {
                         <div className="col-xl-6 col-lg-8">
                             <div className="tp-choose z-index">
                                 <div className="tp-section-title-wrapper mb-105 wow fadeInUp" data-wow-delay=".2s">
-                                    <h5 className="tp-section-subtitle common-yellow-shape common-white-shape section__sm__title">How to book your cleaning</h5>
-                                    <h2 className="tp-section-title">4 Simple Steps to book your service</h2>
+                                    <h5 className="tp-section-subtitle common-yellow-shape common-white-shape section__sm__title">How do we work?</h5>
+                                    <h2 className="tp-section-title">4 Simple Steps <br /> to get your cleaning service</h2>
                                 </div>
                                 <div className="tp-choose-img mb-40 z-index d-block d-xl-none">
                                     <img src="assets/img/about/choose-img-1.jpg" alt="img not found" />
@@ -20,38 +20,32 @@ const Process = () => {
                                 <div className="row">
                                     <div className="col-sm-6">
                                         <div className="tp-choose-timeline ml-15 mb-30">
-                                            <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay=".4s">
+                                            <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay=".4s"><h5>1</h5>
                                                 <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color">
-                                                    <Link href="/servicesDetails">Every Customer <br />is Special</Link>
+                                                    <Link href="/servicesDetails">Get Your <br /> Free Estimate</Link>
                                                 </h4>
                                                 <p>Bras fringilla conubia odios metus torquent commodo quam </p>
                                             </div>
-                                            <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay=".6s">
+                                            <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay=".6s"><h5>2</h5>
                                                 <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color">
-                                                    <Link href="/servicesDetails">Customer Support <br />Live Chat</Link>
+                                                    <Link href="/servicesDetails">Confirm <br /> Your Booking</Link>
                                                 </h4>
                                                 <p>Bras fringilla conubia odios metus torquent commodo quam </p>
                                             </div>
-                                            <div className="tp-choose-timeline-single pl-35 wow fadeInUp" data-wow-delay=".8s">
-                                                <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color"><Link href="/servicesDetails">Enjoy Discounts <br />in Fees</Link></h4>
-                                                <p>Bras fringilla conubia odios metus torquent commodo quam </p>
-                                            </div>
+
                                         </div>
                                     </div>
                                     <div className="col-sm-6">
                                         <div className="tp-choose-timeline ml-15 mb-30">
-                                            <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay="1s">
-                                                <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color"><Link href="/servicesDetails">Book Appointment <br />in online</Link></h4>
+                                            <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay="1s"><h5>3</h5>
+                                                <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color"><Link href="/servicesDetails">Get Your <br /> Final Confirmation</Link></h4>
                                                 <p>Bras fringilla conubia odios metus torquent commodo quam </p>
                                             </div>
-                                            <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay="1.2s">
-                                                <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color"><Link href="/servicesDetails">Information for Any <br />Services</Link></h4>
+                                            <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay="1.2s"><h5>4</h5>
+                                                <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color"><Link href="/servicesDetails">Give Your <br /> Feedback</Link></h4>
                                                 <p>Bras fringilla conubia odios metus torquent commodo quam </p>
                                             </div>
-                                            <div className="tp-choose-timeline-single pl-35 wow fadeInUp" data-wow-delay="1.4s">
-                                                <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color"><Link href="/servicesDetails">We Give 24/7 <br />Support</Link></h4>
-                                                <p>Bras fringilla conubia odios metus torquent commodo quam </p>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>

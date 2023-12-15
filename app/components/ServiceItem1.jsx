@@ -6,7 +6,7 @@ import { BsCardChecklist } from "react-icons/bs";
 const HomeServiceItem1 = ({ icon_name, title }) => {
     return (
         <>
-            <div className="col-xl-4 col-sm-6">
+            <div className="col-6">
                 <div className="tp-services white-bg mb-30 wow fadeInUp" data-wow-delay=".2s">
                     <div className="col mb-4">
                         <div className="tp-services-icon yellow-circle-shape">
