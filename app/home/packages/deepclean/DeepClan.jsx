@@ -1,5 +1,4 @@
 import { CgCheckO } from 'react-icons/cg';
-import Img1 from '../../../public/assets/img/project/project-details1.png'
 
 const ProjectsDetailsArea = () => {
     return (
@@ -10,13 +9,13 @@ const ProjectsDetailsArea = () => {
                         <div className="col-xl-3 col-lg-4">
                             <div className="tp-faqs-left">
                                 <div className="tp-faqs-left-sidebar mb-30">
-                                    <h4 className="tp-faqs-left-sidebar-title">Project Info</h4>
+                                    <h4 className="tp-faqs-left-sidebar-title">Service Details</h4>
                                     <ul>
-                                        <li>Name : <span>Daniel Samuels</span></li>
-                                        <li>Date : <span>25 August, 2021</span></li>
-                                        <li>Service : <span>Cleaning</span></li>
+                                        <li>Duration : <span>70mins/1000sqft</span></li>
+                                        <li>Cleaning Staff : <span>2 ppl</span></li>
+                                        <li>Booking : <span>2 days in advance</span></li>
                                         <li>Budget : <span>$350-$420</span></li>
-                                        <li>Feedback : <span>Happy Client</span></li>
+                                        <li>Cleaning Items : <span ><br />carpets <br />windows <br />door frames</span></li>
                                     </ul>
                                 </div>
 
@@ -25,10 +24,10 @@ const ProjectsDetailsArea = () => {
                         </div>
                         <div className="col-xl-9 col-lg-8">
                             <div className="tp-service-details">
-                                <h2 className="tp-section-title heading-color-black translate-y--10 mb-10">Experience The Difference</h2>
+                                <h2 className="tp-section-title heading-color-black translate-y--10 mb-10">Deep Cleaning</h2>
                                 <p className="mb-30">Fusce fusce ante dis varius iaculis quis penatibus do placerat et convallis ultricies egestas hacker pharetra veile litora nascetur diam dapibus euismod neque sapien siverra nunc nisler fortune litora neque ultrices eros aenean habitant tellus torquent ipsum, commodo Ligula curae; auctor ultricies laoreet metus cubilia enim faucibus litora nibh torquent platea sodales auctor gravida tortor class litora id arcu conubia. Augue suscipit metus ante eu rhoncus cras. Ipsum nulla feugiat nam pede cras a eleifend. Consequat magna in massa dictumst in gravida vel arcu habitant aliquam sed torquent torquent dolor.</p>
                                 <div className="tp-service-details-img mb-30 position-relative">
-                                    <img src={Img1} alt='where' />
+                                    <img src="https://rocketmaidsla.com/wp-content/uploads/2019/10/deep-cleaning-services.jpg" alt='project detail photo' />
                                 </div>
                                 <p className="mb-25">Neque gravida dui fermentum pulvinar fringilla sodales massa hendrerit nascetur. Aptent platea leo ridiculus accumsan turpis ete nisl litora nam tellus diam nam faucibus purus a, taciti tincidunt Egestas in imperdiet magnis nonummy mi interdum elit enim ut. Curabitur quis vitae lobortis quam lacus pharetra mus, arcu. Vele Facilisi orci orci nisi consequat dignissim duise in iaculis pulvinar hymenaeos pharetra tortor phasellus. Consectetuer penatibus id. Eleifend potenti. Elit purus fermentum idev posuere nullam iaculis. Fusce orci co nsectetuer. Metus nonummy turpis sodales vivamus mollis posuere fermentum </p>
                                 <h3 className="tp-service-details-subtitle mb-20">First Class Cleaning Services</h3>
