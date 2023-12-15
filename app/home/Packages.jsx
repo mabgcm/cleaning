@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Package2 from 'app/components/Package2';
 import Package3 from 'app/components/Package3';
 import Package4 from 'app/components/Package4';
+import Package5 from 'app/components/Package5';
+import Package6 from 'app/components/Package6';
 
 
 const Packages = () => {
@@ -14,8 +16,7 @@ const Packages = () => {
                     <div className="row">
                         <div className="col-12">
                             <div className="section-title-wrapper text-center mb-55" data-wow-delay=".2s">
-                                <h2 className="tp-section-title-two">Our Diversified <span>Packages</span>
-                                    <br />Cleaning</h2>
+                                <h2 className="tp-section-title-two">Our Service <span>Packages</span></h2>
                             </div>
                         </div>
                     </div>
@@ -25,15 +26,10 @@ const Packages = () => {
                         <Package2 title="Move In / Out" />
                         <Package3 title="After Party" />
                         <Package4 title="Regular Cleaning" />
+                        <Package5 title="One Time" />
+                        <Package6 title="AirBNB" />
 
 
-                    </div>
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="tp-quality-btn text-center">
-                                <Link href="/" className="theme-btn radius-50 text-white">More Services +</Link>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>

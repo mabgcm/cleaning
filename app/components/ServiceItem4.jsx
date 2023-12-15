@@ -5,7 +5,7 @@ import Link from 'next/link';
 const HomeServiceItem4 = ({ title }) => {
     return (
         <>
-            <div className="col-6">
+            <div className="col-12 col-sm-6">
                 <div className="tp-services white-bg mb-30 wow fadeInUp" data-wow-delay=".2s">
                     <div className="col mb-4">
                         <div className="tp-services-icon yellow-circle-shape">
@@ -14,11 +14,11 @@ const HomeServiceItem4 = ({ title }) => {
                     </div>
 
                     <div className="col tp-services-text fix">
-                        <h4 className="tp-services-text-title mb-15 hover-theme-color">
+                        <h4 className="tp-services-text-title mb-15 hover-theme-color pe-none">
                             <Link href="/">{title}</Link></h4>
                         <p className="mb-20">Bras fringilla conubia odios uira metus torquent commodo quam praesent torna pede</p>
                         <div className="tp-services-text-link">
-                            <Link href="/"><i className="flaticon-enter"></i> Read Details</Link>
+
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import DeepClean from './DeepClan'
+import DeepClean from './DeepClean'
 
 const Packages = () => {
     return (

@@ -2,18 +2,18 @@ import React from 'react';
 import Link from 'next/link';
 import { HiPlus } from 'react-icons/hi';
 
-const Package1 = ({ title }) => {
+const Package6 = ({ title }) => {
     return (
         <>
             <div className="col-xl-4 col-md-6">
                 <div className="tp-quality mb-30 wow fadeInUp" data-wow-delay=".5s">
                     <div className="tp-quality-img">
-                        <img src={`assets/img/service/deepclean.jpg`} className="img-fluid" alt="img not found" />
+                        <img src={`assets/img/service/airbnb.jpg`} className="img-fluid" alt="img not found" />
                     </div>
                     <div className="tp-quality-text text-center">
                         <div className="tp-quality-text-icon mb-10">
-                            <Link href="/home/packages/deepclean">
-                                <img className="tp-quality-text-icon1" src="assets/img/icon/deepclean.png" alt="Deep clean icon" />
+                            <Link href="/">
+                                <img className="tp-quality-text-icon1" src="assets/img/icon/airbnb.png" alt="Deep clean icon" />
                                 <i className="tp-quality-text-icon2"><HiPlus className="text-white" /></i>
                             </Link>
                         </div>
@@ -26,4 +26,4 @@ const Package1 = ({ title }) => {
     );
 };
 
-export default Package1;
+export default Package6;
