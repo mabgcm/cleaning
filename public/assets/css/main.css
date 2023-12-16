@@ -5151,6 +5151,10 @@ only screen and (min-width: 576px) and (max-width: 767px) {
   z-index: 1;
 }
 
+.items {
+  border: white;
+}
+
 .tp-choose-timeline-single:hover::before {
   animation: pulse-green 6s infinite;
 }

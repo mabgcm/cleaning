@@ -10,8 +10,14 @@ const Header = () => {
 
     const linkStyle = {
         textTransform: 'capitalize',
-        color: 'yellow',
-        fontWeight: '500',
+        color: 'white',
+        fontWeight: '400',
+        transition: 'color 0.3s ease',
+        textDecoration: 'none',
+        cursor: 'pointer',
+        ':hover': {
+            color: 'red',
+        },
     };
 
     return (
@@ -28,7 +34,7 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <div className="d-flex justify-content-around col-sm-2 col-md-3 col-lg-8 mx-3">
+                    <div className="d-flex justify-content-end col-sm-2 col-md-3 col-lg-8" style={{ paddingRight: '40px' }}>
                         <div className="row">
                             <button
                                 className="navbar-toggler"
@@ -42,7 +48,7 @@ const Header = () => {
                                 <span className="navbar-toggler-icon"></span>
                             </button>
                             <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                                <ul className="navbar-nav">
+                                <ul className="navbar-nav d-flex justify-content-end">
                                     <li className="nav-item navlink">
                                         <Link className="nav-link active" aria-current="page" href="/" style={linkStyle}>
                                             Home

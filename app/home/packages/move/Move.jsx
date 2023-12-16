@@ -2,21 +2,21 @@ import { CgCheckO } from 'react-icons/cg';
 import { IoMdArrowDropright } from "react-icons/io";
 
 
-const DeepCleaning = () => {
+const Move = () => {
     return (
         <>
             <section className="tp-services-details-area pt-20 pb-40">
                 <div className="container">
-                    <h2 className="tp-section-title heading-color-black translate-y--10 mb-10">Deep Cleaning</h2>
+                    <h2 className="tp-section-title heading-color-black translate-y--10 mb-10">Move In / Move Out</h2>
 
                     <div className="row">
-                        <div className="col-xl-3 col-lg-4">
+                        <div className="col-lg-4">
                             <div className="tp-faqs-left">
                                 <div className="tp-faqs-left-sidebar mb-30">
                                     <h4 className="tp-faqs-left-sidebar-title">Service Details</h4>
                                     <ul>
-                                        <li>Duration : <span>70mins/1000sqft</span></li>
-                                        <li>Cleaning Staff : <span>2-3 guys</span></li>
+                                        <li>Duration : <span>90mins/1000sqft</span></li>
+                                        <li>Cleaning Staff : <span>3 guys</span></li>
                                         <li>Booking : <span>2 days in advance</span></li>
                                         <li>Budget : <span>$450+</span></li>
                                         <li className=''>Cleaning Items :
@@ -43,7 +43,10 @@ const DeepCleaning = () => {
                                                                     <CgCheckO color='#076034' /> Clean under furniture <br />
                                                                     <CgCheckO color='#076034' /> Wipe window sills <br />
                                                                     <CgCheckO color='#076034' /> Clean window frames <br />
-                                                                    <CgCheckO color='#076034' /> Wipe door frames
+                                                                    <CgCheckO color='#076034' /> Wipe door frames <br />
+                                                                    <CgCheckO color='#076034' /> Spot clean walls <br />
+                                                                    <CgCheckO color='#076034' /> Clean and wipe vents <br />
+                                                                    <CgCheckO color='#076034' /> Dust ceiling and fans <br />
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -70,7 +73,12 @@ const DeepCleaning = () => {
                                                                     <CgCheckO color='#076034' /> Empty bins <br />
                                                                     <CgCheckO color='#076034' /> Clean microwave interior <br />
                                                                     <CgCheckO color='#076034' /> Clean kitchen baseboards <br />
-                                                                    <CgCheckO color='#076034' /> Wipe and clean backsplash
+                                                                    <CgCheckO color='#076034' /> Wipe and clean backsplash <br />
+                                                                    <CgCheckO color='#076034' /> Spot clean walls <br />
+                                                                    <CgCheckO color='#076034' /> Clean behind appliances <br />
+                                                                    <CgCheckO color='#076034' /> Clean range hood <br />
+                                                                    <CgCheckO color='#076034' /> Clean and wipe vents <br />
+                                                                    <CgCheckO color='#076034' /> Dust ceiling
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -96,7 +104,9 @@ const DeepCleaning = () => {
                                                                     <CgCheckO color='#076034' /> Sweep and mop floors <br />
                                                                     <CgCheckO color='#076034' /> Clean shower faucets <br />
                                                                     <CgCheckO color='#076034' /> Clean and scrub tub <br />
-                                                                    <CgCheckO color='#076034' /> Empty bins
+                                                                    <CgCheckO color='#076034' /> Empty bins <br />
+                                                                    <CgCheckO color='#076034' /> Clean bathroom baseboards <br />
+                                                                    <CgCheckO color='#076034' /> Clean doors and cabinet exteriors <br />
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -110,13 +120,15 @@ const DeepCleaning = () => {
 
                             </div>
                         </div>
-                        <div className="col-xl-9 col-lg-8">
+                        <div className="col-lg-8">
                             <div className="tp-service-details">
-                                <p className="mb-30">Discover the Neat Guys – your ultimate Canadian clean team, specially crafted for homeowners, landlords, and business owners who dream of impeccably clean spaces. We're on a mission to transform your home, reaching every hidden corner beneath furniture, behind appliances, and those easy-to-forget spots like baseboards and window sills. If you don't absolutely love our service, we'll keep cleaning until it's nothing short of perfection. Elevate your space with the Neat Guys – because your satisfaction is our inspiration!</p>
+                                <p className="mb-30">Introducing The Neat Guys – your premier cleaning partner dedicated to simplifying the moving process for homeowners, landlords, and business owners in the Greater Toronto Area. We understand that moving can be a stressful endeavor for everyone involved, and that's why we're here to alleviate the pressure and workload associated with the transition. Our customizable cleaning services are tailored to meet your specific requirements and specifications, ensuring a seamless and spotless experience.
+
+                                </p>
                                 <div className="tp-service-details-img mb-30 position-relative">
-                                    <img src="https://rocketmaidsla.com/wp-content/uploads/2019/10/deep-cleaning-services.jpg" alt='project detail photo' />
+                                    <img src="https://images.squarespace-cdn.com/content/5d013a2a1271610001feb9a4/1595610921107-NQBNB8V3C59N39SL6FLN/move+in+cleaning+minneapolis.jpg" alt='project detail photo' />
                                 </div>
-                                <p className="mb-1">Our dynamic cleaning team comprises 2-3 dedicated individuals, ensuring a swift and thorough transformation of your space. To secure your spot on our schedule, simply book us two days in advance for a hassle-free experience. When it comes to the nitty-gritty details, rest assured that our cleaning arsenal is equipped to handle various surfaces, including carpets, uncarpeted areas, kitchens, bathrooms, windows, door frames, and windowsills. We leave no stone unturned, reaching behind home appliances and delving beneath furniture to guarantee a comprehensive clean that exceeds your expectations. Trust the Neat Guys to bring a new level of cleanliness to every corner of your home or business!</p>
+                                <p className="mb-1">Whether you're moving in or out, our dedicated team at The Neat Guys is committed to providing top-notch Move Cleaning Services that go beyond the surface. Our seasoned, insured, and vetted cleaning professionals, comprised of 3 skilled individuals, will tackle every nook and cranny of your space. With a duration of 90 minutes per 1000 square feet, our efficient and thorough cleaning process guarantees a meticulous result. To make your experience even more convenient, we offer the flexibility to book our services two days in advance. With The Neat Guys, you can focus on the excitement of your new chapter while we handle the cleaning, making your move a smooth and enjoyable experience.</p>
                             </div>
                         </div>
                     </div>
@@ -126,4 +138,4 @@ const DeepCleaning = () => {
     );
 };
 
-export default DeepCleaning;
+export default Move;
