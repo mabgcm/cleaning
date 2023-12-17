@@ -193,6 +193,11 @@ label {
   font-weight: 400;
 }
 
+.itemstext {
+  overflow: scroll;
+  height: 100px;
+}
+
 .display-inline {
   display: inline-block;
 }

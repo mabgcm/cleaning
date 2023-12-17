@@ -17,7 +17,7 @@ const HomeServiceItem2 = ({ title }) => {
                     <div className="col tp-services-text fix">
                         <h4 className="tp-services-text-title mb-15 hover-theme-color pe-none">
                             <Link href="/">{title}</Link></h4>
-                        <p className="mb-20">Bras fringilla conubia odios uira metus torquent commodo quam praesent torna pede</p>
+                        <p className="mb-20 itemstext" >Our service involves a detailed cleaning of the oven interior, addressing residues and grease for a spotless result. Individual accessories are not cleaned as part of this service.</p>
                         <div className="tp-services-text-link">
 
                         </div>

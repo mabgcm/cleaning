@@ -17,7 +17,7 @@ const HomeServiceItem1 = ({ icon_name, title }) => {
                     <div className="col tp-services-text fix">
                         <h4 className="tp-services-text-title mb-15 hover-theme-color pe-none">
                             <Link href="/">{title}</Link></h4>
-                        <p className="mb-20">Bras fringilla conubia odios uira metus torquent commodo quam praesent torna pede</p>
+                        <p className="mb-20 itemstext">Revitalize your kitchen with our expert cupboard interior cleaning. We empty and clean inside your cupboards, meticulously placing items back. While the cupboard interiors sparkle, individual items remain untouched.</p>
                         <div className="tp-services-text-link">
 
                         </div>

@@ -16,7 +16,13 @@ const HomeServiceItem5 = ({ title }) => {
                     <div className="col tp-services-text fix">
                         <h4 className="tp-services-text-title mb-15 hover-theme-color pe-none">
                             <Link href="/">{title}</Link></h4>
-                        <p className="mb-20">Bras fringilla conubia odios uira metus torquent commodo quam praesent torna pede</p>
+                        <p className="mb-20 itemstext">Our hand dishwashing service includes washing all items in the sink, ensuring thorough cleaning of your dishes, utensils, and cookware.
+
+
+
+
+
+                        </p>
                         <div className="tp-services-text-link">
 
                         </div>

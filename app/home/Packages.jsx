@@ -24,7 +24,7 @@ const Packages = () => {
 
                         <Package1 title="Deep Cleaning" />
                         <Package2 title="Move In / Out" />
-                        <Package3 title="After Party" />
+                        <Package3 title="Office Cleaning" />
                         <Package4 title="Regular Cleaning" />
                         <Package5 title="One Time" />
                         <Package6 title="AirBNB" />

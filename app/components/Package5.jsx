@@ -12,7 +12,7 @@ const Package5 = ({ title }) => {
                     </div>
                     <div className="tp-quality-text text-center">
                         <div className="tp-quality-text-icon mb-10">
-                            <Link href="/">
+                            <Link href="/home/packages/onetime">
                                 <img className="tp-quality-text-icon1" src="assets/img/icon/onetime.png" alt="Deep clean icon" />
                                 <i className="tp-quality-text-icon2"><HiPlus className="text-white" /></i>
                             </Link>

@@ -16,7 +16,7 @@ const HomeServiceItem4 = ({ title }) => {
                     <div className="col tp-services-text fix">
                         <h4 className="tp-services-text-title mb-15 hover-theme-color pe-none">
                             <Link href="/">{title}</Link></h4>
-                        <p className="mb-20">Bras fringilla conubia odios uira metus torquent commodo quam praesent torna pede</p>
+                        <p className="mb-20 itemstext">Our service covers loading and unloading the dishwasher, ensuring efficient cleaning of your dishes. We handle the placement and removal of items within the dishwasher, optimizing the cleaning process.</p>
                         <div className="tp-services-text-link">
 
                         </div>
