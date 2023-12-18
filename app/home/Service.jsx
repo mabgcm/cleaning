@@ -13,7 +13,7 @@ const ServiceArea = () => {
         <>
             <section className="tp-services-area theme-dark-bg">
                 <div className="tp-custom-container">
-                    <div className="tp-services-bg grey-bg pt-120 pb-90 z-index">
+                    <div className="tp-services-bg grey-bg pt-50 pb-40 z-index">
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-lg-8">

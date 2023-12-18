@@ -10,7 +10,7 @@ import img2 from '../../public/assets/img/about/about-img-3.png';
 const AboutArea = () => {
     return (
         <>
-            <section className="tp-about-area position-relative pt-120 pb-90 fix" style={{ backgroundColor: '#EDF3F1' }}>
+            <section className="tp-about-area position-relative pt-20 pb-90 fix" style={{ backgroundColor: '#EDF3F1' }}>
                 <div className="tp-about-shape">
                     <Image src={img1} className="img-fluid" alt="img not found" />
                 </div>

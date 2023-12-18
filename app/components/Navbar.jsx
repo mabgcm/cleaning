@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
 const Header = () => {
     useEffect(() => {
         require('bootstrap/dist/js/bootstrap.js');
@@ -76,7 +77,7 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-            <div className='announce'>
+            <div className='announce pb-2'>
                 <h6>Working Hours:</h6>
             </div>
         </div>
