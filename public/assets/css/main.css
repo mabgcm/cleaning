@@ -6568,10 +6568,9 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 }
 
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
-  height: fit-content;
   z-index: 100;
 }
 

@@ -26,7 +26,7 @@ const Header = () => {
     };
 
     return (
-        <div className='navbar pt-115'>
+        <div className='navbar mt-0 pt-0'>
             <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#075F33', width: '100%' }}>
                 <div className="d-flex align-items-center justify-content-between flex-grow-1 m-auto">
                     <div className="col-sm-10 col-md-9 col-lg-4">
