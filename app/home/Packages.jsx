@@ -1,6 +1,5 @@
-import Package1 from 'app/components/Package1';
 import React from 'react';
-import Link from 'next/link';
+import Package1 from 'app/components/Package1';
 import Package2 from 'app/components/Package2';
 import Package3 from 'app/components/Package3';
 import Package4 from 'app/components/Package4';

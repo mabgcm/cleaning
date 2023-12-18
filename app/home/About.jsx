@@ -1,6 +1,9 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { TbShieldHeart } from "react-icons/tb";
 import { BsCardChecklist } from "react-icons/bs";
+import img1 from '../../public/assets/img/about/about-shape-1.jpg';
+import img2 from '../../public/assets/img/about/about-img-3.png';
 
 
 
@@ -9,13 +12,13 @@ const AboutArea = () => {
         <>
             <section className="tp-about-area position-relative pt-120 pb-90 fix" style={{ backgroundColor: '#EDF3F1' }}>
                 <div className="tp-about-shape">
-                    <img src="assets/img/about/about-shape-1.jpg" className="img-fluid" alt="img not found" />
+                    <Image src={img1} className="img-fluid" alt="img not found" />
                 </div>
                 <div className="container">
                     <div className="row justify-content-xl-betweenjustify-content-md-center">
                         <div className="col-xl-5 col-12">
                             <div className="tp-about-img z-index wow fadeInUp" data-wow-delay=".3s">
-                                <img src="assets/img/about/about-img-3.png" alt="img not found" />
+                                <Image src={img2} alt="img not found" />
                             </div>
                         </div>
                         <div className="col-xl-6 col-md-10">

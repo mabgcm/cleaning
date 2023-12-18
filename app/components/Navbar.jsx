@@ -50,7 +50,7 @@ const Header = () => {
                             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul className="navbar-nav d-flex justify-content-end">
                                     <li className="nav-item navlink">
-                                        <Link className="nav-link active" aria-current="page" href="/home/about" style={linkStyle}>
+                                        <Link className="nav-link active" aria-current="page" href="/" style={linkStyle}>
                                             Home
                                         </Link>
                                     </li>
@@ -60,18 +60,18 @@ const Header = () => {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" href="/services" style={linkStyle}>
-                                            Services
+                                        <Link className="nav-link" href="/home/services" style={linkStyle}>
+                                            Packages
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" href="/recruit" style={linkStyle}>
+                                        <Link className="nav-link" href="https://show.forms.app/theneatguys/joinus" target='_blank' style={linkStyle}>
                                             Join Us
                                         </Link>
                                     </li>
-
                                 </ul>
                             </div>
+
                         </div>
                     </div>
                 </div>
