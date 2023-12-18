@@ -1,7 +1,8 @@
 import React from 'react';
+import Image from 'next/image';
+import img1 from '../../public/assets/img/testimonial/author-2.png'
 import { FaStar } from "react-icons/fa";
 
-// import image from '../../public/assets/img/about/testimonial-img-4.jpg'
 
 const Testimonial1 = () => {
     return (
@@ -10,7 +11,7 @@ const Testimonial1 = () => {
                 <p className="mb-45">I never thought I'd say this about cleaning, but these guys rock! The estimate was spot-on, no hidden fees. Payment was a breeze, and they made my place shine. Real talk, my expectations were exceeded. When I had a small issue, they fixed it pronto. Happy customer alert!</p>
                 <div className="tp-testimonial-author">
                     <div className="tp-testimonial-author-img">
-                        <img src={"assets/img/testimonial/author-2.png"} className="img-fluid" alt="img not found" />
+                        <Image src={img1} className="img-fluid" alt="img not found" />
                     </div>
                     <div className="tp-testimonial-author-text">
                         <h4 className="tp-testimonial-author-text-name">Samantha L</h4>
