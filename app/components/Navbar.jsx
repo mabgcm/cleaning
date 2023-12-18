@@ -2,6 +2,10 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BsInstagram } from 'react-icons/bs';
+import { FaFacebookF } from 'react-icons/fa';
+
+
 
 
 const Header = () => {
@@ -22,7 +26,7 @@ const Header = () => {
     };
 
     return (
-        <div className='navbar'>
+        <div className='navbar pt-115'>
             <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#075F33', width: '100%' }}>
                 <div className="d-flex align-items-center justify-content-between flex-grow-1 m-auto">
                     <div className="col-sm-10 col-md-9 col-lg-4">
@@ -66,19 +70,24 @@ const Header = () => {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" href="https://show.forms.app/theneatguys/joinus" target='_blank' style={linkStyle}>
+                                        <Link className="nav-link" href="https://8fu286als2z.typeform.com/to/welhawPP" target='_blank' style={linkStyle}>
                                             Join Us
                                         </Link>
                                     </li>
+                                    <li>
+                                        <div className="tp-footer-info-social">
+                                            <a href="/"><i><FaFacebookF className='icon' /> </i></a>
+                                            <a href="/"><i><BsInstagram className='icon' /> </i></a>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </nav>
-            <div className='announce pb-2'>
-                <h6>Working Hours:</h6>
+            <div className='announce d-flex justify-content-start align-items-center'>
+                <p className='text-end'>Mon-Fri: 09:30-18:00</p>
             </div>
         </div>
     );

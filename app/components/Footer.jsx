@@ -1,40 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaPaperPlane } from 'react-icons/fa';
 import { FaMapMarkerAlt, FaEnvelopeOpen, FaFacebookF } from 'react-icons/fa';
-import { AiOutlineGoogle } from 'react-icons/ai';
-import { BsTwitter, BsInstagram, BsChevronRight } from 'react-icons/bs';
+import { BsInstagram, BsChevronRight } from 'react-icons/bs';
+import Subscribe from './Subscribe';
 
 const Footer = () => {
     return (
         <>
             <footer className="theme-dark-bg">
-                <div className="tp-footer-subscribe-area-two position-relative pt-100">
-                    <div className="container">
-                        <div className="tp-footer-subscribe-bg-two theme-yellow-bg pt-30 pb-20 z-index pl-60 pr-60">
-                            <div className="row align-items-center">
-                                <div className="col-xl-5 col-lg-4">
-                                    <div className="tp-footer-subscribe">
-                                        <h3 className="tp-footer-subscribe-title">Subscribe Our Newsletter</h3>
-                                    </div>
-                                </div>
-                                <div className="col-xl-7 col-lg-8">
-                                    <div className="tp-footer-subscribe-form">
-                                        <form action="#" className="p-0">
-                                            <div className="tp-footer-subscribe-form-field mb-10">
-                                                <input type="text" placeholder="Email Address" />
-                                                <i ><FaPaperPlane /></i>
-                                            </div>
-                                            <div className="tp-footer-subscribe-form-btn mb-10">
-                                                <button type="submit" className="theme-btn text-white"><i className="flaticon-enter"></i> Subscribe</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div className="tp-footer-area-two pt-80 pb-50">
                     <div className="container">
                         <div className="row">
@@ -44,14 +17,12 @@ const Footer = () => {
                                         <div className="tp-footer-info-logo mb-35">
                                             <Link href="/"><img src="assets/img/logo/logo.png" className="img-fluid" alt="img not found" /></Link>
                                         </div>
-                                        <h4 className="mb-15"><a href="tel:02(850)2560-3">02 (850) 2560 - 3</a></h4>
-                                        <h6 className="mb-15"> <i > <FaEnvelopeOpen /> </i><a href="mailto:info@basictheme.com">info@basictheme.com</a></h6>
+                                        <h4 className="mb-15"><a href="tel:02(850)2560-3">(647)770-2782</a></h4>
+                                        <h6 className="mb-15"> <i > <FaEnvelopeOpen /> </i><a href="mailto:info@basictheme.com">info@neatguys.ca</a></h6>
                                         <h6 className="mb-20"> <i> <FaMapMarkerAlt /> </i> 25/B Globe House Ave. Point Beach, New York</h6>
                                         <div className="tp-footer-info-social">
                                             <a href="/"><i><FaFacebookF className='icon' /> </i></a>
-                                            <a href="/"><i><BsTwitter className='icon' /> </i></a>
                                             <a href="/"><i><BsInstagram className='icon' /> </i></a>
-                                            <a href="/"><i><AiOutlineGoogle className='icon' /> </i></a>
                                         </div>
                                     </div>
                                 </div>
