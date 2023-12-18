@@ -1,19 +1,17 @@
 import React from 'react';
 import { FaStar } from "react-icons/fa";
 
-// import image from '../../public/assets/img/about/testimonial-img-4.jpg'
-
-const Testimonial1 = () => {
+const Testimonial4 = () => {
     return (
         <>
             <div className="tp-testimonial-single swiper-slide z-index">
-                <p className="mb-45">I never thought I'd say this about cleaning, but these guys rock! The estimate was spot-on, no hidden fees. Payment was a breeze, and they made my place shine. Real talk, my expectations were exceeded. When I had a small issue, they fixed it pronto. Happy customer alert!</p>
+                <p className="mb-45">Cleaning day was stress-free. Got the estimate, paid online, and let them do their thing. The team was careful and respectful of my space. Gave feedback, they listened, and boom – it was sorted. Easy-peasy. Definitely calling them again!</p>
                 <div className="tp-testimonial-author">
                     <div className="tp-testimonial-author-img">
-                        <img src={"assets/img/testimonial/author-2.png"} className="img-fluid" alt="img not found" />
+                        <img src={"assets/img/testimonial/author-5.png"} className="img-fluid" alt="img not found" />
                     </div>
                     <div className="tp-testimonial-author-text">
-                        <h4 className="tp-testimonial-author-text-name">Samantha L</h4>
+                        <h4 className="tp-testimonial-author-text-name">Laura K.</h4>
                         <span className="tp-testimonial-author-text-designation"><FaStar color='#FFC000' /><FaStar color='#FFC000' /><FaStar color='#FFC000' /><FaStar color='#FFC000' /><FaStar color='#FFC000' />
                         </span>
                     </div>
@@ -27,4 +25,4 @@ const Testimonial1 = () => {
     );
 };
 
-export default Testimonial1;
+export default Testimonial4;

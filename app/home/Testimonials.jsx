@@ -5,6 +5,10 @@ import { Carousel } from 'react-bootstrap';
 import Testimonial1 from '../components/Testimonial1';
 import { BsChevronLeft } from 'react-icons/bs';
 import BsChevronRight from "react-icons/bs";
+import Testimonial2 from 'app/components/Testimonial2';
+import Testimonial3 from 'app/components/Testimonial3';
+import Testimonial4 from 'app/components/Testimonial4';
+import Testimonial5 from 'app/components/Testimonial5';
 
 const Testimonial = () => {
     // State to control modal open/close
@@ -33,10 +37,19 @@ const Testimonial = () => {
                                     controls={false} // Remove default controls
                                 >
                                     <Carousel.Item>
-                                        <Testimonial1 image={'../../public/assets/img/about/testimonial-img-4.jpg'} name="Rich Gragory" title="Chief Marketing Manager" />
+                                        <Testimonial1 />
                                     </Carousel.Item>
                                     <Carousel.Item>
-                                        <Testimonial1 image={'../../public/assets/img/about/testimonial-img-4.jpg'} name="Rich Gragory" title="Chief Marketing Manager" />
+                                        <Testimonial2 />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <Testimonial3 />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <Testimonial4 />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <Testimonial5 />
                                     </Carousel.Item>
 
 

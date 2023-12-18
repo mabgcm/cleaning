@@ -12,7 +12,7 @@ const Process = () => {
                             <div className="tp-choose z-index">
                                 <div className="tp-section-title-wrapper mb-105 wow fadeInUp" data-wow-delay=".2s">
                                     <h5 className="tp-section-subtitle common-yellow-shape common-white-shape section__sm__title">How do we work?</h5>
-                                    <h2 className="tp-section-title">4 Simple Steps <br /> to get your cleaning service</h2>
+                                    <h2 className="tp-section-title">4 Simple Steps <br /> to secure your cleaning service</h2>
                                 </div>
                                 <div className="tp-choose-img mb-40 z-index d-block d-xl-none">
                                     <img src="assets/img/about/choose-img-1.jpg" alt="img not found" />
@@ -24,13 +24,13 @@ const Process = () => {
                                                 <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color">
                                                     <Link href="/servicesDetails">Get Your <br /> Free Estimate</Link>
                                                 </h4>
-                                                <p>Bras fringilla conubia odios metus torquent commodo quam </p>
+                                                <p>Obtain a free estimate by specifying your service preferences and receiving a tailored price.</p>
                                             </div>
                                             <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay=".6s"><h5>2</h5>
                                                 <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color">
                                                     <Link href="/servicesDetails">Confirm <br /> Your Booking</Link>
                                                 </h4>
-                                                <p>Bras fringilla conubia odios metus torquent commodo quam </p>
+                                                <p>Enter your personal details and securely complete the payment process, ensuring a an efficient booking experience.</p>
                                             </div>
 
                                         </div>
@@ -39,11 +39,11 @@ const Process = () => {
                                         <div className="tp-choose-timeline ml-15 mb-30">
                                             <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay="1s"><h5>3</h5>
                                                 <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color"><Link href="/servicesDetails">Get Your <br /> Final Confirmation</Link></h4>
-                                                <p>Bras fringilla conubia odios metus torquent commodo quam </p>
+                                                <p>Cleaning team assesses actual conditions; additional payment required for extra time or specific client requests.</p>
                                             </div>
                                             <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay="1.2s"><h5>4</h5>
-                                                <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color"><Link href="/servicesDetails">Give Your <br /> Feedback</Link></h4>
-                                                <p>Bras fringilla conubia odios metus torquent commodo quam </p>
+                                                <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color"><Link href="/servicesDetails">Confirm the <br /> Service</Link></h4>
+                                                <p>Cleaning team assesses actual conditions; additional payment required for extra time or specific client requests.</p>
                                             </div>
 
                                         </div>

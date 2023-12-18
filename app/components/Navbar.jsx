@@ -50,12 +50,12 @@ const Header = () => {
                             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul className="navbar-nav d-flex justify-content-end">
                                     <li className="nav-item navlink">
-                                        <Link className="nav-link active" aria-current="page" href="/" style={linkStyle}>
+                                        <Link className="nav-link active" aria-current="page" href="/home/about" style={linkStyle}>
                                             Home
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" href="/about" style={linkStyle}>
+                                        <Link className="nav-link" href="/home/about" style={linkStyle}>
                                             About Us
                                         </Link>
                                     </li>
