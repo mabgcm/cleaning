@@ -41,6 +41,7 @@ export default function Book() {
     const [bathrooms, setBathrooms] = useState(estimate.bathrooms || "")
     const [squareFeetRange, setSquareFeetRange] = useState(estimate.squareFeetRange || "")
     const [cleaningItems, setCleaningItems] = useState(estimate.cleaningItems || "")
+    const [cleaningType, setCleaningType] = useState(estimate.cleaningType || "")
     const [date, setDate] = useState(estimate.date || "")
     const [totalAmount, setTotalAmount] = useState(estimate.totalAmount || "");
 
@@ -60,7 +61,7 @@ export default function Book() {
                 body: JSON.stringify({ cleaningType, name, phone, email, adress, city, postalCode, bedrooms, bathrooms, squareFeetRange, cleaningItems, date, totalAmount })
             });
             if (res.ok) {
-                const paymentLink = getPaymentLink();  // Call the function to get the payment link
+                const paymentLink = getPaymentLink();
                 router.push(getPaymentLink());
             } else {
                 throw new Error("Failed to complete the booking")
