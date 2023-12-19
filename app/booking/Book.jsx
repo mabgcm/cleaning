@@ -13,7 +13,7 @@ const PAYMENT_250 = 'https://buy.stripe.com/test_aEU01E1OT0Ee4lWdQT';
 
 const getBookings = async () => {
     try {
-        const res = await fetch("http://localhost:3000/api", { cache: "no-store" });
+        const res = await fetch("http://neatguys.ca/api", { cache: "no-store" });
 
         if (!res.ok) {
             throw new Error("Failed to fetch from api");
@@ -52,7 +52,7 @@ export default function Book() {
         e.preventDefault();
 
         try {
-            const res = await fetch("https://cleaning-bugucam-gmailcom.vercel.app/api", {
+            const res = await fetch("https://neatguys.ca/api", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
