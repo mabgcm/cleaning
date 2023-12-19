@@ -366,9 +366,6 @@ const Cta = () => {
                         </table>
                     </Modal.Body>
                     <Modal.Footer className="input-field d-flex justify-content-center">
-                        {/* <Button variant="secondary" onClick={handleCloseModal} className="yellow-btn">
-                            Close
-                        </Button> */}
                         <Link
                             href={{
                                 pathname: "/booking",

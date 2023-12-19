@@ -223,16 +223,6 @@ export default function Book() {
                 <Button type='submit' className='btn btn-success mb-5 mt-3'>Create Booking</Button>
 
             </Form>
-
-
-
-
-
-
-            {/* all bookings listing: to be used in dashboard */}
-            {bookings.map((b) => (
-                <div key={b._id}>{b.name}</div>
-            ))}
         </>
     );
 }

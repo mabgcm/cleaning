@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 
 const getConfirmation = async (id) => {
     try {
-        const res = await fetch(`http://localhost:3000/api/${id}`, {
+        const res = await fetch(`http://neatguys.ca/api/${id}`, {
             cache: 'no-store',
         });
 
@@ -26,6 +26,7 @@ export default function BookingConfirmation({ booking, error }) {
             <div>
                 <h1>Booking Confirmation</h1>
                 <p>Error: {error}</p>
+                <p>Client Name: {booking.name}</p>
             </div>
         );
     }
