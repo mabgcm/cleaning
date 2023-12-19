@@ -74,6 +74,11 @@ const Header = () => {
                                             Join Us
                                         </Link>
                                     </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" href="/home/contact" style={linkStyle}>
+                                            Contact
+                                        </Link>
+                                    </li>
                                     <li>
                                         <div className="tp-footer-info-social">
                                             <a href="/"><i><FaFacebookF className='icon' /> </i></a>
@@ -86,9 +91,9 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-            <div className='announce d-flex justify-content-start align-items-center'>
+            {/* <div className='announce d-flex justify-content-start align-items-center'>
                 <p className='text-end'>Mon-Fri: 09:30-18:00</p>
-            </div>
+            </div> */}
         </div>
     );
 };

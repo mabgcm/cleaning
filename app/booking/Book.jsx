@@ -41,6 +41,7 @@ export default function Book() {
     const [bathrooms, setBathrooms] = useState(estimate.bathrooms || "")
     const [squareFeetRange, setSquareFeetRange] = useState(estimate.squareFeetRange || "")
     const [cleaningItems, setCleaningItems] = useState(estimate.cleaningItems || "")
+    const [date, setDate] = useState(estimate.date || "")
     const [totalAmount, setTotalAmount] = useState(estimate.totalAmount || "");
 
 
@@ -56,7 +57,7 @@ export default function Book() {
                 headers: {
                     "Content-type": "application/json",
                 },
-                body: JSON.stringify({ name, phone, email, adress, city, postalCode, bedrooms, bathrooms, squareFeetRange, cleaningItems, totalAmount })
+                body: JSON.stringify({ cleaningType, name, phone, email, adress, city, postalCode, bedrooms, bathrooms, squareFeetRange, cleaningItems, date, totalAmount })
             });
             if (res.ok) {
                 const paymentLink = getPaymentLink();  // Call the function to get the payment link
@@ -142,6 +143,18 @@ export default function Book() {
                         value={cleaningItems.join(', ')}
                     />
                 </Form.Group>
+
+                <Form.Group>
+                    <Form.Label>Service Date</Form.Label>
+                    <Form.Control
+                        onChange={(e) => setServiceDate(e.target.value)}
+                        disabled={true}
+                        type="text"
+                        placeholder="Service Date"
+                        value={date}
+                    />
+                </Form.Group>
+
                 <Form.Group>
                     <Form.Label>Total Amount</Form.Label>
                     <Form.Control

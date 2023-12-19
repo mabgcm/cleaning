@@ -2,6 +2,7 @@
 import mongoose, { Schema } from 'mongoose';
 
 const bookingSchema = new Schema({
+    cleaningType: String,
     name: String,
     phone: Number,
     email: String,
@@ -12,6 +13,7 @@ const bookingSchema = new Schema({
     bathrooms: Number,
     squareFeetRange: String,
     cleaningItems: [String],
+    date: String,
     totalAmount: Number
 },
     {

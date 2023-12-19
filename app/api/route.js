@@ -1,14 +1,43 @@
-// api/route.js
-
 import connectMongoDB from "app/lib/db";
 import Booking from "app/models/booking";
 import { NextResponse } from 'next/server'
 
 
 export async function POST(request) {
-    const { name, phone, email, adress, city, postalCode, bedrooms, bathrooms, squareFeetRange, cleaningItems, totalAmount } = await request.json();
+    const {
+        cleaningType,
+        name,
+        phone,
+        email,
+        adress,
+        city,
+        postalCode,
+        bedrooms,
+        bathrooms,
+        squareFeetRange,
+        cleaningItems,
+        date,
+        totalAmount } = await request.json();
+
     await connectMongoDB();
-    await Booking.create({ name, phone, email, adress, city, postalCode, bedrooms, bathrooms, squareFeetRange, cleaningItems, totalAmount });
+
+
+    await Booking.create({
+        cleaningType,
+        name,
+        phone,
+        email,
+        adress,
+        city,
+        postalCode,
+        bedrooms,
+        bathrooms,
+        squareFeetRange,
+        cleaningItems,
+        date,
+        totalAmount
+    });
+
     return NextResponse.json({ message: "Booking created" }, { status: 201 })
 }
 

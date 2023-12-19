@@ -16,6 +16,7 @@ const Booking = () => {
         <div>
             <h1>Booking Confirmation</h1>
             <div>
+                <h5>Package: {result.cleaningType}</h5>
                 <h5>Bedrooms: {result.bedrooms}</h5>
                 <h5>Bathrooms: {result.bathrooms}</h5>
                 <h5>Cleaning Items: {result.cleaningItems.join(', ')}</h5>

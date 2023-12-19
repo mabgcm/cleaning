@@ -9,29 +9,57 @@ import Link from 'next/link'
 
 const Cta = () => {
 
-    const BASE_PRICE = 20; // Base price for the service
-    const SQM_RATE = 30; // Rate for each 500 sq meters
-    const BEDROOM_RATE = 10; // Rate for each bedroom
-    const BATHROOM_RATE = 8; // Rate for each bathroom
-    const EXTRA_ITEM_RATE = 5; // Rate for each selected extra cleaning item
-
-    const [selectedDate, setSelectedDate] = useState(null);
+    const [selectedDate, setSelectedDate] = useState('');
     const [showModal, setShowModal] = useState(false);
-    const [totalAmount, setTotalAmount] = useState(0); // New state for total amount
+    const [totalAmount, setTotalAmount] = useState(0);
+    const [cleaningType, setCleaningType] = useState('regular');
     const [formData, setFormData] = useState({
+        cleaningType: '',
         bedrooms: '',
         bathrooms: '',
         squareFeetRange: '',
         city: '',
-        date: null,
+        date: '',
         cleaningItems: [],
     });
 
-    const handleInputChange = (name, value) => {
-        setFormData({
-            ...formData,
-            [name]: value,
+    const formatDateString = (date) => {
+        return date.toLocaleString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true,
         });
+    };
+
+    const handleInputChange = (name, value) => {
+        if (name === 'cleaningType') {
+            setCleaningType(value);
+        } else if (name === 'date') {
+            setFormData({
+                ...formData,
+                date: value,
+            });
+            setSelectedDate(value);
+        } else {
+            setFormData({
+                ...formData,
+                [name]: value,
+            });
+        }
+    };
+
+    const filterTimes = (time) => {
+        const startTime = new Date(selectedDate);
+        const endTime = new Date(selectedDate);
+
+        startTime.setHours(8, 30, 0); // 9 AM
+        endTime.setHours(17, 0, 0); // 5:30 PM
+
+        return time >= startTime && time <= endTime;
     };
 
     const handleCheckboxChange = (id) => {
@@ -45,21 +73,45 @@ const Cta = () => {
         });
     };
 
+    const calculateTotalSqft = () => {
+        // Convert the number of bedrooms into sqft using the average sqft per room
+        const bedroomsSqft = formData.bedrooms ? formData.bedrooms * 300 : 0;
+        const bathroomsSqft = formData.bathrooms ? formData.bathrooms * 300 : 0;
+        const roomSqft = bedroomsSqft + bathroomsSqft;
+
+        // Compare the calculated bedrooms sqft with the entered sqft by the user
+        const totalSqft = Math.max(roomSqft, parseInt(formData.squareFeetRange.split('-')[1], 10));
+
+        return totalSqft;
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Calculate the total amount
-        let totalPrice = BASE_PRICE;
-        const sqmRange = formData.squareFeetRange.split('-');
-        const sqm = parseInt(sqmRange[1], 10) - parseInt(sqmRange[0], 10);
-        totalPrice += Math.ceil(sqm / 500) * SQM_RATE;
-        totalPrice += formData.bedrooms * BEDROOM_RATE;
-        totalPrice += formData.bathrooms * BATHROOM_RATE;
-        totalPrice += formData.cleaningItems.length * EXTRA_ITEM_RATE;
 
-        // Round the total amount to the nearest multiple of 50
-        totalPrice = Math.ceil(totalPrice / 50) * 50;
+        // Calculate the total sqft based on the entered data
+        const totalSqft = calculateTotalSqft();
 
-        // Save the total amount to state
+        // Adjust the hourly rate based on the cleaning type
+        let hourlyRate = 50; // Default rate for regular cleaning
+        if (cleaningType === 'deep' || cleaningType === 'movein') {
+            hourlyRate = 80;
+        } else if (cleaningType === 'onetime' || cleaningType === 'airbnb') {
+            hourlyRate = 60;
+        } else if (cleaningType === 'office') {
+            hourlyRate = 40;
+        }
+
+        console.log("Total Sqft:", totalSqft);
+        console.log("Hourly Rate:", hourlyRate);
+        console.log("Cleaning Type:", cleaningType);
+        console.log("Cleaning Date:", formData.date ? formatDateString(formData.date) : '');
+
+        // Calculate the total hours
+        let totalHours = Math.ceil(totalSqft / 500); // 1 hour for every 500 sqft
+        totalHours += formData.cleaningItems.length; // 1 hour for each selected extra item
+
+        // Adjust total hours and calculate the total amount
+        const totalPrice = totalHours * hourlyRate;
         setTotalAmount(totalPrice);
 
         // Display the modal
@@ -95,18 +147,38 @@ const Cta = () => {
     ];
 
     const booking = {
+        cleaningType: cleaningType,
         bedrooms: formData.bedrooms,
         bathrooms: formData.bathrooms,
         squareFeetRange: formData.squareFeetRange,
         city: formData.city,
-        date: formData.date ? formData.date.toDateString() : '',
+        date: formData.date ? formatDateString(formData.date) : '',
         cleaningItems: formData.cleaningItems,
         totalAmount: totalAmount,
-    }
+    };
 
     const getCleaningItemLabel = (itemId) => {
         const selectedCleaningItem = cleaningItems.find(item => item.id === itemId);
         return selectedCleaningItem ? ` ${selectedCleaningItem.description}` : '';
+    };
+
+    const getCleaningTypeName = (cleaningType) => {
+        switch (cleaningType) {
+            case 'deep':
+                return 'Deep Cleaning';
+            case 'movein':
+                return 'Move In / Out Cleaning';
+            case 'office':
+                return 'Office Cleaning';
+            case 'regular':
+                return 'Regular Cleaning';
+            case 'onetime':
+                return 'One-time Cleaning';
+            case 'airbnb':
+                return 'Airbnb Cleaning';
+            default:
+                return '';
+        }
     };
 
 
@@ -120,6 +192,21 @@ const Cta = () => {
                         </div>
                     </div>
                     <div className="row custom-pad-10 mx-2">
+
+                        <div className="tp-appoint col-xl-2 col-lg-12 custom-pad-10 mx-2">
+                            <Form.Group className="row custom-mar-20">
+                                <Form.Select onChange={(e) => handleInputChange('cleaningType', e.target.value)}>
+                                    <option>Cleaning Type</option>
+                                    <option value="deep">Deep Cleaning</option>
+                                    <option value="movein">Move-in Cleaning</option>
+                                    <option value="office">Office Cleaning</option>
+                                    <option value="regular">Regular Cleaning</option>
+                                    <option value="onetime">One-time Cleaning</option>
+                                    <option value="airbnb">Airbnb Cleaning</option>
+                                </Form.Select>
+                            </Form.Group>
+                        </div>
+
                         <div className="tp-appoint col-xl-2 col-lg-12 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
                                 <Form.Select onChange={(e) => handleInputChange('bedrooms', e.target.value)}>
@@ -159,7 +246,6 @@ const Cta = () => {
                                     <option value="2001-2500">2001 - 2500 sqft</option>
                                     <option value="2501-3000">2501 - 3000 sqft</option>
                                     <option value="3001-3500">3001 - 3500 sqft</option>
-                                    {/* Add more options as needed */}
                                 </Form.Select>
                             </Form.Group>
                         </div>
@@ -182,12 +268,13 @@ const Cta = () => {
                                 <span className='row mx-0 p-0 d-flex'>
                                     <DatePicker
                                         selected={selectedDate}
-                                        onChange={(date) => {
-                                            setSelectedDate(date);
-                                            handleInputChange('date', date);
-                                        }}
+                                        onChange={(date) => handleInputChange('date', date)}
                                         placeholderText="Select Date"
-                                        dateFormat="MM/dd/yyyy"
+                                        showTimeSelect
+                                        dateFormat="Pp"
+                                        minDate={new Date()}
+                                        filterDate={(date) => date.getDay() !== 6 && date.getDay() !== 0}
+                                        filterTime={filterTimes}
                                         className='mr-1 rounded'
                                     />
                                 </span>
@@ -195,7 +282,6 @@ const Cta = () => {
                             </Form.Group>
                         </div>
                     </div>
-
                     <div className="row custom-pad-20 mx-2">
                         <div className="row d-flex justify-content-even custom-mar-10">
                             {cleaningItems.map((item) => (
@@ -209,7 +295,7 @@ const Cta = () => {
                                                 type="checkbox"
                                                 label={item.label}
                                                 id={item.id}
-                                                onChange={() => handleCheckboxChange(item.id)} // Update checkbox state
+                                                onChange={() => handleCheckboxChange(item.id)}
                                             />
                                         </span>
                                     </OverlayTrigger>
@@ -227,25 +313,62 @@ const Cta = () => {
                     </div>
                 </Form>
 
-                <Modal show={showModal} onHide={handleCloseModal}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>User Input Summary</Modal.Title>
+                <Modal show={showModal} onHide={handleCloseModal} className='tp-testimonial-two-form'>
+                    <Modal.Header className='col-12'>
+                        <Modal.Title className='tp-testimonial-form-title text-center' style={{ fontSize: '20px', width: '100%' }}>Price Estimation For <br /><span>{getCleaningTypeName(cleaningType)} </span> <br />Package:</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
-                        <p>Bedrooms: {formData.bedrooms}</p>
-                        <p>Bathrooms: {formData.bathrooms}</p>
-                        <p>Square Feet Range: {formData.squareFeetRange}</p>
-                        <p>City: {formData.city}</p>
-                        <p>Date: {formData.date ? formData.date.toDateString() : ''}</p>
-                        <p>
-                            Cleaning Items: {formData.cleaningItems.map(itemId => getCleaningItemLabel(itemId)).join(', ')}
-                        </p>
-                        <p>Total Amount: CAD {totalAmount}</p>
+                    <Modal.Body className='text-start'>
+                        <table className="table">
+                            <tbody>
+                                <tr>
+                                    <td className='col-6'>Number of Bedrooms:</td>
+                                    <td className='col-6'>{formData.bedrooms}</td>
+                                </tr>
+                                <tr>
+                                    <td>Number of Bathrooms:</td>
+                                    <td>{formData.bathrooms}</td>
+                                </tr>
+                                <tr>
+                                    <td>Square Feet Range:</td>
+                                    <td>{formData.squareFeetRange}</td>
+                                </tr>
+                                <tr>
+                                    <td>Location:</td>
+                                    <td>{formData.city}</td>
+                                </tr>
+                                <tr>
+                                    <td>Service Date and Time:</td>
+                                    <td>
+                                        {formData.date ? (
+                                            <div>
+                                                {formData.date.toLocaleString('en-US', {
+                                                    weekday: 'long',
+                                                    year: 'numeric',
+                                                    month: 'long',
+                                                    day: 'numeric',
+                                                    hour: 'numeric',
+                                                    minute: 'numeric',
+                                                    hour12: true,
+                                                })}
+                                            </div>
+                                        ) : ''}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Additional Requests:</td>
+                                    <td>{formData.cleaningItems.map(itemId => getCleaningItemLabel(itemId)).join(', ')}</td>
+                                </tr>
+                                <tr>
+                                    <td>Estimated Price:</td>
+                                    <td>CAD {totalAmount}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleCloseModal}>
+                    <Modal.Footer className="input-field d-flex justify-content-center">
+                        {/* <Button variant="secondary" onClick={handleCloseModal} className="yellow-btn">
                             Close
-                        </Button>
+                        </Button> */}
                         <Link
                             href={{
                                 pathname: "/booking",
@@ -253,7 +376,7 @@ const Cta = () => {
                                     booking: JSON.stringify(booking)
                                 }
                             }}>
-                            <Button variant="secondary">
+                            <Button variant="" className="yellow-btn">
                                 Book Now
                             </Button></Link>
                     </Modal.Footer>
