@@ -6585,6 +6585,13 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   margin-left: 20px;
 }
 
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100Vh;
+}
+
 .tp-prjects-tab-menu .nav-link {
   border: 1px solid #dee0e2;
   height: 50px;

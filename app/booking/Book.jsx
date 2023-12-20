@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useSearchParams } from "next/navigation";
 import { useRouter } from 'next/navigation';
+import { ClipLoader } from 'react-spinners';
+
 
 
 const PAYMENT_100 = 'https://buy.stripe.com/test_8wMaGigJNaeOg4E9AB';
@@ -11,22 +13,22 @@ const PAYMENT_200 = 'https://buy.stripe.com/test_cN201E2SX2Mm05G28a';
 const PAYMENT_250 = 'https://buy.stripe.com/test_aEU01E1OT0Ee4lWdQT';
 // function to fetch all the booking data from api
 
-const getBookings = async () => {
-    try {
-        const res = await fetch("http://neatguys.ca/api", { cache: "no-store" });
+// const getBookings = async () => {
+//     try {
+//         const res = await fetch("http://neatguys.ca/api", { cache: "no-store" });
 
-        if (!res.ok) {
-            throw new Error("Failed to fetch from api");
-        }
-        return res.json();
-    } catch (error) {
-        console.log("Error loading bookings:", error);
-    }
-};
+//         if (!res.ok) {
+//             throw new Error("Failed to fetch from api");
+//         }
+//         return res.json();
+//     } catch (error) {
+//         console.log("Error loading bookings:", error);
+//     }
+// };
 
 export default function Book() {
     const [bookings, setBookings] = useState([]);
-
+    const [loading, setLoading] = useState(false);
     const searchParams = useSearchParams();
     const booking = searchParams.get('booking');
     const estimate = JSON.parse(booking)
@@ -53,12 +55,28 @@ export default function Book() {
         e.preventDefault();
 
         try {
+            setLoading(true);
+
             const res = await fetch("https://neatguys.ca/api", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
                 },
-                body: JSON.stringify({ cleaningType, name, phone, email, adress, city, postalCode, bedrooms, bathrooms, squareFeetRange, cleaningItems, date, totalAmount })
+                body: JSON.stringify({
+                    cleaningType,
+                    name,
+                    phone,
+                    email,
+                    adress,
+                    city,
+                    postalCode,
+                    bedrooms,
+                    bathrooms,
+                    squareFeetRange,
+                    cleaningItems,
+                    date,
+                    totalAmount
+                })
             });
             if (res.ok) {
                 const paymentLink = getPaymentLink();
@@ -73,16 +91,16 @@ export default function Book() {
 
 
     // function to fetch all boking lists: to be used in dashboard
-    useEffect(() => {
-        const fetchData = async () => {
-            const result = await getBookings();
-            if (result) {
-                setBookings(result.bookings || []);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const result = await getBookings();
+    //         if (result) {
+    //             setBookings(result.bookings || []);
+    //         }
+    //     };
 
-        fetchData();
-    }, []);
+    //     fetchData();
+    // }, []);
 
     const getPaymentLink = () => {
         const amount = parseFloat(totalAmount);
