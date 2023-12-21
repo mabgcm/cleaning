@@ -75,8 +75,8 @@ const Cta = () => {
 
     const calculateTotalSqft = () => {
         // Convert the number of bedrooms into sqft using the average sqft per room
-        const bedroomsSqft = formData.bedrooms ? formData.bedrooms * 300 : 0;
-        const bathroomsSqft = formData.bathrooms ? formData.bathrooms * 300 : 0;
+        const bedroomsSqft = formData.bedrooms ? formData.bedrooms * 250 : 0;
+        const bathroomsSqft = formData.bathrooms ? formData.bathrooms * 250 : 0;
         const roomSqft = bedroomsSqft + bathroomsSqft;
 
         // Compare the calculated bedrooms sqft with the entered sqft by the user
@@ -124,14 +124,13 @@ const Cta = () => {
 
     const cleaningItems = [
         { id: 'cupboardsin', label: 'Cupboards', tooltipText: 'Info about Cupboards', description: 'Inside the cupboards' },
-        { id: 'closetin', label: 'Closets', tooltipText: 'Info about Cupboards', description: 'Inside the closets' },
         { id: 'ovenin', label: 'Oven', tooltipText: 'Info about Cupboards', description: 'Inside the Oven' },
         { id: 'fridge', label: 'Fridge', tooltipText: 'Info about Cupboards', description: 'Inside the fridge' },
         { id: 'dish', label: 'Dish Washing', tooltipText: 'Info about Cupboards', description: 'Washing the dishes' },
         { id: 'dishwasher', label: 'Loading Dishwasher', tooltipText: 'Info about Cupboards', description: 'Loading/unloading the dishwasher' },
         { id: 'wall', label: 'Marks on Wall', tooltipText: 'Info about Cupboards', description: 'Marks on the Wall' },
         { id: 'windows', label: 'Windows', tooltipText: 'Info about Cupboards', description: 'Cleaning the windows from inside' },
-        { id: 'linens', label: 'Linens Change', tooltipText: 'Info about Cupboards', description: 'Changing the linens' },
+        { id: 'baseboards', label: 'Cleaning the Baseboards', tooltipText: 'Info about Cupboards', description: 'Cleaning the Baseboards' },
     ];
 
     const cities = [
@@ -191,9 +190,9 @@ const Cta = () => {
                             <h4 className="tp-appoint-title text-center">Online Estimate </h4>
                         </div>
                     </div>
-                    <div className="row custom-pad-10 mx-2">
+                    <div className="row custom-pad-10 mx-2 centered">
 
-                        <div className="tp-appoint col-xl-2 col-lg-12 custom-pad-10 mx-2">
+                        <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
                                 <Form.Select onChange={(e) => handleInputChange('cleaningType', e.target.value)}>
                                     <option>Cleaning Type</option>
@@ -207,7 +206,7 @@ const Cta = () => {
                             </Form.Group>
                         </div>
 
-                        <div className="tp-appoint col-xl-2 col-lg-12 custom-pad-10 mx-2">
+                        <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
                                 <Form.Select onChange={(e) => handleInputChange('bedrooms', e.target.value)}>
                                     <option>Bedrooms</option>
@@ -221,10 +220,11 @@ const Cta = () => {
                             </Form.Group>
                         </div>
 
-                        <div className="tp-appoint col-xl-2 col-lg-12 custom-pad-10 mx-2">
+                        <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
                                 <Form.Select onChange={(e) => handleInputChange('bathrooms', e.target.value)}>
                                     <option>Bathrooms</option>
+                                    <option value="0">-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -235,7 +235,7 @@ const Cta = () => {
                             </Form.Group>
                         </div>
 
-                        <div className="tp-appoint col-xl-2 col-lg-12 custom-pad-10 mx-2">
+                        <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
                                 <Form.Select onChange={(e) => handleInputChange('squareFeetRange', e.target.value)}>
                                     <option>Square Feet Range</option>
@@ -249,7 +249,7 @@ const Cta = () => {
                                 </Form.Select>
                             </Form.Group>
                         </div>
-                        <div className="tp-appoint col-xl-2 col-lg-12 custom-pad-10 mx-2">
+                        <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
                                 <Form.Select onChange={(e) => handleInputChange('city', e.target.value)}>
                                     <option>Select City</option>
@@ -262,7 +262,7 @@ const Cta = () => {
                             </Form.Group>
                         </div>
 
-                        <div className="tp-appoint col-xl-2 col-lg-12 custom-pad-10 mx-2">
+                        <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
 
                                 <span className='row mx-0 p-0 d-flex'>
@@ -282,10 +282,10 @@ const Cta = () => {
                             </Form.Group>
                         </div>
                     </div>
-                    <div className="row custom-pad-20 mx-2">
+                    <div className="row custom-pad-20 mx-2 centered">
                         <div className="row d-flex justify-content-even custom-mar-10">
                             {cleaningItems.map((item) => (
-                                <div key={item.id} className="col-auto">
+                                <div key={item.id} className="col-md-12 col-lg-3">
                                     <OverlayTrigger
                                         trigger={['hover', 'focus']}
                                         overlay={<Tooltip id={`tooltip-${item.id}`}>{item.tooltipText}</Tooltip>}
@@ -304,7 +304,7 @@ const Cta = () => {
                         </div>
                     </div>
 
-                    <div className="row custom-pad-10">
+                    <div className="row custom-pad-20 mx-2">
                         <div className="tp-appoint text-end">
                             <button type="submit" className="theme-btn">
                                 <i className="flaticon-enter"></i>Calculate

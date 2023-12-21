@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useSearchParams } from "next/navigation";
 import { useRouter } from 'next/navigation';
-import { ClipLoader } from 'react-spinners';
 
 
 
@@ -89,19 +88,6 @@ export default function Book() {
         }
     }
 
-
-    // function to fetch all boking lists: to be used in dashboard
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const result = await getBookings();
-    //         if (result) {
-    //             setBookings(result.bookings || []);
-    //         }
-    //     };
-
-    //     fetchData();
-    // }, []);
-
     const getPaymentLink = () => {
         const amount = parseFloat(totalAmount);
 
@@ -119,10 +105,60 @@ export default function Book() {
         return PAYMENT_100;
     };
 
+    const getCleaningTypeName = (cleaningType) => {
+        switch (cleaningType) {
+            case 'deep':
+                return 'Deep Cleaning';
+            case 'movein':
+                return 'Move In / Out Cleaning';
+            case 'office':
+                return 'Office Cleaning';
+            case 'regular':
+                return 'Regular Cleaning';
+            case 'onetime':
+                return 'One-time Cleaning';
+            case 'airbnb':
+                return 'Airbnb Cleaning';
+            default:
+                return '';
+        }
+    };
+
+    const getCleaningItemsName = (cleaningItems) => {
+        switch (cleaningItems) {
+            case 'cupboardsin':
+                return ' Cleaning Inside the Kitchen Cupboards';
+            case 'ovenin':
+                return 'Cleaning Inside the Oven';
+            case 'fridge':
+                return 'Cleaning Inside the Fridge';
+            case 'dish':
+                return 'Hand-washing everything in the sink';
+            case 'dishwasher':
+                return 'Loading / Unloading the Dishwasher';
+            case 'wall':
+                return 'Cleaning the Walls';
+            case 'windows':
+                return 'Cleaning the Windows Glass from Inside';
+            case 'baseboard':
+                return 'Cleaning the Baseboards';
+            default:
+                return '';
+        }
+    };
+
     return (
-        <>
-            <Form onSubmit={handleSubmit} className='p-5'>
-                <Form.Group>
+        <div className='col-11 mx-auto'>
+
+
+
+            <Form onSubmit={handleSubmit} className='py-3'>
+                <div>
+                    Enter your details for the {getCleaningTypeName(cleaningType)} Package for a {squareFeetRange && `${squareFeetRange} square feet area with ${bedrooms} bedroom(s)`} {bathrooms && `and ${bathrooms} bathroom(s)`} {cleaningItems && cleaningItems.length > 0 && `, including the extra ${cleaningItems.map(item => getCleaningItemsName(item)).join(', ')} item(s)`}. The service is scheduled for {date && `${date},`} with a total amount of C${totalAmount}.00.
+                </div>
+
+
+                {/* <Form.Group>
                     <Form.Label>Bedrooms</Form.Label>
                     <Form.Control
                         onChange={(e) => setBedrooms(e.target.value)}
@@ -131,8 +167,9 @@ export default function Book() {
                         placeholder="Number of Bedrooms"
                         value={bedrooms}
                     />
-                </Form.Group>
-                <Form.Group>
+                </Form.Group> */}
+
+                {/* <Form.Group>
                     <Form.Label>Bathrooms</Form.Label>
                     <Form.Control
                         onChange={(e) => setBathrooms(e.target.value)}
@@ -141,8 +178,9 @@ export default function Book() {
                         placeholder="Number of bathrooms"
                         value={bathrooms}
                     />
-                </Form.Group>
-                <Form.Group>
+                </Form.Group> */}
+
+                {/* <Form.Group>
                     <Form.Label>Cleaning Area Size</Form.Label>
                     <Form.Control
                         onChange={(e) => setSquareFeetRange(e.target.value)}
@@ -151,8 +189,9 @@ export default function Book() {
                         placeholder="Square Meters"
                         value={`${squareFeetRange} square feet`}
                     />
-                </Form.Group>
-                <Form.Group>
+                </Form.Group> */}
+
+                {/* <Form.Group>
                     <Form.Label>Extra Items to Clean</Form.Label>
                     <Form.Control
                         onChange={(e) => setCleaningItems(e.target.value)}
@@ -161,9 +200,9 @@ export default function Book() {
                         placeholder="Items to clean"
                         value={cleaningItems.join(', ')}
                     />
-                </Form.Group>
+                </Form.Group> */}
 
-                <Form.Group>
+                {/* <Form.Group>
                     <Form.Label>Service Date</Form.Label>
                     <Form.Control
                         onChange={(e) => setServiceDate(e.target.value)}
@@ -172,9 +211,9 @@ export default function Book() {
                         placeholder="Service Date"
                         value={date}
                     />
-                </Form.Group>
+                </Form.Group> */}
 
-                <Form.Group>
+                {/* <Form.Group>
                     <Form.Label>Total Amount</Form.Label>
                     <Form.Control
                         onChange={(e) => setTotalAmount(e.target.value)}
@@ -183,7 +222,8 @@ export default function Book() {
                         placeholder="CAD"
                         value={`CAD ${totalAmount}`}
                     />
-                </Form.Group>
+                </Form.Group> */}
+
                 <Form.Group>
                     <Form.Label>Your Name:</Form.Label>
                     <Form.Control
@@ -238,9 +278,9 @@ export default function Book() {
                         value={postalCode}
                     />
                 </Form.Group>
-                <Button type='submit' className='btn btn-success mb-5 mt-3'>Create Booking</Button>
+                <Button type='submit' className='btn btn-block w-100 mb-5 mt-3' style={{ backgroundColor: '#075f33' }}>Go to Payment</Button>
 
             </Form>
-        </>
+        </div>
     );
 }

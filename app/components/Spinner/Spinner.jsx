@@ -1,13 +1,15 @@
 'use client'
 import { HashLoader } from "react-spinners";
 
-const Spinner = () => {
+const Spinner = ({ loading, loadingText }) => {
     return (
         <div className='spinner'>
             <HashLoader
                 color="#075F33"
-                size={100}
+                size={60}
+                loading={loading}
             />
+            <p>{loadingText}</p>
         </div>
     )
 }

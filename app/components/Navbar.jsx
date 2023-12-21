@@ -4,6 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BsInstagram } from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
+import logo from '../../public/assets/img/logo/logo.png'
+import { CgMenuGridR } from "react-icons/cg";
+
+
 
 
 
@@ -15,7 +19,7 @@ const Header = () => {
 
     const linkStyle = {
         textTransform: 'capitalize',
-        color: 'white',
+        color: '#ffde59',
         fontWeight: '400',
         transition: 'color 0.3s ease',
         textDecoration: 'none',
@@ -33,7 +37,7 @@ const Header = () => {
                         <div>
                             <div className="header-logo text-center">
                                 <Link href="/">
-                                    <Image src="/assets/img/logo/logo.png" className="img-fluid" width='300' height='100' priority={false} alt="logo not found" />
+                                    <Image src={logo} className="img-fluid" width='300' height='100' priority={false} alt="logo not found" />
                                 </Link>
                             </div>
                         </div>
@@ -50,11 +54,12 @@ const Header = () => {
                                 aria-expanded="false"
                                 aria-label="Toggle navigation"
                             >
-                                <span className="navbar-toggler-icon"></span>
+                                <span className=""><CgMenuGridR size='40' />
+                                </span>
                             </button>
                             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul className="navbar-nav d-flex justify-content-end">
-                                    <li className="nav-item navlink">
+                                    <li className="nav-item">
                                         <Link className="nav-link active" aria-current="page" href="/" style={linkStyle}>
                                             Home
                                         </Link>
@@ -80,9 +85,9 @@ const Header = () => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <div className="tp-footer-info-social">
-                                            <a href="/"><i><FaFacebookF className='icon' /> </i></a>
-                                            <a href="/"><i><BsInstagram className='icon' /> </i></a>
+                                        <div className="tp-footer-info-social mx-4">
+                                            <a href="/"><i><FaFacebookF className='icon' style={linkStyle} /> </i></a>
+                                            <a href="/"><i><BsInstagram className='icon' style={linkStyle} /> </i></a>
                                         </div>
                                     </li>
                                 </ul>

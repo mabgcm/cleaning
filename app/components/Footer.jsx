@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaMapMarkerAlt, FaEnvelopeOpen, FaFacebookF } from 'react-icons/fa';
 import { BsInstagram, BsChevronRight } from 'react-icons/bs';
-import Subscribe from './Subscribe';
+import logo from '../../public/assets/img/logo/logo.png'
 
 const Footer = () => {
     return (
@@ -15,11 +16,11 @@ const Footer = () => {
                                 <div className="tp-footer-widget footer-col-1 mb-30 wow fadeInUp" data-wow-delay=".3s">
                                     <div className="tp-footer-info">
                                         <div className="tp-footer-info-logo mb-35">
-                                            <Link href="/"><img src="assets/img/logo/logo.png" className="img-fluid" alt="img not found" /></Link>
+                                            <Link href="/"><Image src={logo} className="img-fluid" alt="img not found" /></Link>
                                         </div>
                                         <h4 className="mb-15"><a href="tel:02(850)2560-3">(647)770-2782</a></h4>
                                         <h6 className="mb-15"> <i > <FaEnvelopeOpen /> </i><a href="mailto:info@basictheme.com">info@neatguys.ca</a></h6>
-                                        <h6 className="mb-20"> <i> <FaMapMarkerAlt /> </i> 25/B Globe House Ave. Point Beach, New York</h6>
+                                        <h6 className="mb-20"> <i> <FaMapMarkerAlt /> </i> 179 Hickling Trail, Barrie</h6>
                                         <div className="tp-footer-info-social">
                                             <a href="/"><i><FaFacebookF className='icon' /> </i></a>
                                             <a href="/"><i><BsInstagram className='icon' /> </i></a>
@@ -27,63 +28,44 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-sm-6">
+                            <div className="col-lg-4 col-sm-6">
                                 <div className="tp-footer-widget footer-col-2 mb-30 wow fadeInUp" data-wow-delay=".6s">
                                     <h4 className="tp-footer-widget-title mb-35">Our Services</h4>
                                     <ul>
                                         <li><BsChevronRight
-                                            color='white' /><a href="#">Carpet Cleaning</a></li>
+                                            color='white' /><a href="/home/packages/deepclean">Deep Cleaning</a></li>
                                         <li><BsChevronRight
-                                            color='white' /><a href="#">Plumbing Serivices</a></li>
+                                            color='white' /><a href="/home/packages/move">Move In / Out Cleaning</a></li>
                                         <li><BsChevronRight
-                                            color='white' /><a href="#">Park Cleaning</a></li>
+                                            color='white' /><a href="/home/packages/office">Office Cleaning</a></li>
                                         <li><BsChevronRight
-                                            color='white' /><a href="#">Residential Services</a></li>
+                                            color='white' /><a href="/home/packages/regular">Regular Cleaning</a></li>
                                         <li><BsChevronRight
-                                            color='white' /><a href="#">Toilet Cleaning</a></li>
+                                            color='white' /><a href="/home/packages/onetime">One-Time Cleaning</a></li>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="/home/packages/airbnb">AirBNB Cleaning</a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <div className="tp-footer-widget footer-col-3 mb-30 wow fadeInUp" data-wow-delay=".9s">
-                                    <h4 className="tp-footer-widget-title mb-35">Recent News</h4>
-                                    <div className="tp-footer-news">
-                                        <div className="tp-footer-news-single mb-15">
-                                            <h6><Link href="/blogDetails">Orci magna pede, quisque sociis integer litora netus</Link></h6>
-                                            <span>Jun 02, 2021</span>
-                                        </div>
-                                        <div className="tp-footer-news-single">
-                                            <h6><Link href="/blogDetails">Congue morbi elit dictumst socio sit mauris congue sed.</Link></h6>
-                                            <span>Jun 02, 2021</span>
-                                        </div>
-                                    </div>
+                            <div className="col-lg-4 col-sm-6">
+                                <div className="tp-footer-widget footer-col-2 mb-30 wow fadeInUp" data-wow-delay=".6s">
+                                    <h4 className="tp-footer-widget-title mb-35">Site Map</h4>
+                                    <ul>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="/">Home</a></li>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="/home/about">About Us</a></li>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="/home/services">Packages</a></li>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="https://8fu286als2z.typeform.com/to/welhawPP" target='__blank'>Join Us</a></li>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="/home/contact">Contact Us</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <div className="tp-footer-widget footer-col-4 mb-30 wow fadeInUp" data-wow-delay="1.2s">
-                                    <h4 className="tp-footer-widget-title mb-40">Instagram</h4>
-                                    <div className="tp-footer-insta">
-                                        <a href="/">
-                                            <img src="assets/img/footer/footer-insta-1.jpg" className="img-fluid" alt="img not found" />
-                                        </a>
-                                        <a href="/">
-                                            <img src="assets/img/footer/footer-insta-2.jpg" className="img-fluid" alt="img not found" />
-                                        </a>
-                                        <a href="/">
-                                            <img src="assets/img/footer/footer-insta-3.jpg" className="img-fluid" alt="img not found" />
-                                        </a>
-                                        <a href="/">
-                                            <img src="assets/img/footer/footer-insta-4.jpg" className="img-fluid" alt="img not found" />
-                                        </a>
-                                        <a href="/">
-                                            <img src="assets/img/footer/footer-insta-5.jpg" className="img-fluid" alt="img not found" />
-                                        </a>
-                                        <a href="/">
-                                            <img src="assets/img/footer/footer-insta-6.jpg" className="img-fluid" alt="img not found" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+
+
                         </div>
                     </div>
                 </div>

@@ -6574,22 +6574,17 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   z-index: 100;
 }
 
-.announce {
-  background-color: #075f33;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.announce p {
-  color: white;
-  margin-left: 20px;
-}
-
 .spinner {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100Vh;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tp-prjects-tab-menu .nav-link {
