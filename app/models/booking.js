@@ -14,7 +14,15 @@ const bookingSchema = new Schema({
     squareFeetRange: String,
     cleaningItems: [String],
     date: String,
-    totalAmount: Number
+    totalAmount: Number,
+    paid: {
+        type: Boolean,
+        default: false // You can set a default value if needed
+    },
+    completed: {
+        type: Boolean,
+        default: false // You can set a default value if needed
+    }
 },
     {
         timestamps: true

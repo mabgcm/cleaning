@@ -17,7 +17,9 @@ export async function POST(request) {
         squareFeetRange,
         cleaningItems,
         date,
-        totalAmount } = await request.json();
+        totalAmount,
+        paid,
+        completed } = await request.json();
 
     await connectMongoDB();
 
@@ -35,7 +37,9 @@ export async function POST(request) {
         squareFeetRange,
         cleaningItems,
         date,
-        totalAmount
+        totalAmount,
+        paid,
+        completed
     });
 
     return NextResponse.json({ message: "Booking created" }, { status: 201 })

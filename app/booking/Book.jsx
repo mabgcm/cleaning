@@ -10,20 +10,7 @@ const PAYMENT_100 = 'https://buy.stripe.com/test_8wMaGigJNaeOg4E9AB';
 const PAYMENT_150 = 'https://buy.stripe.com/test_aEU9Ce3X1ev42dO144';
 const PAYMENT_200 = 'https://buy.stripe.com/test_cN201E2SX2Mm05G28a';
 const PAYMENT_250 = 'https://buy.stripe.com/test_aEU01E1OT0Ee4lWdQT';
-// function to fetch all the booking data from api
 
-// const getBookings = async () => {
-//     try {
-//         const res = await fetch("http://neatguys.ca/api", { cache: "no-store" });
-
-//         if (!res.ok) {
-//             throw new Error("Failed to fetch from api");
-//         }
-//         return res.json();
-//     } catch (error) {
-//         console.log("Error loading bookings:", error);
-//     }
-// };
 
 export default function Book() {
     const [bookings, setBookings] = useState([]);
@@ -45,6 +32,8 @@ export default function Book() {
     const [cleaningType, setCleaningType] = useState(estimate.cleaningType || "")
     const [date, setDate] = useState(estimate.date || "")
     const [totalAmount, setTotalAmount] = useState(estimate.totalAmount || "");
+    const [paid, setPaid] = useState(false);
+    const [completed, setCompleted] = useState(false);
 
 
 
@@ -74,7 +63,9 @@ export default function Book() {
                     squareFeetRange,
                     cleaningItems,
                     date,
-                    totalAmount
+                    totalAmount,
+                    paid,
+                    completed
                 })
             });
             if (res.ok) {
@@ -156,73 +147,6 @@ export default function Book() {
                 <div>
                     Enter your details for the {getCleaningTypeName(cleaningType)} Package for a {squareFeetRange && `${squareFeetRange} square feet area with ${bedrooms} bedroom(s)`} {bathrooms && `and ${bathrooms} bathroom(s)`} {cleaningItems && cleaningItems.length > 0 && `, including the extra ${cleaningItems.map(item => getCleaningItemsName(item)).join(', ')} item(s)`}. The service is scheduled for {date && `${date},`} with a total amount of C${totalAmount}.00.
                 </div>
-
-
-                {/* <Form.Group>
-                    <Form.Label>Bedrooms</Form.Label>
-                    <Form.Control
-                        onChange={(e) => setBedrooms(e.target.value)}
-                        disabled={true}
-                        type="text"
-                        placeholder="Number of Bedrooms"
-                        value={bedrooms}
-                    />
-                </Form.Group> */}
-
-                {/* <Form.Group>
-                    <Form.Label>Bathrooms</Form.Label>
-                    <Form.Control
-                        onChange={(e) => setBathrooms(e.target.value)}
-                        disabled={true}
-                        type="text"
-                        placeholder="Number of bathrooms"
-                        value={bathrooms}
-                    />
-                </Form.Group> */}
-
-                {/* <Form.Group>
-                    <Form.Label>Cleaning Area Size</Form.Label>
-                    <Form.Control
-                        onChange={(e) => setSquareFeetRange(e.target.value)}
-                        disabled={true}
-                        type="text"
-                        placeholder="Square Meters"
-                        value={`${squareFeetRange} square feet`}
-                    />
-                </Form.Group> */}
-
-                {/* <Form.Group>
-                    <Form.Label>Extra Items to Clean</Form.Label>
-                    <Form.Control
-                        onChange={(e) => setCleaningItems(e.target.value)}
-                        disabled={true}
-                        type="text"
-                        placeholder="Items to clean"
-                        value={cleaningItems.join(', ')}
-                    />
-                </Form.Group> */}
-
-                {/* <Form.Group>
-                    <Form.Label>Service Date</Form.Label>
-                    <Form.Control
-                        onChange={(e) => setServiceDate(e.target.value)}
-                        disabled={true}
-                        type="text"
-                        placeholder="Service Date"
-                        value={date}
-                    />
-                </Form.Group> */}
-
-                {/* <Form.Group>
-                    <Form.Label>Total Amount</Form.Label>
-                    <Form.Control
-                        onChange={(e) => setTotalAmount(e.target.value)}
-                        disabled={true}
-                        type="text"
-                        placeholder="CAD"
-                        value={`CAD ${totalAmount}`}
-                    />
-                </Form.Group> */}
 
                 <Form.Group>
                     <Form.Label>Your Name:</Form.Label>

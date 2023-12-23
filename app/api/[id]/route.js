@@ -17,7 +17,9 @@ export async function PUT(request, { params }) {
         newSquareFeetRange: squareFeetRange,
         newCleaningItems: cleaningItems,
         newDate: date,
-        newTotalAmount: totalAmount } = await request.json();
+        newTotalAmount: totalAmount,
+        newPaid: paid,
+        newCompleted: completed } = await request.json();
 
     console.log("Received date:", date);
 
@@ -35,7 +37,9 @@ export async function PUT(request, { params }) {
         squareFeetRange,
         cleaningItems,
         date,
-        totalAmount
+        totalAmount,
+        paid,
+        completed
     });
     return NextResponse.json({ message: "Booking updated" }, { status: 200 });
 }
