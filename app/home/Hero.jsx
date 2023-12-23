@@ -1,9 +1,9 @@
 'use client'
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
-import HomeHeroSingleSlide from './HomeHeroSingleSlide';
-import HomeHeroSingleSlide2 from './HomeHeroSingleSlide2';
-import HomeHeroSingleSlide3 from './HomeHeroSingleSlide3';
+import HomeHeroSingleSlide from '../components/HomeHeroSingleSlide';
+import HomeHeroSingleSlide2 from '../components/HomeHeroSingleSlide2';
+import HomeHeroSingleSlide3 from '../components/HomeHeroSingleSlide3';
 
 
 const HeroSection = () => {

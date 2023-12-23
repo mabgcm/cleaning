@@ -1,12 +1,4 @@
-/*-----------------------------------------------------------------------------------
-
-    Template Name: Klenar - Cleaning Service HTML5 Template
-    Description: Klenar - Cleaning Service HTML5 Template
-    Author: Theme_Pure
-    Version: 1.0
-
------------------------------------------------------------------------------------
-
+/* 
     CSS INDEX
     ===================
 
@@ -30,16 +22,15 @@
     19. Breadcrumb
     20. Contact
     21. Team
+ */
 
------------------------------------------------------------------------------------*/
-/*----------------------------------------*/
-/*  01. Theme default
-/*----------------------------------------*/
+
 /* 1. Theme default css */
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Spinnaker&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #064e2a;
@@ -139,7 +130,7 @@ textarea:focus {
 input,
 select,
 textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   opacity: 1;
 }
@@ -150,7 +141,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #064e2a;
   margin: 0px;
   font-style: normal;
@@ -209,7 +200,7 @@ select {
 
 input,
 select {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
 }
 
@@ -233,14 +224,14 @@ select {
 * input::-moz-placeholder {
   font-size: 16px;
   opacity: 1;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
 }
 
 * input::placeholder {
   font-size: 16px;
   opacity: 1;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
 }
 
@@ -1641,6 +1632,7 @@ select {
 .tp-section-title-two {
   font-size: 55px;
   line-height: 1.18;
+  font-family: 'Raleway', sans-serif;
 }
 
 
@@ -2723,7 +2715,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   position: relative;
   padding-left: 13px;
   z-index: 1;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   display: inline-block;
   margin-top: 3px;
 }
@@ -4279,7 +4271,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   font-size: 36px;
   color: #09150f;
   line-height: 1;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 30px;
   overflow: hidden;
   display: inline-block;
@@ -4292,7 +4284,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   transform: rotate(90deg);
   margin-bottom: 0px;
   text-align: left;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 500;
 }
 
@@ -4967,7 +4959,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   display: flex;
   align-items: center;
   background: #06ae5a;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   color: #ffffff;
   font-size: 20px;
@@ -5284,7 +5276,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   line-height: 1;
   color: #ffffff;
   margin-bottom: 5px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
 }
 
@@ -5299,7 +5291,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   color: #ffffff;
   line-height: 1.3;
   margin-bottom: 0px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
 }
 
@@ -5372,7 +5364,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .tp-fact-text-subtitle {
   font-size: 20px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 0px;
 }
 
@@ -5532,7 +5524,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 .tp-pricing-rate-title {
   font-weight: 700;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 60px;
   line-height: 0.5;
 }
@@ -5632,7 +5624,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 }
 
 .tp-pricing-two-rate h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   color: #09150f;
   line-height: 1;
@@ -6060,7 +6052,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .tp-testimonial-two-form-wrapper .input-field textarea {
   color: #6a6b71;
   font-size: 15px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   display: block;
   font-weight: 500;
   height: 60px;
@@ -6599,7 +6591,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   cursor: pointer;
   display: inline-block;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -6728,7 +6720,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   display: inline-block;
   margin-bottom: 0px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -7546,7 +7538,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .ablog__text4 blockquote:before {
   content: "\f10e";
   position: static;
-  font-family: "Font Awesome 5 Pro";
+  font-family: 'Raleway', sans-serif;
   font-size: 32px;
   color: #06ae5a;
   line-height: 1;
@@ -7886,14 +7878,14 @@ only screen and (min-width: 768px) and (max-width: 991px),
   font-size: 24px;
   font-weight: 500;
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .tp-footer-info h6 {
   font-size: 16px;
   font-weight: 400;
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   line-height: 1.6;
   display: inline-flex;
 }
@@ -7959,7 +7951,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .tp-footer-news-single h6 {
   font-size: 16px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #ffffff;
   line-height: 27px;
   margin-bottom: 5px;
@@ -8790,7 +8782,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   color: #626664;
   font-weight: 700;
   margin-right: 30px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 @media (max-width: 767px) {
