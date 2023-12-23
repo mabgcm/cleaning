@@ -18,24 +18,28 @@ const Process = () => {
                                     <img src="assets/img/about/choose-img-1.jpg" alt="img not found" />
                                 </div>
                                 <div className="row">
-                                    <div className="col-sm-6">
+                                    <div className="col">
                                         <div className="tp-choose-timeline ml-15 mb-30">
                                             <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay=".4s"><h5>1</h5>
                                                 <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color">
                                                     <Link href="/servicesDetails">Get Your <br /> Free Estimate</Link>
                                                 </h4>
-                                                <p>Obtain a free estimate by specifying your service preferences and receiving a tailored price.</p>
+                                                <p>Begin your journey by obtaining a comprehensive and personalized estimate for the services you desire. Specify your service preferences, and our system will generate a tailored price, ensuring transparency and accuracy in every detail.</p>
                                             </div>
                                             <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay=".6s"><h5>2</h5>
                                                 <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color">
                                                     <Link href="/servicesDetails">Confirm <br /> Your Booking</Link>
                                                 </h4>
-                                                <p>Enter your personal details and securely complete the payment process, ensuring a an efficient booking experience.</p>
+                                                <p>Once you've received your free estimate and decided on the services that suit your needs, proceed to confirm your booking effortlessly. Simply provide your personal details, and follow our user-friendly process to complete the payment. This ensures a smooth and convenient booking experience, allowing you to secure your reservation quickly and easily.</p>
+                                            </div>
+                                            <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay=".6s"><h5>3</h5>
+                                                <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color"><Link href="">Enjoy the Service and<br /> Give Your Feedback</Link></h4>
+                                                <p>Sit back, relax, and enjoy the exceptional service you've booked. Your satisfaction is our top priority. After the service is complete, we value your opinion. Share your feedback with us – your insights are crucial in helping us enhance our services and provide an even better experience for our customers. Your feedback contributes to the continuous improvement of our offerings, making future interactions even more tailored to your needs.</p>
                                             </div>
 
                                         </div>
                                     </div>
-                                    <div className="col-sm-6">
+                                    {/* <div className="col-sm-6">
                                         <div className="tp-choose-timeline ml-15 mb-30">
                                             <div className="tp-choose-timeline-single mb-55 pl-35 wow fadeInUp" data-wow-delay="1s"><h5>3</h5>
                                                 <h4 className="tp-choose-timeline-single-title mb-15 hover-theme-color"><Link href="/servicesDetails">Get Your <br /> Final Confirmation</Link></h4>
@@ -47,7 +51,7 @@ const Process = () => {
                                             </div>
 
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
