@@ -269,8 +269,9 @@ const Cta = () => {
                                     <DatePicker
                                         selected={selectedDate}
                                         onChange={(date) => handleInputChange('date', date)}
-                                        placeholderText="Select Date"
+                                        placeholderText="Select Date and Time"
                                         showTimeSelect
+                                        withPortal
                                         dateFormat="Pp"
                                         minDate={new Date()}
                                         filterDate={(date) => date.getDay() !== 6 && date.getDay() !== 0}
@@ -313,12 +314,12 @@ const Cta = () => {
                     </div>
                 </Form>
 
-                <Modal show={showModal} onHide={handleCloseModal} className='tp-testimonial-two-form'>
-                    <Modal.Header className='col-12'>
+                <Modal show={showModal} onHide={handleCloseModal} className='tp-testimonial-two-form w-75 centered'>
+                    <Modal.Header className='col-12 border-0'>
                         <Modal.Title className='tp-testimonial-form-title text-center' style={{ fontSize: '20px', width: '100%' }}>Price Estimation For <br /><span>{getCleaningTypeName(cleaningType)} </span> <br />Package:</Modal.Title>
                     </Modal.Header>
                     <Modal.Body className='text-start'>
-                        <table className="table">
+                        <table className="">
                             <tbody>
                                 <tr>
                                     <td className='col-6'>Number of Bedrooms:</td>
@@ -365,7 +366,7 @@ const Cta = () => {
                             </tbody>
                         </table>
                     </Modal.Body>
-                    <Modal.Footer className="input-field d-flex justify-content-center">
+                    <Modal.Footer className="input-field d-flex justify-content-center border-0">
                         <Link
                             href={{
                                 pathname: "/booking",
