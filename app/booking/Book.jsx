@@ -75,9 +75,11 @@ export default function Book() {
                 throw new Error("Failed to complete the booking")
             }
         } catch (error) {
-
+            // Handle error, if needed
+        } finally {
+            setLoading(false); // Set loading back to false after the operation is complete
         }
-    }
+    };
 
     const getPaymentLink = () => {
         const amount = parseFloat(totalAmount);
@@ -202,7 +204,9 @@ export default function Book() {
                         value={postalCode}
                     />
                 </Form.Group>
-                <Button type='submit' className='btn btn-block w-100 mb-5 mt-3' style={{ backgroundColor: '#075f33' }}>Go to Payment</Button>
+                <Button type='submit' disabled={loading} className='btn btn-block w-100 mb-5 mt-3' style={{ backgroundColor: '#075f33' }}>
+                    {loading ? 'Processing...' : 'Go to Payment'}
+                </Button>
 
             </Form>
         </div>

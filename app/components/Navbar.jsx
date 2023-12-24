@@ -75,6 +75,16 @@ const Header = () => {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
+                                        <Link className="nav-link" href="/home/process" style={linkStyle}>
+                                            How to Book
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" href="/home/estimate" style={linkStyle}>
+                                            Booking
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
                                         <Link className="nav-link" href="https://8fu286als2z.typeform.com/to/welhawPP" target='_blank' style={linkStyle}>
                                             Join Us
                                         </Link>
@@ -86,8 +96,8 @@ const Header = () => {
                                     </li>
                                     <li>
                                         <div className="tp-footer-info-social mx-4">
-                                            <a href="/"><i><FaFacebookF className='icon' style={linkStyle} /> </i></a>
-                                            <a href="/"><i><BsInstagram className='icon' style={linkStyle} /> </i></a>
+                                            <a href="https://www.facebook.com/neatguys.ca"><i><FaFacebookF className='icon' style={linkStyle} /> </i></a>
+                                            <a href="https://www.instagram.com/neatguys.ca"><i><BsInstagram className='icon' style={linkStyle} /> </i></a>
                                         </div>
                                     </li>
                                 </ul>

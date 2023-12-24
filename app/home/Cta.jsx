@@ -194,8 +194,8 @@ const Cta = () => {
 
                         <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
-                                <Form.Select onChange={(e) => handleInputChange('cleaningType', e.target.value)}>
-                                    <option>Cleaning Type</option>
+                                <Form.Select onChange={(e) => handleInputChange('cleaningType', e.target.value)} required>
+                                    <option selected disabled value="">Cleaning Type</option>
                                     <option value="deep">Deep Cleaning</option>
                                     <option value="movein">Move-in Cleaning</option>
                                     <option value="office">Office Cleaning</option>
@@ -208,8 +208,8 @@ const Cta = () => {
 
                         <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
-                                <Form.Select onChange={(e) => handleInputChange('bedrooms', e.target.value)}>
-                                    <option>Bedrooms</option>
+                                <Form.Select onChange={(e) => handleInputChange('bedrooms', e.target.value)} required>
+                                    <option selected disabled value="">Bedrooms</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -222,8 +222,8 @@ const Cta = () => {
 
                         <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
-                                <Form.Select onChange={(e) => handleInputChange('bathrooms', e.target.value)}>
-                                    <option>Bathrooms</option>
+                                <Form.Select onChange={(e) => handleInputChange('bathrooms', e.target.value)} required>
+                                    <option selected disabled value="">Bathrooms</option>
                                     <option value="0">-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -237,8 +237,8 @@ const Cta = () => {
 
                         <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
-                                <Form.Select onChange={(e) => handleInputChange('squareFeetRange', e.target.value)}>
-                                    <option>Square Feet Range</option>
+                                <Form.Select onChange={(e) => handleInputChange('squareFeetRange', e.target.value)} required>
+                                    <option selected disabled value="">Square Feet Range</option>
                                     <option value="0-500">0 - 500 sqft</option>
                                     <option value="500-1000">500 - 1000 sqft</option>
                                     <option value="1000-1500">1000 - 1500 sqft</option>
@@ -251,8 +251,8 @@ const Cta = () => {
                         </div>
                         <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
-                                <Form.Select onChange={(e) => handleInputChange('city', e.target.value)}>
-                                    <option>Select City</option>
+                                <Form.Select onChange={(e) => handleInputChange('city', e.target.value)} required>
+                                    <option selected disabled value="">Select City</option>
                                     {cities.map((city) => (
                                         <option key={city} value={city}>
                                             {city}
@@ -265,7 +265,7 @@ const Cta = () => {
                         <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
 
-                                <span className='row mx-0 p-0 d-flex'>
+                                <span className='row mx-0 p-0 d-flex' required>
                                     <DatePicker
                                         selected={selectedDate}
                                         onChange={(date) => handleInputChange('date', date)}
@@ -306,14 +306,14 @@ const Cta = () => {
 
                     <div className="row custom-pad-20 mx-2">
                         <div className="tp-appoint text-end">
-                            <button type="submit" className="theme-btn">
+                            <button type="submit" className="theme-btn mt-3">
                                 <i className="flaticon-enter"></i>Calculate
                             </button>
                         </div>
                     </div>
                 </Form>
 
-                <Modal show={showModal} onHide={handleCloseModal} className='tp-testimonial-two-form w-75 centered'>
+                <Modal show={showModal} onHide={handleCloseModal} className='tp-testimonial-two-form centered'>
                     <Modal.Header className='col-12 border-0'>
                         <Modal.Title className='tp-testimonial-form-title text-center' style={{ fontSize: '20px', width: '100%' }}>Price Estimation For <br /><span>{getCleaningTypeName(cleaningType)} </span> <br />Package:</Modal.Title>
                     </Modal.Header>

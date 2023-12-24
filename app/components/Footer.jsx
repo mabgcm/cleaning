@@ -22,8 +22,8 @@ const Footer = () => {
                                         <h6 className="mb-15"> <i > <FaEnvelopeOpen /> </i><a href="mailto:info@basictheme.com">info@neatguys.ca</a></h6>
                                         <h6 className="mb-20"> <i> <FaMapMarkerAlt /> </i> 179 Hickling Trail, Barrie</h6>
                                         <div className="tp-footer-info-social">
-                                            <a href="/"><i><FaFacebookF className='icon' /> </i></a>
-                                            <a href="/"><i><BsInstagram className='icon' /> </i></a>
+                                            <a href="https://www.facebook.com/neatguys.ca"><i><FaFacebookF className='icon' /> </i></a>
+                                            <a href="https://www.instagram.com/neatguys.ca"><i><BsInstagram className='icon' /> </i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -57,6 +57,10 @@ const Footer = () => {
                                             color='white' /><a href="/home/about">About Us</a></li>
                                         <li><BsChevronRight
                                             color='white' /><a href="/home/services">Packages</a></li>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="/home/process">How To Book</a></li>
+                                        <li><BsChevronRight
+                                            color='white' /><a href="/home/estimate">Booking</a></li>
                                         <li><BsChevronRight
                                             color='white' /><a href="https://8fu286als2z.typeform.com/to/welhawPP" target='__blank'>Join Us</a></li>
                                         <li><BsChevronRight
