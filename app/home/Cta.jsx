@@ -314,7 +314,7 @@ const Cta = () => {
                     </div>
                 </Form>
 
-                <Modal show={showModal} onHide={handleCloseModal} className='centered px-3'>
+                <Modal show={showModal} onHide={handleCloseModal} className='centered mx-1'>
                     <Modal.Header className='col-12 border-0'>
                         <Modal.Title className='tp-testimonial-form-title text-center' style={{ fontSize: '20px', width: '100%' }}>Price Estimation For <br /><span>{getCleaningTypeName(cleaningType)} </span> <br />Package:</Modal.Title>
                     </Modal.Header>
