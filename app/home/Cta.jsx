@@ -125,15 +125,16 @@ const Cta = () => {
     };
 
     const cleaningItems = [
-        { id: 'cupboardsin', label: 'Cupboards', tooltipText: 'Info about Cupboards', description: 'Inside the cupboards' },
-        { id: 'ovenin', label: 'Oven', tooltipText: 'Info about Cupboards', description: 'Inside the Oven' },
-        { id: 'fridge', label: 'Fridge', tooltipText: 'Info about Cupboards', description: 'Inside the fridge' },
-        { id: 'dish', label: 'Dish Washing', tooltipText: 'Info about Cupboards', description: 'Washing the dishes' },
-        { id: 'dishwasher', label: 'Loading Dishwasher', tooltipText: 'Info about Cupboards', description: 'Loading/unloading the dishwasher' },
-        { id: 'wall', label: 'Marks on Wall', tooltipText: 'Info about Cupboards', description: 'Marks on the Wall' },
-        { id: 'windows', label: 'Windows', tooltipText: 'Info about Cupboards', description: 'Cleaning the windows from inside' },
-        { id: 'baseboards', label: 'Cleaning the Baseboards', tooltipText: 'Info about Cupboards', description: 'Cleaning the Baseboards' },
+        { id: 'cupboardsin', label: 'Cupboards', tooltipText: 'Cleaning inside the cupboards', description: 'Cleaning inside the cupboards' },
+        { id: 'ovenin', label: 'Oven', tooltipText: 'Cleaning inside the Oven', description: 'Cleaning inside the Oven' },
+        { id: 'fridge', label: 'Fridge', tooltipText: 'Cleaning inside the fridge', description: 'Cleaning inside the fridge' },
+        { id: 'dish', label: 'Dish Washing', tooltipText: 'Washing the dishes by hand', description: 'Washing the dishes by hand' },
+        { id: 'dishwasher', label: 'Loading the Dishwasher', tooltipText: 'Loading/Unloading the dishwasher', description: 'Loading/Unloading the dishwasher' },
+        { id: 'wall', label: 'Marks on Wall', tooltipText: 'Cleaning the marks on the Wall', description: 'Cleaning the marks on the Wall' },
+        { id: 'windows', label: 'Windows', tooltipText: 'Cleaning the windows from inside', description: 'Cleaning the windows from inside' },
+        { id: 'baseboards', label: 'Cleaning the Baseboards', tooltipText: 'Cleaning the Baseboards', description: 'Cleaning the Baseboards' },
     ];
+
 
     const cities = [
         'Toronto',
@@ -241,13 +242,13 @@ const Cta = () => {
                             <Form.Group className="row custom-mar-20">
                                 <Form.Select onChange={(e) => handleInputChange('squareFeetRange', e.target.value)} required>
                                     <option selected disabled value="">Square Feet Range</option>
-                                    <option value="500">0 - 500 sqft</option>
-                                    <option value="1000">500 - 1000 sqft</option>
-                                    <option value="1500">1000 - 1500 sqft</option>
-                                    <option value="2000">1501 - 2000 sqft</option>
-                                    <option value="2500">2001 - 2500 sqft</option>
-                                    <option value="3000">2501 - 3000 sqft</option>
-                                    <option value="3500">3001 - 3500 sqft</option>
+                                    <option value="0 - 500">0 - 500 sqft</option>
+                                    <option value="500 - 1000">500 - 1000 sqft</option>
+                                    <option value="1000 - 1500">1000 - 1500 sqft</option>
+                                    <option value="1501 - 2000">1501 - 2000 sqft</option>
+                                    <option value="2001 - 2500">2001 - 2500 sqft</option>
+                                    <option value="2501 - 3000">2501 - 3000 sqft</option>
+                                    <option value="3001 - 3500">3001 - 3500 sqft</option>
                                 </Form.Select>
                             </Form.Group>
                         </div>
