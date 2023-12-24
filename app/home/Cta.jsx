@@ -271,6 +271,7 @@ const Cta = () => {
                                         onChange={(date) => handleInputChange('date', date)}
                                         placeholderText="Select Date and Time"
                                         showTimeSelect
+                                        disabledKeyboardNavigation
                                         dateFormat="Pp"
                                         minDate={new Date()}
                                         filterDate={(date) => date.getDay() !== 6 && date.getDay() !== 0}
