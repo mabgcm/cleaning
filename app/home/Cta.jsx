@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import { Form, OverlayTrigger, Tooltip, Modal, Button } from 'react-bootstrap';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Link from 'next/link'
+import Link from 'next/link';
+import { CgCheckO } from 'react-icons/cg';
+
 
 
 
@@ -322,27 +324,26 @@ const Cta = () => {
                         <table className="">
                             <tbody>
                                 <tr>
-                                    <td className='col-6'>Number of Bedrooms:</td>
-                                    <td className='col-6'>{formData.bedrooms}</td>
+                                    <td className='fw-semibold pb-2'>Number of Bedrooms: <span className='fw-normal'>{formData.bedrooms}</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td className='fw-semibold pb-2'>Number of Bathrooms: <span className='fw-normal'>{formData.bathrooms}</span></td>
                                 </tr>
                                 <tr>
-                                    <td>Number of Bathrooms:</td>
-                                    <td>{formData.bathrooms}</td>
+                                    <td className='fw-semibold pb-2'>Square Feet Range: <span className='fw-normal'>{formData.squareFeetRange} sqft</span></td>
                                 </tr>
                                 <tr>
-                                    <td>Square Feet Range:</td>
-                                    <td>{formData.squareFeetRange}</td>
+                                    <td className='fw-semibold pb-2'>Location: <span className='fw-normal'>{formData.city}</span></td>
                                 </tr>
                                 <tr>
-                                    <td>Location:</td>
-                                    <td>{formData.city}</td>
+                                    <td className='fw-semibold'>Service Date and Time:</td>
                                 </tr>
                                 <tr>
-                                    <td>Service Date and Time:</td>
-                                    <td>
+                                    <th colSpan={2} className='px-2 fw-normal pb-2'>
                                         {formData.date ? (
                                             <div>
-                                                {formData.date.toLocaleString('en-US', {
+                                                <CgCheckO /> {formData.date.toLocaleString('en-US', {
                                                     weekday: 'long',
                                                     year: 'numeric',
                                                     month: 'long',
@@ -353,15 +354,16 @@ const Cta = () => {
                                                 })}
                                             </div>
                                         ) : ''}
-                                    </td>
+                                    </th>
                                 </tr>
                                 <tr>
-                                    <td>Additional Requests:</td>
-                                    <td>{formData.cleaningItems.map(itemId => getCleaningItemLabel(itemId)).join(', ')}</td>
+                                    <td className='fw-semibold'>Additional Requests:</td>
                                 </tr>
                                 <tr>
-                                    <td>Estimated Price:</td>
-                                    <td>CAD {totalAmount}</td>
+                                    <th className='px-2 fw-normal pb-3' colSpan={2}> <CgCheckO /> {formData.cleaningItems.map(itemId => getCleaningItemLabel(itemId)).join(', ')}</th>
+                                </tr>
+                                <tr>
+                                    <td className='fw-semibold'>Estimated Price: <span className='fw-semibold text-danger'>CAD{totalAmount}</span></td>
                                 </tr>
                             </tbody>
                         </table>
