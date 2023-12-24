@@ -241,13 +241,13 @@ const Cta = () => {
                             <Form.Group className="row custom-mar-20">
                                 <Form.Select onChange={(e) => handleInputChange('squareFeetRange', e.target.value)} required>
                                     <option selected disabled value="">Square Feet Range</option>
-                                    <option value="0-500">0 - 500 sqft</option>
-                                    <option value="500-1000">500 - 1000 sqft</option>
-                                    <option value="1000-1500">1000 - 1500 sqft</option>
-                                    <option value="1501-2000">1501 - 2000 sqft</option>
-                                    <option value="2001-2500">2001 - 2500 sqft</option>
-                                    <option value="2501-3000">2501 - 3000 sqft</option>
-                                    <option value="3001-3500">3001 - 3500 sqft</option>
+                                    <option value="500">0 - 500 sqft</option>
+                                    <option value="1000">500 - 1000 sqft</option>
+                                    <option value="1500">1000 - 1500 sqft</option>
+                                    <option value="2000">1501 - 2000 sqft</option>
+                                    <option value="2500">2001 - 2500 sqft</option>
+                                    <option value="3000">2501 - 3000 sqft</option>
+                                    <option value="3500">3001 - 3500 sqft</option>
                                 </Form.Select>
                             </Form.Group>
                         </div>
@@ -361,14 +361,14 @@ const Cta = () => {
                                 </tr>
 
                                 {formData.cleaningItems.map((itemId) => (
-                                    <tr key={itemId}>
+                                    <tr key={itemId} className=''>
                                         <td className='px-2'>
                                             <CgCheckO /> {getCleaningItemLabel(itemId)}
                                         </td>
                                     </tr>
                                 ))}
                                 <tr>
-                                    <td className='fw-semibold'>Estimated Price: <span className='fw-semibold text-danger'>CAD{totalAmount}</span></td>
+                                    <td className='fw-semibold pt-2'>Estimated Price: <span className='fw-semibold text-danger'>CAD{totalAmount}</span></td>
                                 </tr>
                             </tbody>
                         </table>
