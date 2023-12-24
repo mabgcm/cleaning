@@ -359,9 +359,14 @@ const Cta = () => {
                                 <tr>
                                     <td className='fw-semibold'>Additional Requests:</td>
                                 </tr>
-                                <tr>
-                                    <th className='px-2 fw-normal pb-3' colSpan={2}> <CgCheckO /> {formData.cleaningItems.map(itemId => getCleaningItemLabel(itemId)).join(', ')}</th>
-                                </tr>
+
+                                {formData.cleaningItems.map((itemId) => (
+                                    <tr key={itemId}>
+                                        <td className='px-2'>
+                                            <CgCheckO /> {getCleaningItemLabel(itemId)}
+                                        </td>
+                                    </tr>
+                                ))}
                                 <tr>
                                     <td className='fw-semibold'>Estimated Price: <span className='fw-semibold text-danger'>CAD{totalAmount}</span></td>
                                 </tr>
