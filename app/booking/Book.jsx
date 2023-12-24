@@ -147,60 +147,63 @@ export default function Book() {
 
             <Form onSubmit={handleSubmit} className='py-3'>
                 <div>
-                    Enter your details for the {getCleaningTypeName(cleaningType)} Package for a {squareFeetRange && `${squareFeetRange} square feet area with ${bedrooms} bedroom(s)`} {bathrooms && `and ${bathrooms} bathroom(s)`} {cleaningItems && cleaningItems.length > 0 && `, including the extra ${cleaningItems.map(item => getCleaningItemsName(item)).join(', ')} item(s)`}. The service is scheduled for {date && `${date},`} with a total amount of C${totalAmount}.00.
+                    Enter your details for the <span className='fw-semibold'>{getCleaningTypeName(cleaningType)} Package</span> for <span className='fw-semibold'>{squareFeetRange && `${squareFeetRange}`}</span>  square feet area with <span className='fw-semibold'>{bedrooms} bedroom(s)</span> and <span className='fw-semibold'>{bathrooms && `${bathrooms} bathroom(s)`}</span>, including the  <span className='fw-semibold'>{cleaningItems && cleaningItems.length > 0 && `, ${cleaningItems.map(item => getCleaningItemsName(item)).join(', ')}`}</span> item(s). The service will be scheduled for <span className='fw-semibold'>{date && `${date},`}</span>  with the total amount of <span className='fw-semibold text-danger'>C${totalAmount}.00</span> .
                 </div>
 
-                <Form.Group>
-                    <Form.Label>Your Name:</Form.Label>
+                <Form.Group className='mt-3'>
+                    <Form.Label className='fw-semibold'> Your Name:</Form.Label>
                     <Form.Control
                         onChange={(e) => setName(e.target.value)}
                         type="text"
-                        placeholder="Full Name"
+                        placeholder="Your full name.."
                         value={name}
                     />
                 </Form.Group>
-                <Form.Group>
-                    <Form.Label>Your Phone Number:</Form.Label>
+                <Form.Group className='mt-3'>
+                    <Form.Label className='fw-semibold'>Your Phone Number:</Form.Label>
                     <Form.Control
                         onChange={(e) => setPhone(e.target.value)}
                         type="text"
-                        placeholder="Phone number to contact"
+                        placeholder="Your phone number.."
                         value={phone}
                     />
                 </Form.Group>
-                <Form.Group>
-                    <Form.Label>Your Email:</Form.Label>
+
+                <Form.Group className='mt-3'>
+                    <Form.Label className='fw-semibold'>Your Email:</Form.Label>
                     <Form.Control
                         onChange={(e) => setEmail(e.target.value)}
                         type="text"
-                        placeholder="Your email"
+                        placeholder="Your email.."
                         value={email}
                     />
                 </Form.Group>
-                <Form.Group>
-                    <Form.Label>Your Adress:</Form.Label>
+
+                <Form.Group className='mt-3'>
+                    <Form.Label className='fw-semibold'>Your Adress:</Form.Label>
                     <Form.Control
                         onChange={(e) => setAdress(e.target.value)}
                         type="text"
-                        placeholder="The adress of the cleaning"
+                        placeholder="The open adress of the cleaning location"
                         value={adress}
                     />
                 </Form.Group>
-                <Form.Group>
-                    <Form.Label>City:</Form.Label>
+
+                <Form.Group className='mt-3'>
+                    <Form.Label className='fw-semibold'>City:</Form.Label>
                     <Form.Control
                         onChange={(e) => setCity(e.target.value)}
                         type="text"
-                        placeholder="Phone number to contact"
                         value={city}
                     />
                 </Form.Group>
-                <Form.Group>
-                    <Form.Label>Your Postal Code:</Form.Label>
+
+                <Form.Group className='mt-3'>
+                    <Form.Label className='fw-semibold'>Your Postal Code:</Form.Label>
                     <Form.Control
                         onChange={(e) => setPostalCode(e.target.value)}
                         type="text"
-                        placeholder="Postal Code"
+                        placeholder="Your Postal Code.."
                         value={postalCode}
                     />
                 </Form.Group>
