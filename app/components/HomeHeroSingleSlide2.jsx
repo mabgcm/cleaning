@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import { MotionAnimate } from 'react-motion-animate'
+import BookNow from './BookNow';
 
 const HomeHeroSingleSlide2 = () => {
 
@@ -53,10 +53,7 @@ const HomeHeroSingleSlide2 = () => {
                                     </h1>
 
                                     <div className="tp-slider-btn">
-                                        <div >
-                                            <Link href="/about" className="theme-btn text-white">
-                                                <i className="flaticon-enter"></i> Book Now!</Link>
-                                        </div>
+                                        <BookNow />
                                     </div>
 
 

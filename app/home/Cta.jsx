@@ -187,7 +187,7 @@ const Cta = () => {
                 <Form className="row custom-mar-20" onSubmit={handleSubmit}>
                     <div className="row custom-pad-20">
                         <div className="tp-appoint wow fadeInUp" data-wow-delay=".1s">
-                            <h4 className="tp-appoint-title text-center">Online Estimate </h4>
+                            <h4 className="tp-appoint-title text-center">Free Estimate </h4>
                         </div>
                     </div>
                     <div className="row custom-pad-10 mx-2 centered">
@@ -313,7 +313,7 @@ const Cta = () => {
                     </div>
                 </Form>
 
-                <Modal show={showModal} onHide={handleCloseModal} className='tp-testimonial-two-form centered'>
+                <Modal show={showModal} onHide={handleCloseModal} className='centered px-1'>
                     <Modal.Header className='col-12 border-0'>
                         <Modal.Title className='tp-testimonial-form-title text-center' style={{ fontSize: '20px', width: '100%' }}>Price Estimation For <br /><span>{getCleaningTypeName(cleaningType)} </span> <br />Package:</Modal.Title>
                     </Modal.Header>
