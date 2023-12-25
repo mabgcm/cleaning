@@ -96,8 +96,8 @@ const Header = () => {
                                     </li>
                                     <li>
                                         <div className="tp-footer-info-social mx-4">
-                                            <a href="https://www.facebook.com/neatguys.ca"><i><FaFacebookF className='icon' style={linkStyle} /> </i></a>
-                                            <a href="https://www.instagram.com/neatguys.ca"><i><BsInstagram className='icon' style={linkStyle} /> </i></a>
+                                            <a href="https://www.facebook.com/neatguys.ca"><i><FaFacebookF className='icon' /> </i></a>
+                                            <a href="https://www.instagram.com/neatguys.ca"><i><BsInstagram className='icon' /> </i></a>
                                         </div>
                                     </li>
                                 </ul>
