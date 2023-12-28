@@ -77,8 +77,8 @@ const Cta = () => {
 
     const calculateTotalSqft = () => {
         // Convert the number of bedrooms into sqft using the average sqft per room
-        const bedroomsSqft = formData.bedrooms ? formData.bedrooms * 250 : 0;
-        const bathroomsSqft = formData.bathrooms ? formData.bathrooms * 250 : 0;
+        const bedroomsSqft = formData.bedrooms ? formData.bedrooms * 300 : 0;
+        const bathroomsSqft = formData.bathrooms ? formData.bathrooms * 300 : 0;
         const roomSqft = bedroomsSqft + bathroomsSqft;
 
         // Compare the calculated bedrooms sqft with the entered sqft by the user
@@ -110,10 +110,15 @@ const Cta = () => {
 
         // Calculate the total hours
         let totalHours = Math.ceil(totalSqft / 500); // 1 hour for every 500 sqft
-        totalHours += formData.cleaningItems.length; // 1 hour for each selected extra item
+        // Sum up the fees for selected cleaning items
+        const additionalFee = formData.cleaningItems.reduce((acc, itemId) => {
+            const selectedCleaningItem = cleaningItems.find(item => item.id === itemId);
+            return acc + (selectedCleaningItem ? selectedCleaningItem.fee || 0 : 0);
+        }, 0);
 
+        const base_fee = 50
         // Adjust total hours and calculate the total amount
-        const totalPrice = totalHours * hourlyRate;
+        const totalPrice = base_fee + (totalHours * hourlyRate) + additionalFee;
         setTotalAmount(totalPrice);
 
         // Display the modal
@@ -125,27 +130,29 @@ const Cta = () => {
     };
 
     const cleaningItems = [
-        { id: 'cupboardsin', label: 'Cupboards', tooltipText: 'Cleaning inside the cupboards', description: 'Cleaning inside the cupboards' },
-        { id: 'ovenin', label: 'Oven', tooltipText: 'Cleaning inside the Oven', description: 'Cleaning inside the Oven' },
-        { id: 'fridge', label: 'Fridge', tooltipText: 'Cleaning inside the fridge', description: 'Cleaning inside the fridge' },
-        { id: 'dish', label: 'Dish Washing', tooltipText: 'Washing the dishes by hand', description: 'Washing the dishes by hand' },
-        { id: 'dishwasher', label: 'Loading the Dishwasher', tooltipText: 'Loading/Unloading the dishwasher', description: 'Loading/Unloading the dishwasher' },
-        { id: 'wall', label: 'Marks on Wall', tooltipText: 'Cleaning the marks on the Wall', description: 'Cleaning the marks on the Wall' },
-        { id: 'windows', label: 'Windows', tooltipText: 'Cleaning the windows from inside', description: 'Cleaning the windows from inside' },
-        { id: 'baseboards', label: 'Cleaning the Baseboards', tooltipText: 'Cleaning the Baseboards', description: 'Cleaning the Baseboards' },
+        { id: 'cupboardsin', label: 'Cupboards', tooltipText: 'Cleaning inside the cupboards', description: 'Cleaning inside the cupboards', fee: 70 },
+        { id: 'ovenin', label: 'Oven', tooltipText: 'Cleaning inside the Oven', description: 'Cleaning inside the Oven', fee: 70 },
+        { id: 'fridge', label: 'Fridge', tooltipText: 'Cleaning inside the fridge', description: 'Cleaning inside the fridge', fee: 70 },
+        { id: 'dish', label: 'Dish Washing', tooltipText: 'Washing the dishes by hand', description: 'Washing the dishes by hand', fee: 60 },
+        { id: 'dishwasher', label: 'Loading the Dishwasher', tooltipText: 'Loading/Unloading the dishwasher', description: 'Loading/Unloading the dishwasher', fee: 50 },
+        { id: 'wall', label: 'Marks on Wall', tooltipText: 'Cleaning the marks on the Wall', description: 'Cleaning the marks on the Wall', fee: 80 },
+        { id: 'windows', label: 'Windows', tooltipText: 'Cleaning the windows from inside', description: 'Cleaning the windows from inside', fee: 60 },
+        { id: 'baseboards', label: 'Cleaning the Baseboards', tooltipText: 'Cleaning the Baseboards', description: 'Cleaning the Baseboards', fee: 70 },
     ];
 
 
     const cities = [
-        'Toronto',
-        'Mississauga',
-        'Brampton',
+        'Angus',
+        'Barrie',
+        'Innisfil',
+        'King City',
+        'Maple',
         'Markham',
-        'Vaughan',
+        'Midhurst',
+        'Orillia',
         'Richmond Hill',
-        'Oakville',
-        'Ajax',
-        'Pickering',
+        'Thornhill',
+        'Woodbridge',
     ];
 
     const booking = {
