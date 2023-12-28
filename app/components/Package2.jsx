@@ -21,7 +21,7 @@ const Package2 = ({ title }) => {
                             </Link>
                         </div>
                         <span>Residential</span>
-                        <h4 className="tp-quality-text-title m-0"><Link href="/">{title}</Link></h4>
+                        <h4 className="tp-quality-text-title m-0"><Link href="/home/packages/move">{title}</Link></h4>
                     </div>
                 </div>
             </div>

@@ -3,8 +3,7 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import Testimonial1 from '../components/Testimonial1';
-import { BsChevronLeft } from 'react-icons/bs';
-import BsChevronRight from "react-icons/bs";
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import Testimonial2 from 'app/components/Testimonial2';
 import Testimonial3 from 'app/components/Testimonial3';
 import Testimonial4 from 'app/components/Testimonial4';
@@ -26,12 +25,12 @@ const Testimonial = () => {
                         </div>                        <div className="col-xl-7 col-lg-6">
                             <div className="tp-testimonial ml-70">
                                 <div className="section-title-wrapper">
-                                    <h5 className="tp-section-subtitle section__sm__title common-yellow-shape mb-20">Customer Statement</h5>
-                                    <h2 className="tp-section-title mb-20">Our Client Feedback</h2>
+                                    <h5 className="tp-section-subtitle section__sm__title common-yellow-shape mb-20">Our Clients Share Their Shine Bright Cleaning Experiences!</h5>
+                                    <h2 className="tp-section-title mb-20">A Symphony of Satisfied Customers</h2>
                                 </div>
 
                                 <Carousel
-                                    nextIcon={''}
+                                    nextIcon={<BsChevronRight />}
                                     prevIcon={<BsChevronLeft />}
                                     interval={6000} // Set your desired interval
                                     controls={false} // Remove default controls

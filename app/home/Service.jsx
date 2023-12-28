@@ -18,8 +18,8 @@ const ServiceArea = () => {
                             <div className="row justify-content-center">
                                 <div className="col-lg-8">
                                     <div className="tp-section-title-wrapper text-center mb-55 wow fadeInUp" data-wow-delay=".1s">
-                                        <h5 className="tp-section-subtitle section__sm__title common-yellow-shape mb-25">Extra Cleaning Items</h5>
-                                        <h2 className="tp-section-title">We're taking care of everything <br />In your house</h2>
+                                        <h5 className="tp-section-subtitle section__sm__title common-yellow-shape mb-25">Going Above and Beyond With Our Additional Cleaning Offerings</h5>
+                                        <h2 className="tp-section-title">Extra Cleaning Items We Cover</h2>
                                     </div>
                                 </div>
                             </div>

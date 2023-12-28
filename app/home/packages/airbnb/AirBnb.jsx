@@ -112,7 +112,7 @@ const AirBNB = () => {
 
                                 </p>
                                 <div className="tp-service-details-img mb-30 position-relative">
-                                    <Image src={img} alt='project detail photo' />
+                                    <Image src={img} className='images' alt='project detail photo' />
                                 </div>
                                 <p className="mb-1">Our dedicated team understands the challenges of maintaining a pristine Airbnb space amidst the hustle and bustle. Investing in The Neat Guys' one-time cleaning ensures that your property is consistently inviting and impeccably clean, leaving a positive impression on every guest. Say goodbye to the stress of post-checkout cleanups – our reliable team takes care of the details, from thorough cleanings to managing the aftermath of celebrations. With The Neat Guys, hosting becomes a seamless and enjoyable experience, allowing you to focus on providing a welcoming atmosphere for your guests.</p>
                             </div>

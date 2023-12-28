@@ -45,6 +45,12 @@ body {
   margin: 0 auto;
 }
 
+.images {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 @media only screen and (min-width: 1600px) and (max-width: 1750px) {
   .tp-custom-container {
     max-width: 1570px;
@@ -5184,7 +5190,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .tp-choose-yellow-bg {
-  height: 300px;
+  height: 200px;
   position: absolute;
   top: 0;
   left: 0px;
