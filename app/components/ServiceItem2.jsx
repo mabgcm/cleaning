@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { BsCardChecklist } from "react-icons/bs";
-
+import Image from 'next/image';
+import icn1 from '../../public/assets/img/icon/oven.png';
 
 const HomeServiceItem2 = ({ title }) => {
     return (
@@ -10,7 +10,7 @@ const HomeServiceItem2 = ({ title }) => {
                 <div className="tp-services white-bg mb-30 wow fadeInUp" data-wow-delay=".2s">
                     <div className="col mb-4">
                         <div className="tp-services-icon yellow-circle-shape">
-                            <img src="assets/img/icon/oven.png" alt="cupboard logo" />
+                            <Image src={icn1} alt="cupboard logo" />
                         </div>
                     </div>
 

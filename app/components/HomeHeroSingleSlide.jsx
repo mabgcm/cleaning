@@ -1,5 +1,8 @@
-import { MotionAnimate } from 'react-motion-animate'
+import { MotionAnimate } from 'react-motion-animate';
 import BookNow from './BookNow';
+import Image from 'next/image';
+import img1 from '../../public/assets/img/slider/slider-bg-1.jpg';
+import img2 from '../../public/assets/img/slider/slider-img-1.jpg';
 
 const HomeHeroSingleSlide = () => {
 
@@ -7,10 +10,10 @@ const HomeHeroSingleSlide = () => {
         <>
             <div className="tp-single-slider tp-slider-height d-flex align-items-center swiper-slide" data-swiper-autoplay="5000">
                 <div className="slide-bg">
-                    <img src="assets/img/slider/slider-bg-1.jpg" alt="" />
+                    <Image src={img1} alt="" />
                 </div>
                 <div className="slider-img">
-                    <img src="assets/img/slider/slider-img-1.jpg" className="img-fluid" alt="img not found" />
+                    <Image src={img2} className="img-fluid" alt="img not found" />
                 </div>
                 <div className="container">
                     <div className="row">

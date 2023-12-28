@@ -6,7 +6,7 @@ const BookNow = () => {
     return (
         <div>
             <div >
-                <Link href="/home/estimate" className="theme-btn text-white">
+                <Link href="/home/estimate" className="btn theme-btn text-white">
                     <i className="flaticon-enter"></i> Book Now!</Link>
             </div>
         </div>

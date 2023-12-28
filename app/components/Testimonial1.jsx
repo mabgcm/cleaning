@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import img1 from '../../public/assets/img/testimonial/author-2.png'
+import img1 from '../../public/assets/img/testimonial/author-2.png';
+import img2 from '../../public/assets/img/icon/test-qoute.png';
 import { FaStar } from "react-icons/fa";
 
 
@@ -21,7 +22,7 @@ const Testimonial1 = () => {
 
                 </div>
                 <div className="tp-testimonial-qoute">
-                    <img src="assets/img/icon/test-qoute.png" alt="img not found" />
+                    <Image src={img2} alt="img not found" />
                 </div>
             </div>
         </>

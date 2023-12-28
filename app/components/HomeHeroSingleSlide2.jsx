@@ -1,5 +1,8 @@
 import { MotionAnimate } from 'react-motion-animate'
 import BookNow from './BookNow';
+import Image from 'next/image';
+import img1 from '../../public/assets/img/slider/slider-bg-2.jpg';
+import img2 from '../../public/assets/img/slider/slider-img-2.jpg';
 
 const HomeHeroSingleSlide2 = () => {
 
@@ -7,10 +10,10 @@ const HomeHeroSingleSlide2 = () => {
         <>
             <div className="tp-single-slider tp-slider-height d-flex align-items-center swiper-slide" data-swiper-autoplay="5000">
                 <div className="slide-bg">
-                    <img src="assets/img/slider/slider-bg-2.jpg" alt="" />
+                    <Image src={img1} alt="" />
                 </div>
                 <div className="slider-img">
-                    <img src="assets/img/slider/slider-img-2.jpg" className="img-fluid" alt="img not found" />
+                    <Image src={img2} className="img-fluid" alt="img not found" />
                 </div>
                 <div className="container">
                     <div className="row">
@@ -20,7 +23,7 @@ const HomeHeroSingleSlide2 = () => {
                                 <div className="tp-slider z-index">
 
                                     <div>
-                                        <h5 className="tp-slider-subtitle section__sm__title common-yellow-shape w-80 mb-35">Cleaning that fits your schedule</h5>
+                                        <h5 className="tp-slider-subtitle section__sm__title common-yellow-shape w-80 mb-35">The Cleaning Service that fits your schedule</h5>
                                     </div>
 
                                     <h1 className="tp-slider-title mb-45">
@@ -30,7 +33,7 @@ const HomeHeroSingleSlide2 = () => {
                                             distance={200}
                                             delay={0.5}
                                             speed={1}>
-                                            <div >Efortless</div>
+                                            <div >Efortless!</div>
                                         </MotionAnimate>
 
                                         <MotionAnimate
@@ -39,7 +42,7 @@ const HomeHeroSingleSlide2 = () => {
                                             distance={200}
                                             delay={0.6}
                                             speed={1}>
-                                            <div >Stress-Free</div>
+                                            <div >Stress-Free!</div>
                                         </MotionAnimate>
 
                                         <MotionAnimate
@@ -48,7 +51,7 @@ const HomeHeroSingleSlide2 = () => {
                                             distance={200}
                                             delay={0.7}
                                             speed={1}>
-                                            <div >Professional</div>
+                                            <div >Professional!</div>
                                         </MotionAnimate>
                                     </h1>
 

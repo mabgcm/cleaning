@@ -78,7 +78,7 @@ const Footer = () => {
                         <div className="row">
                             <div className="col-12">
                                 <div className="tp-copyright tp-copyright-two text-center">
-                                    <p className="m-0">Copyright ©2024 <span>Rav Link Inc.</span>. All Rights Reserved Copyright</p>
+                                    <p className="m-0">Copyright ©2024 <Link href='ravlink.ca' target='__blank'><span>Rav Link Inc.</span></Link>. All Rights Reserved Copyright</p>
                                 </div>
                             </div>
                         </div>
