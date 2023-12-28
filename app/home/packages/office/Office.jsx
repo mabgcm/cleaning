@@ -1,5 +1,8 @@
 import { CgCheckO } from 'react-icons/cg';
 import { IoMdArrowDropright } from "react-icons/io";
+import Image from 'next/image';
+import img from '../../../../public/assets/img/service/service-4.jpg';
+
 
 
 const Office = () => {
@@ -124,7 +127,7 @@ const Office = () => {
 
                                 </p>
                                 <div className="tp-service-details-img mb-30 position-relative">
-                                    <img src="https://www.stratusclean.com/sites/default/files/2021-02/2020.05.27.Lifestyle.Stratus.Disinfecting.Office-NoSuit.8014_0.jpg" alt='project detail photo' />
+                                    <Image src={img} alt='project detail photo' />
                                 </div>
                                 <p className="mb-1">What sets The Neat Guys apart is our unwavering commitment to your satisfaction. With customizable service plans and a user-friendly online booking system, we simplify the process of meeting your cleaning needs. Our 24-hour cancellation policy reflects our dedication to accommodating your unique schedule, ensuring flexibility and convenience. Should you find any aspect of our service less than satisfactory, we pledge to revisit your premises promptly and re-clean until it surpasses your expectations. Elevate the cleanliness and professionalism of your workspace in the north of the GTA – contact The Neat Guys today for an unmatched experience in office and commercial cleaning.</p>
                             </div>

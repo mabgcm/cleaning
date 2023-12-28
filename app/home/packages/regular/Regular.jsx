@@ -1,5 +1,8 @@
 import { CgCheckO } from 'react-icons/cg';
 import { IoMdArrowDropright } from "react-icons/io";
+import Image from 'next/image';
+import img from '../../../../public/assets/img/service/service-6.jpeg';
+
 
 
 const Regular = () => {
@@ -108,7 +111,7 @@ const Regular = () => {
 
                                 </p>
                                 <div className="tp-service-details-img mb-30 position-relative">
-                                    <img src="https://www.thecleaningcollective.co.uk/storage/uploads/clean-home-zen.jpg" alt='project detail photo' />
+                                    <Image src={img} alt='project detail photo' />
                                 </div>
                                 <p className="mb-1">Forget the stress of cleaning after a long day; let The Neat Guys take care of the dirty work for you. Whether you opt for our weekly, bi-weekly, or monthly services, we've got you covered. Picture walking into a sparkling clean home without lifting a finger, and that's the reality we bring to our clients. With our adaptable services, we understand that time is precious, and our goal is to free you up to create memories with your loved ones. Choose The Neat Guys for a systematic and professional approach to cleaning, ensuring every nook and cranny receives the attention it deserves. Give us a call today to experience the joy of a consistently clean and organized living space tailored to your unique needs.</p>
                             </div>

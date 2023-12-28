@@ -1,5 +1,8 @@
 import { CgCheckO } from 'react-icons/cg';
 import { IoMdArrowDropright } from "react-icons/io";
+import Image from 'next/image';
+import img from '../../../../public/assets/img/service/service-5.jpeg';
+
 
 
 const OneTime = () => {
@@ -117,7 +120,7 @@ const OneTime = () => {
 
                                 </p>
                                 <div className="tp-service-details-img mb-30 position-relative">
-                                    <img src="https://img.freepik.com/free-photo/young-happy-man-texting-smart-phone-while-relaxing-sofa-drinking-coffee_637285-5927.jpg" alt='project detail photo' />
+                                    <Image src={img} alt='project detail photo' />
                                 </div>
                                 <p className="mb-1">Moving, planning a party, or just in need of a refreshing deep clean? Invest in The Neat Guys' one-time house cleaning service to bring your home back to its pristine condition. Our professional team understands the challenges of finding time for yourself amid distractions and responsibilities. If the thought of cleaning becomes an added stress, give us a call for a break without committing to a recurring service. Whether it's post-party cleanup or rejuvenating your space, our reliable team at The Neat Guys has you covered, ensuring a win-win situation for a clean and stress-free home.</p>
                             </div>

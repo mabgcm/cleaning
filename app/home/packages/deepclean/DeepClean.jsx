@@ -1,5 +1,7 @@
 import { CgCheckO } from 'react-icons/cg';
 import { IoMdArrowDropright } from "react-icons/io";
+import Image from 'next/image';
+import img from '../../../../public/assets/img/service/service-1.jpeg';
 
 
 const DeepCleaning = () => {
@@ -114,7 +116,7 @@ const DeepCleaning = () => {
                             <div className="tp-service-details">
                                 <p className="mb-30">Discover the Neat Guys – your ultimate Canadian clean team, specially crafted for homeowners, landlords, and business owners who dream of impeccably clean spaces. We're on a mission to transform your home, reaching every hidden corner beneath furniture, behind appliances, and those easy-to-forget spots like baseboards and window sills. If you don't absolutely love our service, we'll keep cleaning until it's nothing short of perfection. Elevate your space with the Neat Guys – because your satisfaction is our inspiration!</p>
                                 <div className="tp-service-details-img mb-30 position-relative">
-                                    <img src="https://rocketmaidsla.com/wp-content/uploads/2019/10/deep-cleaning-services.jpg" alt='project detail photo' />
+                                    <Image src={img} alt='project detail photo' />
                                 </div>
                                 <p className="mb-1">Our dynamic cleaning team comprises 2-3 dedicated individuals, ensuring a swift and thorough transformation of your space. To secure your spot on our schedule, simply book us two days in advance for a hassle-free experience. When it comes to the nitty-gritty details, rest assured that our cleaning arsenal is equipped to handle various surfaces, including carpets, uncarpeted areas, kitchens, bathrooms, windows, door frames, and windowsills. We leave no stone unturned, reaching behind home appliances and delving beneath furniture to guarantee a comprehensive clean that exceeds your expectations. Trust the Neat Guys to bring a new level of cleanliness to every corner of your home or business!</p>
                             </div>

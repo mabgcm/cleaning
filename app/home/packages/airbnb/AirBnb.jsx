@@ -1,5 +1,9 @@
 import { CgCheckO } from 'react-icons/cg';
 import { IoMdArrowDropright } from "react-icons/io";
+import Image from 'next/image';
+import img from '../../../../public/assets/img/service/service-2.webp';
+
+
 
 
 const AirBNB = () => {
@@ -108,7 +112,7 @@ const AirBNB = () => {
 
                                 </p>
                                 <div className="tp-service-details-img mb-30 position-relative">
-                                    <img src="https://inspireddesigntalk.com/wp-content/uploads/2020/06/neutral-airbnb-with-two-beds-and-white-bedding-1200x8400-1.jpg" alt='project detail photo' />
+                                    <Image src={img} alt='project detail photo' />
                                 </div>
                                 <p className="mb-1">Our dedicated team understands the challenges of maintaining a pristine Airbnb space amidst the hustle and bustle. Investing in The Neat Guys' one-time cleaning ensures that your property is consistently inviting and impeccably clean, leaving a positive impression on every guest. Say goodbye to the stress of post-checkout cleanups – our reliable team takes care of the details, from thorough cleanings to managing the aftermath of celebrations. With The Neat Guys, hosting becomes a seamless and enjoyable experience, allowing you to focus on providing a welcoming atmosphere for your guests.</p>
                             </div>

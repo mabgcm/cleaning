@@ -1,5 +1,8 @@
 import { CgCheckO } from 'react-icons/cg';
 import { IoMdArrowDropright } from "react-icons/io";
+import Image from 'next/image';
+import img from '../../../../public/assets/img/service/service-3.jpeg';
+
 
 
 const Move = () => {
@@ -126,7 +129,7 @@ const Move = () => {
 
                                 </p>
                                 <div className="tp-service-details-img mb-30 position-relative">
-                                    <img src="https://images.squarespace-cdn.com/content/5d013a2a1271610001feb9a4/1595610921107-NQBNB8V3C59N39SL6FLN/move+in+cleaning+minneapolis.jpg" alt='project detail photo' />
+                                    <Image src={img} alt='project detail photo' />
                                 </div>
                                 <p className="mb-1">Whether you're moving in or out, our dedicated team at The Neat Guys is committed to providing top-notch Move Cleaning Services that go beyond the surface. Our seasoned, insured, and vetted cleaning professionals, comprised of 3 skilled individuals, will tackle every nook and cranny of your space. With a duration of 90 minutes per 1000 square feet, our efficient and thorough cleaning process guarantees a meticulous result. To make your experience even more convenient, we offer the flexibility to book our services two days in advance. With The Neat Guys, you can focus on the excitement of your new chapter while we handle the cleaning, making your move a smooth and enjoyable experience.</p>
                             </div>
