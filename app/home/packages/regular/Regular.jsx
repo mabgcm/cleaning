@@ -69,7 +69,7 @@ const Regular = () => {
                                         <li>Duration : <span>60mins/1000sqft</span></li>
                                         <li>Cleaning Staff : <span>1-2 guys</span></li>
                                         <li>Booking : <span>1 days in advance</span></li>
-                                        <li>Budget : <span>From $150</span></li>
+                                        <li>Budget : <span>From $150+</span></li>
                                         <li className=''>Cleaning Items :
 
                                             <Items title="Living Areas" content={livingAreasContent} />

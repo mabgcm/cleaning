@@ -84,7 +84,7 @@ const Office = () => {
                                         <li>Duration : <span>60mins/1000sqft</span></li>
                                         <li>Cleaning Staff : <span>1 guy</span></li>
                                         <li>Booking : <span>1 days in advance</span></li>
-                                        <li>Budget : <span>$150+</span></li>
+                                        <li>Budget : <span>$130+</span></li>
                                         <li className=''>Cleaning Items :
                                             <Items title="Living Areas" content={livingAreas} />
                                             <Items title="Kitchen Cleaning" content={kitchen} />

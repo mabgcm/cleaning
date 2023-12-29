@@ -86,7 +86,7 @@ const Move = () => {
                                         <li>Duration : <span>90mins/1000sqft</span></li>
                                         <li>Cleaning Staff : <span>3 guys</span></li>
                                         <li>Booking : <span>2 days in advance</span></li>
-                                        <li>Budget : <span>$450+</span></li>
+                                        <li>Budget : <span>$210+</span></li>
                                         <li className=''>Cleaning Items :
                                             <Items title="Living Areas" content={livingAreasContent} />
                                             <Items title="Kitchen Cleaning" content={kitchenCleaningContent} />
