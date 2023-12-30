@@ -143,15 +143,20 @@ const Cta = () => {
 
     const cities = [
         'Angus',
+        'Aurora',
         'Barrie',
+        'Bolton',
+        'Brampton',
         'Innisfil',
         'King City',
         'Maple',
         'Markham',
         'Midhurst',
+        'New Market',
         'Orillia',
         'Richmond Hill',
         'Thornhill',
+        'Vaughan',
         'Woodbridge',
     ];
 
