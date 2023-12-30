@@ -25,7 +25,7 @@ const AboutArea = () => {
                                 <div className="section-title-wrapper mb-30">
                                     <h5 className="tp-section-subtitle section__sm__title common-yellow-shape mb-20">
                                         Professional Cleaning Service For Your Home</h5>
-                                    <h2 className="tp-section-title">Your Trusted Cleaning Partner in<br />the North of Toronto</h2>
+                                    <h2 className="tp-section-title">Your Trusted Cleaning Partner in the North of Toronto</h2>
                                 </div>
                                 <p className="mb-40">Tired of spending your time cleaning when you could be doing the things you love? Meet The Neat Guys, your go-to professional cleaning company in the North of Toronto, ready to serve you. With a professional approach, our expert home cleaners deliver comprehensive and detail-oriented cleanings every visit, ensuring you come home to the spotless haven you deserve.</p>
                             </div>

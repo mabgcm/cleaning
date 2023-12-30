@@ -3,6 +3,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import Image from 'next/image';
 import img from '../../../../public/assets/img/service/service-3.jpeg';
 import Items from './Items';
+import BookNow from 'app/components/BookNow';
 
 
 
@@ -93,6 +94,7 @@ const Move = () => {
                                             <Items title="Bathroom Cleaning" content={bathroomCleaningContent} />
                                         </li>
                                     </ul>
+                                    <BookNow />
                                 </div>
 
 

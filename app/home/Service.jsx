@@ -17,9 +17,9 @@ const ServiceArea = () => {
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-lg-8">
-                                    <div className="tp-section-title-wrapper text-center mb-55 wow fadeInUp" data-wow-delay=".1s">
+                                    <div className="tp-section-title-wrapper mb-55 wow fadeInUp" data-wow-delay=".1s">
                                         <h5 className="tp-section-subtitle section__sm__title common-yellow-shape mb-25">Going Above and Beyond With Our Additional Cleaning Offerings</h5>
-                                        <h2 className="tp-section-title">Extra Cleaning Items We Cover</h2>
+                                        <h2 className="tp-section-title text-center">Extra Cleaning Items We Cover</h2>
                                     </div>
                                 </div>
                             </div>

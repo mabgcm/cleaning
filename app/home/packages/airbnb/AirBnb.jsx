@@ -2,6 +2,7 @@ import { CgCheckO } from 'react-icons/cg';
 import Image from 'next/image';
 import img from '../../../../public/assets/img/service/service-2.webp';
 import Items from './Items';
+import BookNow from 'app/components/BookNow';
 
 
 
@@ -78,6 +79,7 @@ const AirBNB = () => {
 
                                         </li>
                                     </ul>
+                                    <BookNow />
                                 </div>
 
 

@@ -3,6 +3,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import Image from 'next/image';
 import img from '../../../../public/assets/img/service/service-5.jpeg';
 import Items from './Items';
+import BookNow from 'app/components/BookNow';
 
 
 
@@ -88,6 +89,7 @@ const OneTime = () => {
 
                                         </li>
                                     </ul>
+                                    <BookNow />
                                 </div>
 
 

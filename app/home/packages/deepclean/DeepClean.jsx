@@ -4,6 +4,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import Image from 'next/image';
 import img from '../../../../public/assets/img/service/service-1.jpeg';
 import Items from './Items';
+import BookNow from 'app/components/BookNow';
 
 
 const DeepCleaning = () => {
@@ -84,6 +85,7 @@ const DeepCleaning = () => {
                                             <Items title="Bathroom Cleaning" content={bathroomCleaningContent} />
                                         </li>
                                     </ul>
+                                    <BookNow />
                                 </div>
 
 

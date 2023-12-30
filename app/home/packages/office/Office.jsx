@@ -2,6 +2,7 @@ import { CgCheckO } from 'react-icons/cg';
 import Image from 'next/image';
 import img from '../../../../public/assets/img/service/service-4.jpg';
 import Items from './Items';
+import BookNow from 'app/components/BookNow';
 
 
 
@@ -91,6 +92,7 @@ const Office = () => {
                                             <Items title="Bathroom Cleaning" content={bathroom} />
                                         </li>
                                     </ul>
+                                    <BookNow />
                                 </div>
 
 

@@ -3,6 +3,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import Image from 'next/image';
 import img from '../../../../public/assets/img/service/service-6.jpeg';
 import Items from './Items';
+import BookNow from 'app/components/BookNow';
 
 
 
@@ -78,6 +79,7 @@ const Regular = () => {
 
                                         </li>
                                     </ul>
+                                    <BookNow />
                                 </div>
 
 

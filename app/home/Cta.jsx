@@ -317,7 +317,7 @@ const Cta = () => {
 
                     <div className="row custom-pad-20 mx-2">
                         <div className="tp-appoint text-end">
-                            <button type="submit" className="theme-btn mt-3">
+                            <button type="submit" className="btn theme-btn mt-3">
                                 <i className="flaticon-enter"></i>Calculate
                             </button>
                         </div>

@@ -1739,7 +1739,7 @@ select {
   height: 60px;
   line-height: 60px;
   color: #ffffff;
-  background: #06ae5a;
+  background: #076034;
   text-align: center;
   padding: 0px 38px;
   cursor: pointer;
@@ -1750,6 +1750,7 @@ select {
 .theme-btn:hover {
   background: #fed10c;
   color: #064e2a;
+  border: solid 1px gray;
 }
 
 .yellow-btn:before,

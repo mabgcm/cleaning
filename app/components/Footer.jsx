@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FaMapMarkerAlt, FaEnvelopeOpen, FaFacebookF } from 'react-icons/fa';
 import { BsInstagram, BsChevronRight } from 'react-icons/bs';
+import { FaPhoneVolume } from "react-icons/fa6";
+
 import logo from '../../public/assets/img/logo/logo.png'
 
 const Footer = () => {
@@ -18,9 +20,9 @@ const Footer = () => {
                                         <div className="tp-footer-info-logo mb-35">
                                             <Link href="/"><Image src={logo} className="img-fluid" alt="img not found" /></Link>
                                         </div>
-                                        <h4 className="mb-15"><a href="tel:02(850)2560-3">(647)770-2782</a></h4>
-                                        <h6 className="mb-15"> <i > <FaEnvelopeOpen /> </i><a href="mailto:info@basictheme.com">info@neatguys.ca</a></h6>
-                                        <h6 className="mb-20"> <i> <FaMapMarkerAlt /> </i> 179 Hickling Trail, Barrie</h6>
+                                        <h4 className="mb-15"><a href="tel:6477702782"> <FaPhoneVolume /> (647)770-2782</a></h4>
+                                        <h6 className="mb-15 d-block"> <i > <FaEnvelopeOpen size='20px' /> </i><a href="mailto:info@neatguys.ca">info@neatguys.ca</a></h6>
+                                        <h6 className="mb-20"> <i> <FaMapMarkerAlt size='20px' /> </i> 173 Hickling Trail, Barrie</h6>
                                         <div className="tp-footer-info-social">
                                             <a href="https://www.facebook.com/neatguys.ca"><i><FaFacebookF className='icon' /> </i></a>
                                             <a href="https://www.instagram.com/neatguys.ca"><i><BsInstagram className='icon' /> </i></a>

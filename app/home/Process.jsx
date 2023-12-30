@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import img1 from '../../public/assets/img/about/choose-img-1.jpg'
 import img2 from '../../public/assets/img/about/choose-img-1.jpg'
+import BookNow from 'app/components/BookNow';
 
 const Process = () => {
     return (
@@ -15,7 +16,7 @@ const Process = () => {
                             <div className="tp-choose z-index">
                                 <div className="tp-section-title-wrapper mb-105 wow fadeInUp" data-wow-delay=".2s">
                                     <h5 className="tp-section-subtitle common-yellow-shape common-white-shape section__sm__title">The Neat Guys Booking Process</h5>
-                                    <h2 className="tp-section-title">Seamless Cleaning<br />in 3 Easy Steps</h2>
+                                    <h2 className="tp-section-title">Seamless Cleaning<br /> in 3 Easy Steps</h2>
                                 </div>
                                 <div className="tp-choose-img mb-40 z-index d-block d-xl-none">
                                     <Image src={img1} className='images' alt="img not found" />
@@ -49,6 +50,8 @@ const Process = () => {
                             <div className="tp-choose-img mb-30 z-index d-none d-xl-block wow fadeInUp" data-wow-delay=".6s">
                                 <Image src={img2} alt="img not found" />
                             </div>
+                            <div className="centered p-5"><BookNow /></div>
+
                         </div>
                     </div>
                 </div>
