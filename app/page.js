@@ -7,6 +7,7 @@ import Packages from "./home/Packages";
 import Process from "./home/Process";
 import ServiceArea from "./home/Service";
 import Testimonial from "./home/Testimonials";
+import Messenger from '../app/home/Messenger'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Process />
       <Testimonial />
       <Cta />
+      <Messenger />
     </div>
   )
 }
