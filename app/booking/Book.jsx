@@ -403,6 +403,7 @@ export default function Book() {
                 <Form.Group className='mt-3'>
                     <Form.Label className='fw-semibold'>City:</Form.Label>
                     <Form.Control
+                        disabled
                         onChange={(e) => setCity(e.target.value)}
                         type="text"
                         value={city}
