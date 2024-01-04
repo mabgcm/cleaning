@@ -11,8 +11,8 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Raleway({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'The Neat Guys',
-  description: 'Home Cleaning Service',
+  title: 'The Neat Guys Home Cleaning Service',
+  description: 'House Cleaning Service in Toronto',
 }
 
 export default function RootLayout({ children }) {
