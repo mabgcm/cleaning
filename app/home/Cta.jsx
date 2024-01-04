@@ -291,7 +291,7 @@ const Cta = () => {
                                         dateFormat="Pp"
                                         minDate={new Date()}
                                         excludeDateIntervals={[
-                                            { start: subDays(new Date(), 5), end: addDays(new Date(), 5) },
+                                            { start: subDays(new Date(), 1), end: addDays(new Date(), 2) },
                                         ]}
                                         filterDate={(date) => date.getDay() !== 6 && date.getDay() !== 0}
                                         filterTime={filterTimes}
