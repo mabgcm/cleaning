@@ -85,7 +85,7 @@ const Header = () => {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" href="https://8fu286als2z.typeform.com/to/welhawPP" target='_blank' style={linkStyle}>
+                                        <Link className="nav-link" href="https://1p4xmivg22g.typeform.com/to/UAgIsazI" target='_blank' style={linkStyle}>
                                             Join Us
                                         </Link>
                                     </li>

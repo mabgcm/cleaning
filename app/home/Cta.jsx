@@ -291,6 +291,7 @@ const Cta = () => {
                                         minDate={new Date()}
                                         filterDate={(date) => date.getDay() !== 6 && date.getDay() !== 0}
                                         filterTime={filterTimes}
+
                                         className='mr-1 rounded'
                                     />
                                 </span>
