@@ -61,7 +61,8 @@ const Contact = () => {
                                         </div>
                                         <div className="tp-contact-info-text">
                                             <h4 className="tp-contact-info-title mb-15">Phone</h4>
-                                            <a href="tel:(647)770-2782">(647)770-2782</a>
+                                            <a href="tel:4372196444">(437)219-6444</a>
+                                            <a href="tel:4372196444">(647)770-2782</a>
                                         </div>
                                     </div>
                                 </div>
