@@ -102,11 +102,13 @@ const Contact = () => {
                                         <div className="col-md-6 custom-pad-20">
                                             <div className="tp-contact-form-field mb-20">
                                                 <select name="subject">
-                                                    <option defaultValue="">Choose Subject</option>
-                                                    <option defaultValue="">House Cleaning</option>
-                                                    <option defaultValue="">Office Cleaning</option>
-                                                    <option defaultValue="">Kitchen Cleaning</option>
-                                                    <option defaultValue="">Club Cleaning</option>
+                                                    <option selected disabled value="">Choose Subject</option>
+                                                    <option value="deep">Deep Cleaning</option>
+                                                    <option value="move">Move-In / Move-Out Cleaning</option>
+                                                    <option value="office">Office Cleaning</option>
+                                                    <option value="regular">Regular Cleaning</option>
+                                                    <option value="onetime">One-Time Cleaning</option>
+                                                    <option value="airbnb">AirBNB Cleaning</option>
                                                 </select>
                                             </div>
                                         </div>
