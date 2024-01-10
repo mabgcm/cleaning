@@ -293,7 +293,7 @@ const Cta = () => {
                                         excludeDateIntervals={[
                                             { start: subDays(new Date(), 1), end: addDays(new Date(), 1) },
                                         ]}
-                                        filterDate={(date) => date.getDay() !== 6 && date.getDay() !== 0}
+                                        // filterDate={(date) => date.getDay() !== 6 && date.getDay() !== 0}
                                         filterTime={filterTimes}
 
                                         className='mr-1 rounded'
