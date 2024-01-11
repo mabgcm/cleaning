@@ -15,7 +15,7 @@ const Booking = () => {
     console.log(result)
 
     return (
-        <div>
+        <div className="p-2">
             <h4 className="mt-4 text-center">Booking Confirmation</h4>
             <p className="mt-4 fw-semibold text-center">We need some more details to secure your booking!</p>
             <div className="row">
