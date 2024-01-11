@@ -2,7 +2,7 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 
 const page = () => {
     return (
-        <div>
+        <div className="p-2">
             <div className="conf-text1 text-center mx-4">
                 <h4>You have secured your booking!</h4>
             </div>
