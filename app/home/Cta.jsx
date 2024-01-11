@@ -12,6 +12,7 @@ import { addDays, subDays } from 'date-fns';
 
 const Cta = () => {
 
+    const [prediscount, setPrediscount] = useState(0);
     const [selectedDate, setSelectedDate] = useState('');
     const [showModal, setShowModal] = useState(false);
     const [totalAmount, setTotalAmount] = useState(0);
@@ -104,10 +105,10 @@ const Cta = () => {
             hourlyRate = 40;
         }
 
-        console.log("Total Sqft:", totalSqft);
-        console.log("Hourly Rate:", hourlyRate);
-        console.log("Cleaning Type:", cleaningType);
-        console.log("Cleaning Date:", formData.date ? formatDateString(formData.date) : '');
+        // console.log("Total Sqft:", totalSqft);
+        // console.log("Hourly Rate:", hourlyRate);
+        // console.log("Cleaning Type:", cleaningType);
+        // console.log("Cleaning Date:", formData.date ? formatDateString(formData.date) : '');
 
         // Calculate the total hours
         let totalHours = Math.ceil(totalSqft / 500); // 1 hour for every 500 sqft
@@ -121,6 +122,9 @@ const Cta = () => {
         // Adjust total hours and calculate the total amount
         const totalPrice = base_fee + (totalHours * hourlyRate) + additionalFee;
         setTotalAmount(totalPrice);
+
+        const prediscountValue = totalPrice / (1 - 25 / 100);;
+        setPrediscount(prediscountValue);
 
         // Display the modal
         setShowModal(true);
@@ -385,8 +389,12 @@ const Cta = () => {
                                         </td>
                                     </tr>
                                 ))}
+
                                 <tr>
-                                    <td className='fw-semibold pt-2'>Estimated Price: <span className='fw-semibold text-danger'>CAD{totalAmount}</span></td>
+                                    <td className='fw-semibold pt-2'>
+                                        Estimated Price:
+                                        <span className='fw-semibold text-danger text-decoration-line-through'>CAD{prediscount.toFixed(0)}</span>
+                                        <span className='fw-semibold text-success'> CAD{totalAmount}</span></td>
                                 </tr>
                             </tbody>
                         </table>
