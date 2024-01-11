@@ -11,7 +11,7 @@ import Messenger from '../app/home/Messenger'
 
 export default function Home() {
   return (
-    <div>
+    <div className="p-2">
       <HeroSection />
       <AboutArea />
       <Packages />
