@@ -50,7 +50,7 @@ const Contact = () => {
                                         </div>
                                         <div className="tp-contact-info-text">
                                             <h4 className="tp-contact-info-title mb-15">Address</h4>
-                                            <p>173 Hickling Trail,<br />Barrie</p>
+                                            <p>10 Honeycrisp Cres,<br />Condorn ON</p>
                                         </div>
                                     </div>
                                 </div>
@@ -62,7 +62,6 @@ const Contact = () => {
                                         <div className="tp-contact-info-text">
                                             <h4 className="tp-contact-info-title mb-15">Phone</h4>
                                             <a href="tel:4372196444">(437)219-6444</a>
-                                            <a href="tel:4372196444">(647)770-2782</a>
                                         </div>
                                     </div>
                                 </div>
