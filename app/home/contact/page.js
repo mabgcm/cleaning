@@ -50,7 +50,7 @@ const Contact = () => {
                                         </div>
                                         <div className="tp-contact-info-text">
                                             <h4 className="tp-contact-info-title mb-15">Address</h4>
-                                            <p>10 Honeycrisp Cres,<br />Condorn ON</p>
+                                            <p>10 Honeycrisp Cres,<br />Condord ON</p>
                                         </div>
                                     </div>
                                 </div>
