@@ -1,38 +1,43 @@
 // app/api/book/route.js
+export const runtime = 'nodejs';
+
 import nodemailer from "nodemailer";
+
+const fmt = (v) => (v ?? "—");
+const list = (arr) => (Array.isArray(arr) && arr.length ? arr.join(", ") : "—");
+const stripHtml = (html) => html.replace(/<[^>]+>/g, "").replace(/\s+\n/g, "\n").trim();
 
 export async function POST(req) {
     try {
-        const data = await req.json();
-
-        // Basic shape
+        const data = await req.json().catch(() => ({}));
         const {
-            customer = {},       // name, phone, email, address, postalCode
-            booking = {},        // cleaningType, bedrooms, bathrooms, squareFeetRange, city, date, cleaningItems, totalAmount
-            metadata = {}        // optional: ip, userAgent, source, etc.
+            customer = {},  // name, phone, email (optional if you don’t want to send to them), address, postalCode
+            booking = {},   // cleaningType, bedrooms, bathrooms, squareFeetRange, city, date, cleaningItems, totalAmount
+            metadata = {}   // optional: ip, ua, source
         } = data;
 
-        // ---- validate minimal fields ----
-        if (!customer?.email || !booking?.cleaningType || !booking?.date) {
-            return new Response(JSON.stringify({ ok: false, error: "Missing fields" }), { status: 400 });
+        // ---- minimal validation (only booking required since we’re not emailing customer) ----
+        if (!booking?.cleaningType || !booking?.date || !booking?.city) {
+            return new Response(JSON.stringify({ ok: false, error: "Required booking fields missing" }), { status: 400 });
         }
 
-        // ---- Nodemailer transporter ----
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
             port: Number(process.env.SMTP_PORT || 587),
-            secure: process.env.SMTP_SECURE === "true", // true for 465, false for 587
+            secure: process.env.SMTP_SECURE === "true", // true for 465
             auth: {
-                user: process.env.SMTP_USER,
-                pass: process.env.SMTP_PASS
-            }
+                user: process.env.SMTP_USER,  // e.g. info@cooking.com
+                pass: process.env.SMTP_PASS,
+            },
         });
 
-        // Helpers
-        const fmt = (v) => (v ?? "—");
-        const list = (arr) => Array.isArray(arr) && arr.length ? arr.join(", ") : "—";
+        // For GoDaddy reliability, use the raw SMTP mailbox as the From:
+        const FROM = process.env.SMTP_USER;
+        const OWNER = process.env.OWNER_EMAIL || process.env.SMTP_USER;
 
-        // ---- Owner email (FULL details) ----
+        // (Optional) surface SMTP issues clearly in Vercel logs
+        await transporter.verify().catch((e) => { console.error("SMTP verify failed", e); throw e; });
+
         const ownerHtml = `
       <h2>New Booking Request</h2>
       <h3>Booking Details</h3>
@@ -58,38 +63,21 @@ export async function POST(req) {
       <pre>${JSON.stringify(metadata, null, 2)}</pre>
     `;
 
-        await transporter.sendMail({
-            from: process.env.FROM_EMAIL,            // e.g. "Neat Guys <no-reply@yourdomain.com>"
-            to: process.env.OWNER_EMAIL,             // you
-            subject: `New Booking: ${booking.cleaningType} • ${booking.city} • ${booking.date}`,
-            html: ownerHtml
+        const info = await transporter.sendMail({
+            from: FROM,
+            to: OWNER,
+            // Nice touch: if the customer entered an email, set reply-to for quick replies
+            ...(customer?.email ? { replyTo: customer.email } : {}),
+            subject: `New Booking: ${fmt(booking.cleaningType)} • ${fmt(booking.city)} • ${fmt(booking.date)}`,
+            text: stripHtml(ownerHtml),
+            html: ownerHtml,
         });
 
-        // ---- Customer email (BOOKING ONLY) ----
-        const customerHtml = `
-      <h2>Booking Request Received</h2>
-      <p>Thanks for your request! Here are your booking details:</p>
-      <ul>
-        <li><b>Type:</b> ${fmt(booking.cleaningType)}</li>
-        <li><b>Bedrooms:</b> ${fmt(booking.bedrooms)}</li>
-        <li><b>Bathrooms:</b> ${fmt(booking.bathrooms)}</li>
-        <li><b>Square Feet Range:</b> ${fmt(booking.squareFeetRange)}</li>
-        <li><b>City:</b> ${fmt(booking.city)}</li>
-        <li><b>Date/Time:</b> ${fmt(booking.date)}</li>
-        <li><b>Extras:</b> ${list(booking.cleaningItems)}</li>
-        <li><b>Estimated Total:</b> C$${fmt(booking.totalAmount)}</li>
-      </ul>
-      <p>We’ll contact you shortly to confirm.</p>
-    `;
-
-        await transporter.sendMail({
-            from: process.env.FROM_EMAIL,
-            to: customer.email,                      // customer
-            subject: "We received your booking request",
-            html: customerHtml
+        const ownerSent = Boolean(info?.messageId);
+        return new Response(JSON.stringify({ ok: ownerSent, ownerSent }), {
+            status: ownerSent ? 200 : 500,
+            headers: { "Content-Type": "application/json" },
         });
-
-        return new Response(JSON.stringify({ ok: true }), { status: 200 });
     } catch (err) {
         console.error("Booking API error:", err);
         return new Response(JSON.stringify({ ok: false, error: "Server error" }), { status: 500 });

@@ -142,7 +142,7 @@ export default function Book() {
             {success ? (
                 <div className="py-4">
                     <h4 className="mb-2">Thanks! 🎉</h4>
-                    <p>We’ve emailed your booking details to you and notified our team. We’ll contact you shortly to confirm.</p>
+                    <p>Your booking request has been submitted. Our team will contact you shortly to confirm.</p>
                     <Button className="mt-2" onClick={() => router.push("/")}>Back to Home</Button>
                 </div>
             ) : (
