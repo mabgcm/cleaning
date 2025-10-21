@@ -116,10 +116,19 @@ export default function Book() {
                 const data = await res.json().catch(() => ({}));
                 throw new Error(data?.error || "Failed to submit booking");
             }
-
-            setSuccess(true);
-            // You can either show inline success or redirect to a thank-you page:
-            // router.push("/thanks");
+            // Optional: show different messages depending on which sends succeeded:
+            if (data.customerSent && data.ownerSent) {
+                setSuccess(true);
+            } else if (data.ownerSent && !data.customerSent) {
+                setSuccess(true);
+                // also show a notice:
+                setErrorMsg("We received your request, but your confirmation email couldn’t be delivered. Please check your email address or spam.");
+            } else if (!data.ownerSent && data.customerSent) {
+                setSuccess(true);
+                // You can either show inline success or redirect to a thank-you page:
+                // router.push("/thanks");
+                setErrorMsg("We sent your confirmation, but notifying our team failed. We’ll follow up shortly.");
+            }
         } catch (err) {
             console.error(err);
             setErrorMsg(err?.message || "Something went wrong. Please try again.");
