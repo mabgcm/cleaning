@@ -97,7 +97,7 @@ function NavBar2() {
                                     justifyContent: 'center',
                                     borderRadius: '50%',
                                     padding: '8px',
-                                    backgroundColor: '#076034',
+                                    backgroundColor: '#0071A8',
                                     color: '#fff',
                                     textDecoration: 'none',
                                     transition: 'background-color 0.3s ease, color 0.3s ease',

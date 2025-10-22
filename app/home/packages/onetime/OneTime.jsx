@@ -16,16 +16,16 @@ const OneTime = () => {
     const livingAreasContent = (
         <div style={itemStyle}>
             <span className='fs-6 fw-light mr-3'>
-                <CgCheckO color='#076034' /> Dust and wipe surfaces <br />
-                <CgCheckO color='#076034' /> Sweep and mop floors <br />
-                <CgCheckO color='#076034' /> Vacuum carpets <br />
-                <CgCheckO color='#076034' /> Clean mirrors <br />
-                <CgCheckO color='#076034' /> Dust furniture <br />
-                <CgCheckO color='#076034' /> Empty bins <br />
-                <CgCheckO color='#076034' /> Clean under furniture <br />
-                <CgCheckO color='#076034' /> Wipe window sills <br />
-                <CgCheckO color='#076034' /> Clean window frames <br />
-                <CgCheckO color='#076034' /> Wipe door frames <br />
+                <CgCheckO color='#0071A8' /> Dust and wipe surfaces <br />
+                <CgCheckO color='#0071A8' /> Sweep and mop floors <br />
+                <CgCheckO color='#0071A8' /> Vacuum carpets <br />
+                <CgCheckO color='#0071A8' /> Clean mirrors <br />
+                <CgCheckO color='#0071A8' /> Dust furniture <br />
+                <CgCheckO color='#0071A8' /> Empty bins <br />
+                <CgCheckO color='#0071A8' /> Clean under furniture <br />
+                <CgCheckO color='#0071A8' /> Wipe window sills <br />
+                <CgCheckO color='#0071A8' /> Clean window frames <br />
+                <CgCheckO color='#0071A8' /> Wipe door frames <br />
 
             </span>
         </div>
@@ -34,15 +34,15 @@ const OneTime = () => {
     const kitchenCleaningContent = (
         <div style={itemStyle}>
             <span className='fs-6 fw-light'>
-                <CgCheckO color='#076034' /> Dust and wipe table-top surfaces <br />
-                <CgCheckO color='#076034' /> Clean and shine sink <br />
-                <CgCheckO color='#076034' /> Sweep and mop floors <br />
-                <CgCheckO color='#076034' /> Clean appliance exteriors <br />
-                <CgCheckO color='#076034' /> Clean stovetop <br />
-                <CgCheckO color='#076034' /> Empty bins <br />
-                <CgCheckO color='#076034' /> Clean kitchen baseboards <br />
-                <CgCheckO color='#076034' /> Wipe and clean backsplash <br />
-                <CgCheckO color='#076034' /> Clean behind appliances <br />
+                <CgCheckO color='#0071A8' /> Dust and wipe table-top surfaces <br />
+                <CgCheckO color='#0071A8' /> Clean and shine sink <br />
+                <CgCheckO color='#0071A8' /> Sweep and mop floors <br />
+                <CgCheckO color='#0071A8' /> Clean appliance exteriors <br />
+                <CgCheckO color='#0071A8' /> Clean stovetop <br />
+                <CgCheckO color='#0071A8' /> Empty bins <br />
+                <CgCheckO color='#0071A8' /> Clean kitchen baseboards <br />
+                <CgCheckO color='#0071A8' /> Wipe and clean backsplash <br />
+                <CgCheckO color='#0071A8' /> Clean behind appliances <br />
             </span>
         </div>
     );
@@ -50,16 +50,16 @@ const OneTime = () => {
     const bathroomCleaningContent = (
         <div style={itemStyle}>
             <span className='fs-6 fw-light'>
-                <CgCheckO color='#076034' /> Wipe all surfaces <br />
-                <CgCheckO color='#076034' /> Clean and shine sink <br />
-                <CgCheckO color='#076034' /> Clean mirrors <br />
-                <CgCheckO color='#076034' /> Clean the toilets <br />
-                <CgCheckO color='#076034' /> Sweep and mop floors <br />
-                <CgCheckO color='#076034' /> Clean shower faucets <br />
-                <CgCheckO color='#076034' /> Clean and scrub tub <br />
-                <CgCheckO color='#076034' /> Empty bins <br />
-                <CgCheckO color='#076034' /> Clean bathroom baseboards <br />
-                <CgCheckO color='#076034' /> Clean doors and cabinet exteriors
+                <CgCheckO color='#0071A8' /> Wipe all surfaces <br />
+                <CgCheckO color='#0071A8' /> Clean and shine sink <br />
+                <CgCheckO color='#0071A8' /> Clean mirrors <br />
+                <CgCheckO color='#0071A8' /> Clean the toilets <br />
+                <CgCheckO color='#0071A8' /> Sweep and mop floors <br />
+                <CgCheckO color='#0071A8' /> Clean shower faucets <br />
+                <CgCheckO color='#0071A8' /> Clean and scrub tub <br />
+                <CgCheckO color='#0071A8' /> Empty bins <br />
+                <CgCheckO color='#0071A8' /> Clean bathroom baseboards <br />
+                <CgCheckO color='#0071A8' /> Clean doors and cabinet exteriors
             </span>
         </div>
     );
@@ -97,13 +97,13 @@ const OneTime = () => {
                         </div>
                         <div className="col-lg-8">
                             <div className="tp-service-details">
-                                <p className="mb-30">Embrace the chaos of life without sacrificing the cleanliness of your home with The Neat Guys – your go-to solution for one-time house cleaning in Barrie, Orillia & Innisfil. Life's demands can be overwhelming, whether it's hosting family or friends, celebrating special occasions like birthdays or showers, or simply feeling the weight of daily responsibilities. At The Neat Guys, we offer flexible cleaning times and customizable one-time cleaning services tailored to your specific needs and budget.
+                                <p className="mb-30">Embrace the chaos of life without sacrificing the cleanliness of your home with Brinova – your go-to solution for one-time house cleaning in Barrie, Orillia & Innisfil. Life's demands can be overwhelming, whether it's hosting family or friends, celebrating special occasions like birthdays or showers, or simply feeling the weight of daily responsibilities. At Brinova, we offer flexible cleaning times and customizable one-time cleaning services tailored to your specific needs and budget.
 
                                 </p>
                                 <div className="tp-service-details-img mb-30 position-relative">
                                     <Image src={img} className='images' alt='project detail photo' />
                                 </div>
-                                <p className="mb-1">Moving, planning a party, or just in need of a refreshing deep clean? Invest in The Neat Guys' one-time house cleaning service to bring your home back to its pristine condition. Our professional team understands the challenges of finding time for yourself amid distractions and responsibilities. If the thought of cleaning becomes an added stress, give us a call for a break without committing to a recurring service. Whether it's post-party cleanup or rejuvenating your space, our reliable team at The Neat Guys has you covered, ensuring a win-win situation for a clean and stress-free home.</p>
+                                <p className="mb-1">Moving, planning a party, or just in need of a refreshing deep clean? Invest in Brinova' one-time house cleaning service to bring your home back to its pristine condition. Our professional team understands the challenges of finding time for yourself amid distractions and responsibilities. If the thought of cleaning becomes an added stress, give us a call for a break without committing to a recurring service. Whether it's post-party cleanup or rejuvenating your space, our reliable team at Brinova has you covered, ensuring a win-win situation for a clean and stress-free home.</p>
                             </div>
                         </div>
                     </div>

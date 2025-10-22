@@ -15,7 +15,7 @@ const Process = () => {
                         <div className="col-xl-6 col-lg-8">
                             <div className="tp-choose z-index">
                                 <div className="tp-section-title-wrapper mb-105 wow fadeInUp" data-wow-delay=".2s">
-                                    <h5 className="tp-section-subtitle common-yellow-shape common-white-shape section__sm__title">The Neat Guys Booking Process</h5>
+                                    <h5 className="tp-section-subtitle common-yellow-shape common-white-shape section__sm__title">Brinova Booking Process</h5>
                                     <h2 className="tp-section-title">Seamless Cleaning<br /> in 3 Easy Steps</h2>
                                 </div>
                                 <div className="tp-choose-img mb-40 z-index d-block d-xl-none">

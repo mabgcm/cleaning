@@ -16,21 +16,21 @@ const Move = () => {
     const livingAreasContent = (
         <div style={itemStyle}>
             <span className='fs-6 fw-light'>
-                <CgCheckO color='#076034' /> Dust and wipe surfaces <br />
-                <CgCheckO color='#076034' /> Sweep and mop floors <br />
-                <CgCheckO color='#076034' /> Vacuum carpets <br />
-                <CgCheckO color='#076034' /> Clean mirrors <br />
-                <CgCheckO color='#076034' /> Dust furniture <br />
-                <CgCheckO color='#076034' /> Clean hallways and staircases <br />
-                <CgCheckO color='#076034' /> Empty bins <br />
-                <CgCheckO color='#076034' /> Clean baseboards <br />
-                <CgCheckO color='#076034' /> Clean under furniture <br />
-                <CgCheckO color='#076034' /> Wipe window sills <br />
-                <CgCheckO color='#076034' /> Clean window frames <br />
-                <CgCheckO color='#076034' /> Wipe door frames <br />
-                <CgCheckO color='#076034' /> Spot clean walls <br />
-                <CgCheckO color='#076034' /> Clean and wipe vents <br />
-                <CgCheckO color='#076034' /> Dust ceiling and fans <br />
+                <CgCheckO color='#0071A8' /> Dust and wipe surfaces <br />
+                <CgCheckO color='#0071A8' /> Sweep and mop floors <br />
+                <CgCheckO color='#0071A8' /> Vacuum carpets <br />
+                <CgCheckO color='#0071A8' /> Clean mirrors <br />
+                <CgCheckO color='#0071A8' /> Dust furniture <br />
+                <CgCheckO color='#0071A8' /> Clean hallways and staircases <br />
+                <CgCheckO color='#0071A8' /> Empty bins <br />
+                <CgCheckO color='#0071A8' /> Clean baseboards <br />
+                <CgCheckO color='#0071A8' /> Clean under furniture <br />
+                <CgCheckO color='#0071A8' /> Wipe window sills <br />
+                <CgCheckO color='#0071A8' /> Clean window frames <br />
+                <CgCheckO color='#0071A8' /> Wipe door frames <br />
+                <CgCheckO color='#0071A8' /> Spot clean walls <br />
+                <CgCheckO color='#0071A8' /> Clean and wipe vents <br />
+                <CgCheckO color='#0071A8' /> Dust ceiling and fans <br />
             </span>
         </div>
     );
@@ -38,20 +38,20 @@ const Move = () => {
     const kitchenCleaningContent = (
         <div style={itemStyle}>
             <span className='fs-6 fw-light'>
-                <CgCheckO color='#076034' /> Dust and wipe table-top surfaces <br />
-                <CgCheckO color='#076034' /> Clean and shine sink <br />
-                <CgCheckO color='#076034' /> Sweep and mop floors <br />
-                <CgCheckO color='#076034' /> Clean appliance exteriors <br />
-                <CgCheckO color='#076034' /> Clean stovetop <br />
-                <CgCheckO color='#076034' /> Empty bins <br />
-                <CgCheckO color='#076034' /> Clean microwave interior <br />
-                <CgCheckO color='#076034' /> Clean kitchen baseboards <br />
-                <CgCheckO color='#076034' /> Wipe and clean backsplash <br />
-                <CgCheckO color='#076034' /> Spot clean walls <br />
-                <CgCheckO color='#076034' /> Clean behind appliances <br />
-                <CgCheckO color='#076034' /> Clean range hood <br />
-                <CgCheckO color='#076034' /> Clean and wipe vents <br />
-                <CgCheckO color='#076034' /> Dust ceiling
+                <CgCheckO color='#0071A8' /> Dust and wipe table-top surfaces <br />
+                <CgCheckO color='#0071A8' /> Clean and shine sink <br />
+                <CgCheckO color='#0071A8' /> Sweep and mop floors <br />
+                <CgCheckO color='#0071A8' /> Clean appliance exteriors <br />
+                <CgCheckO color='#0071A8' /> Clean stovetop <br />
+                <CgCheckO color='#0071A8' /> Empty bins <br />
+                <CgCheckO color='#0071A8' /> Clean microwave interior <br />
+                <CgCheckO color='#0071A8' /> Clean kitchen baseboards <br />
+                <CgCheckO color='#0071A8' /> Wipe and clean backsplash <br />
+                <CgCheckO color='#0071A8' /> Spot clean walls <br />
+                <CgCheckO color='#0071A8' /> Clean behind appliances <br />
+                <CgCheckO color='#0071A8' /> Clean range hood <br />
+                <CgCheckO color='#0071A8' /> Clean and wipe vents <br />
+                <CgCheckO color='#0071A8' /> Dust ceiling
             </span>
         </div>
     );
@@ -59,16 +59,16 @@ const Move = () => {
     const bathroomCleaningContent = (
         <div style={itemStyle}>
             <span className='fs-6 fw-light'>
-                <CgCheckO color='#076034' /> Wipe and sanitize all surfaces <br />
-                <CgCheckO color='#076034' /> Clean and shine sink <br />
-                <CgCheckO color='#076034' /> Clean mirrors <br />
-                <CgCheckO color='#076034' /> Clean and sanitize toilets <br />
-                <CgCheckO color='#076034' /> Sweep and mop floors <br />
-                <CgCheckO color='#076034' /> Clean shower faucets <br />
-                <CgCheckO color='#076034' /> Clean and scrub tub <br />
-                <CgCheckO color='#076034' /> Empty bins <br />
-                <CgCheckO color='#076034' /> Clean bathroom baseboards <br />
-                <CgCheckO color='#076034' /> Clean doors and cabinet exteriors <br />
+                <CgCheckO color='#0071A8' /> Wipe and sanitize all surfaces <br />
+                <CgCheckO color='#0071A8' /> Clean and shine sink <br />
+                <CgCheckO color='#0071A8' /> Clean mirrors <br />
+                <CgCheckO color='#0071A8' /> Clean and sanitize toilets <br />
+                <CgCheckO color='#0071A8' /> Sweep and mop floors <br />
+                <CgCheckO color='#0071A8' /> Clean shower faucets <br />
+                <CgCheckO color='#0071A8' /> Clean and scrub tub <br />
+                <CgCheckO color='#0071A8' /> Empty bins <br />
+                <CgCheckO color='#0071A8' /> Clean bathroom baseboards <br />
+                <CgCheckO color='#0071A8' /> Clean doors and cabinet exteriors <br />
             </span>
         </div>
     );
@@ -102,13 +102,13 @@ const Move = () => {
                         </div>
                         <div className="col-lg-8">
                             <div className="tp-service-details">
-                                <p className="mb-30">Introducing The Neat Guys – your premier cleaning partner dedicated to simplifying the moving process for homeowners, landlords, and business owners in the Greater Toronto Area. We understand that moving can be a stressful endeavor for everyone involved, and that's why we're here to alleviate the pressure and workload associated with the transition. Our customizable cleaning services are tailored to meet your specific requirements and specifications, ensuring a seamless and spotless experience.
+                                <p className="mb-30">Introducing Brinova – your premier cleaning partner dedicated to simplifying the moving process for homeowners, landlords, and business owners in the Greater Toronto Area. We understand that moving can be a stressful endeavor for everyone involved, and that's why we're here to alleviate the pressure and workload associated with the transition. Our customizable cleaning services are tailored to meet your specific requirements and specifications, ensuring a seamless and spotless experience.
 
                                 </p>
                                 <div className="tp-service-details-img mb-30 position-relative">
                                     <Image src={img} className='images' alt='project detail photo' />
                                 </div>
-                                <p className="mb-1">Whether you're moving in or out, our dedicated team at The Neat Guys is committed to providing top-notch Move Cleaning Services that go beyond the surface. Our seasoned, insured, and vetted cleaning professionals, comprised of 3 skilled individuals, will tackle every nook and cranny of your space. With a duration of 90 minutes per 1000 square feet, our efficient and thorough cleaning process guarantees a meticulous result. To make your experience even more convenient, we offer the flexibility to book our services two days in advance. With The Neat Guys, you can focus on the excitement of your new chapter while we handle the cleaning, making your move a smooth and enjoyable experience.</p>
+                                <p className="mb-1">Whether you're moving in or out, our dedicated team at Brinova is committed to providing top-notch Move Cleaning Services that go beyond the surface. Our seasoned, insured, and vetted cleaning professionals, comprised of 3 skilled individuals, will tackle every nook and cranny of your space. With a duration of 90 minutes per 1000 square feet, our efficient and thorough cleaning process guarantees a meticulous result. To make your experience even more convenient, we offer the flexibility to book our services two days in advance. With Brinova, you can focus on the excitement of your new chapter while we handle the cleaning, making your move a smooth and enjoyable experience.</p>
                             </div>
                         </div>
                     </div>

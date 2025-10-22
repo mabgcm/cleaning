@@ -2,32 +2,39 @@
 /*  12. Progress
 /*----------------------------------------*/
 .tp-progress-area {
-	background: $white;
+    background: $white;
 }
+
 .tp-progress-shape {
     position: absolute;
     top: 0px;
     left: 0px;
     max-width: 835px;
+
     @media #{$xxxl} {
         max-width: 40%;
     }
+
     @media #{$xxl,$xl,$lg,$md,$xs} {
         max-width: 40%;
     }
+
     @media #{$md,$xs} {
         max-width: 100%;
     }
 }
+
 .tp-skill--title__wrapper {
     margin-bottom: 13px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     & span {
         color: $heading-color;
     }
 }
+
 .tp-skill--title {
     font-size: 16px;
     display: inline-block;
@@ -35,19 +42,23 @@
     font-weight: 500;
     font-family: $roboto;
 }
+
 .tp-skill__wrapper {
     @media #{$lg} {
         margin-bottom: 20px;
     }
+
     & .progress {
         height: 8px;
         border-radius: 0px;
         overflow: inherit;
         background-color: #e9ecef;
+
         & .progress-bar {
             background: $theme-color;
             position: relative;
             overflow: inherit;
+
             & span {
                 height: 22px;
                 width: 4px;
@@ -61,22 +72,26 @@
         }
     }
 }
+
 .tp-skill--content {
-	overflow: hidden;
-	padding-bottom: 15px;
+    overflow: hidden;
+    padding-bottom: 15px;
 }
+
 .tp-skill--title__wrapper {
-	margin-bottom: 13px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: relative;
+    margin-bottom: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
+
 .tp-skill--title__wrapper span {
-	color: #064e2a;
-	position: absolute;
-	top: 0;
+    color: #0071a8;
+    position: absolute;
+    top: 0;
 }
+
 .tp-progress-text {
     & p {
         @media #{$lg} {
@@ -84,10 +99,12 @@
         }
     }
 }
+
 .tp-progress-img {
     @media #{$md,$xs} {
         margin-bottom: 50px;
     }
+
     & img {
         @media #{$md,$xs} {
             width: 100%;

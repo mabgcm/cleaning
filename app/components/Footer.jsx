@@ -39,7 +39,7 @@ const Footer = () => {
                                                     justifyContent: 'center',
                                                     borderRadius: '50%',
                                                     padding: '8px',
-                                                    backgroundColor: '#076034',
+                                                    backgroundColor: '#0071A8',
                                                     color: '#fff',
                                                     textDecoration: 'none',
                                                     transition: 'background-color 0.3s ease, color 0.3s ease',
@@ -68,7 +68,7 @@ const Footer = () => {
                                                     justifyContent: 'center',
                                                     borderRadius: '50%',
                                                     padding: '8px',
-                                                    backgroundColor: '#076034',
+                                                    backgroundColor: '#0071A8',
                                                     color: '#fff',
                                                     textDecoration: 'none',
                                                     transition: 'background-color 0.3s ease, color 0.3s ease',
@@ -127,7 +127,7 @@ const Footer = () => {
                         <div className="row">
                             <div className="col-12">
                                 <div className="tp-copyright tp-copyright-two text-center">
-                                    <p className="m-0">Copyright ©2024 <Link href='ravlink.ca' target='__blank'><span>Rav Link Inc.</span></Link>. All Rights Reserved Copyright</p>
+                                    <p className="m-0">Copyright ©2024 <Link href='ravlink.ca' target='__blank'>Rav Link Inc.</Link>. All Rights Reserved Copyright</p>
                                 </div>
                             </div>
                         </div>
