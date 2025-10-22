@@ -87,15 +87,58 @@ function NavBar2() {
                         </li>
 
                         <li className="tp-footer-info-social mb-2">
-                            <Link href="https://www.facebook.com/neatguys.ca">
-                                <i>
-                                    <FaFacebookF className="iconn" />
-                                </i>
+                            <Link
+                                href="https://www.facebook.com/neatguys.ca"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    borderRadius: '50%',
+                                    padding: '8px',
+                                    backgroundColor: '#076034',
+                                    color: '#fff',
+                                    textDecoration: 'none',
+                                    transition: 'background-color 0.3s ease, color 0.3s ease',
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.backgroundColor = '#7acbf2'; // hover background
+                                    e.currentTarget.style.color = '#fff';               // keep icon white
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.backgroundColor = '#0071a8'; // reset
+                                    e.currentTarget.style.color = '#fff';
+                                }}
+                            >
+                                <FaFacebookF size={18} />
                             </Link>
-                            <Link href="https://www.instagram.com/neatguys.ca">
-                                <i>
-                                    <BsInstagram className="iconn" />
-                                </i>
+                            <Link
+                                href="https://www.instagram.com/neatguys.ca"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    borderRadius: '50%',
+                                    padding: '8px',
+                                    backgroundColor: '#0071a8', // default green
+                                    color: '#fff',
+                                    textDecoration: 'none',
+                                    transition: 'background-color 0.3s ease, color 0.3s ease',
+                                    marginLeft: '6px', // small spacing from FB icon
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.backgroundColor = '#7acbf2'; // hover background
+                                    e.currentTarget.style.color = '#fff';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.backgroundColor = '#0071a8'; // reset background
+                                    e.currentTarget.style.color = '#fff';
+                                }}
+                            >
+                                <BsInstagram size={18} />
                             </Link>
                         </li>
                     </ul>

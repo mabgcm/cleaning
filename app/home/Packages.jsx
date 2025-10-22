@@ -15,7 +15,7 @@ const Packages = () => {
                     <div className="row">
                         <div className="col-12">
                             <div className="section-title-wrapper text-center mb-55" data-wow-delay=".2s">
-                                <h2 className="tp-section-title-two">Our <span>Cleaning </span>Packages</h2>
+                                <h2 className="tp-section-title-two">Our Cleaning Packages</h2>
                             </div>
                         </div>
                     </div>

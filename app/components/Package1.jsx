@@ -20,7 +20,7 @@ const Package1 = ({ title }) => {
                                 <i className="tp-quality-text-icon2"><HiPlus className="text-white" /></i>
                             </Link>
                         </div>
-                        <span>Residential</span>
+                        <span >Residential</span>
                         <h4 className="tp-quality-text-title m-0"><Link href="/home/packages/deepclean">{title}</Link></h4>
                     </div>
                 </div>

@@ -268,7 +268,7 @@ select {
 }
 
 .yellow-dark-bg {
-  background: #ffc000;
+  background: #62c7e3;
 }
 
 .blue-dark-bg {
@@ -276,7 +276,7 @@ select {
 }
 
 .theme-dark-bg {
-  background: #075f33;
+  background: #fff;
 }
 
 .theme-dark-bg2 {
@@ -292,7 +292,7 @@ select {
 }
 
 .bg-green-light {
-  background: #084d2b;
+  background: #0071A8;
 }
 
 .bg-gray-light {
@@ -1739,7 +1739,7 @@ select {
   height: 60px;
   line-height: 60px;
   color: #ffffff;
-  background: #076034;
+  background: #0071a8;
   text-align: center;
   padding: 0px 38px;
   cursor: pointer;
@@ -1748,8 +1748,8 @@ select {
 }
 
 .theme-btn:hover {
-  background: #fed10c;
-  color: #064e2a;
+  background: #fff;
+  color: #0071a8;
   border: solid 1px gray;
 }
 
@@ -2734,7 +2734,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   left: 0px;
   height: 28px;
   width: 50px;
-  background: #fed10c;
+  background: #7acbf2;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   z-index: -1;
@@ -2747,6 +2747,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .tp-slider-title {
   font-size: 90px;
   line-height: 1;
+  color: #0071a8;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -3951,7 +3952,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   height: 65px;
   width: 65px;
   border-radius: 50%;
-  background: #fed10c;
+  background: #7acbf2;
   top: -6px;
   left: 0px;
   z-index: -1;
@@ -4680,7 +4681,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   width: 100%;
   top: 0px;
   left: 0px;
-  background-color: rgba(254, 209, 12, 0.651);
+  background-color: rgba(122, 203, 242, 0.651);
   z-index: 1;
   opacity: 0;
   visibility: hidden;
@@ -4720,7 +4721,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   text-align: center;
   font-size: 50px;
   color: #09150f;
-  background: #fed10c;
+  background: #7acbf2;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -4745,13 +4746,13 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .tp-quality-text span {
   font-size: 16px;
   font-weight: 500;
-  color: #06ae5a;
+  color: #0071A8;
   display: block;
   margin-bottom: 5px;
 }
 
 .tp-quality:hover .tp-quality-text-icon a {
-  background: #06ae5a;
+  background: #0071a8;
   color: #ffffff;
   position: relative;
 }
@@ -7881,7 +7882,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .tp-footer-widget-title {
   font-size: 24px;
-  color: #ffffff;
+  color: #000;
   position: relative;
   padding-bottom: 10px;
 }
@@ -7891,7 +7892,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   content: "";
   height: 2px;
   width: 60px;
-  background: #fed10c;
+  /* background: #fed10c; */
   left: 0px;
   bottom: 0px;
 }
@@ -7899,14 +7900,14 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .tp-footer-info h4 {
   font-size: 24px;
   font-weight: 500;
-  color: #ffffff;
+  color: #000;
   font-family: 'Raleway', sans-serif;
 }
 
 .tp-footer-info h6 {
   font-size: 16px;
   font-weight: 400;
-  color: #ffffff;
+  color: #000;
   font-family: 'Raleway', sans-serif;
   line-height: 1.6;
   display: inline-flex;
@@ -7914,7 +7915,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .tp-footer-info h6 i {
   font-size: 16px;
-  color: #ffffff;
+  color: #000;
   min-width: 25px;
   transform: translateY(4px);
 }
@@ -7926,8 +7927,8 @@ only screen and (min-width: 768px) and (max-width: 991px),
   line-height: 40px;
   border-radius: 50%;
   font-size: 16px;
-  color: #ffffff;
-  background: #347b58;
+  color: #000;
+  background: #fff;
   margin-right: 10px;
   text-align: center;
 }
@@ -7936,10 +7937,10 @@ only screen and (min-width: 768px) and (max-width: 991px),
   margin-right: 0px;
 }
 
-.tp-footer-info-social a:hover {
+/* .tp-footer-info-social a:hover {
   color: #ffffff;
-  background: #084d2b;
-}
+  background: #0071A8;
+} */
 
 .tp-footer-widget ul li {
   list-style: none;
@@ -7953,12 +7954,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .tp-footer-widget ul li a {
   font-size: 16px;
   position: relative;
-  color: #ffffff;
+  color: #000;
 }
 
 .tp-footer-widget ul li a:hover {
   padding-left: 5px;
-  color: #fed10c;
+  color: #0071a8;
 }
 
 /* .tp-footer-widget ul li a:before {
@@ -8207,7 +8208,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 .tp-footer-subscribe-shape {
   position: absolute;
   height: 60px;
-  background: #084d2b;
+  background: #0071A8;
   bottom: 0px;
   left: 0px;
   right: 0px;

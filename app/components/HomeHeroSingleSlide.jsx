@@ -51,7 +51,7 @@ const HomeHeroSingleSlide = () => {
                                             distance={200}
                                             delay={0.7}
                                             speed={1}>
-                                            <div >Neat Guys</div>
+                                            <div >Brinova</div>
                                         </MotionAnimate>
                                     </h1>
 
