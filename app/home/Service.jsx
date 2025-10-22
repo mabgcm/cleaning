@@ -31,7 +31,7 @@ const ServiceArea = () => {
                                 <HomeServiceItem5 title="Dish Washing" />
                                 <HomeServiceItem6 title="Windows Interior" />
                                 <HomeServiceItem7 title="Cleaning the Wall" />
-                                <HomeServiceItem8 title="steam" />
+                                <HomeServiceItem8 title="Cushion Steam Cleaning" />
                             </div>
                         </div>
                     </div>

@@ -17,7 +17,7 @@ const HomeServiceItem8 = ({ title }) => {
                     <div className="col tp-services-text fix">
                         <h4 className="tp-services-text-title mb-15 hover-theme-color pe-none">
                             <Link href="/">{title}</Link></h4>
-                        <p className="mb-20 itemstext">Our baseboard cleaning service includes hand wiping to ensure meticulous removal of dust and dirt. Some stains may be challenging to remove completely.</p>
+                        <p className="mb-20 itemstext">Steam-Powered Freshness uses advanced steam technology for a deep, chemical-free clean — leaving every space spotless, sanitized, and naturally fresh.</p>
                         <div className="tp-services-text-link">
 
                         </div>
