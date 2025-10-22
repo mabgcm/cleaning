@@ -9,14 +9,19 @@ const list = (arr) => Array.isArray(arr) && arr.length ? arr.join(", ") : "—";
 export async function POST(req) {
     try {
         const data = await req.json().catch(() => ({}));
-        const { customer = {}, booking = {}, metadata = {} } = data;
+        const { customer = {}, booking = {} } = data;
 
-        // Minimal validation for test
         if (!booking?.cleaningType || !booking?.date || !booking?.city) {
             return new Response(JSON.stringify({ ok: false, error: "Required booking fields missing" }), { status: 400 });
         }
 
-        // Build message text (keep it compact for WhatsApp)
+        // ✅ Read and validate envs up front (avoids the cryptic "params['to'] missing")
+        const FROM = process.env.TWILIO_WHATSAPP_FROM;   // e.g. "whatsapp:+14155238886" (Sandbox)
+        const TO = process.env.MY_WHATSAPP_TO;         // e.g. "whatsapp:+1YOURNUMBER"
+        if (!FROM || !TO) {
+            return new Response(JSON.stringify({ ok: false, error: "Missing FROM/TO WhatsApp env vars" }), { status: 400 });
+        }
+
         const text =
             `🧹 New booking
 • Type: ${fmt(booking.cleaningType)}
@@ -31,17 +36,13 @@ export async function POST(req) {
 • Email: ${fmt(customer.email)}
 • Addr: ${fmt(customer.address)} ${fmt(customer.postalCode)}`;
 
-        // Send via Twilio WhatsApp Sandbox
         const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
         const msg = await client.messages.create({
-            from: process.env.TWILIO_WHATSAPP_FROM, // "whatsapp:+14155238886" (sandbox)
-            to: process.env.MY_WHATSAPP_TO,         // "whatsapp:+1XXXXXXXXXX" (your phone)
-            body: text,
+            from: FROM,    // "whatsapp:+14155238886"
+            to: TO,        // "whatsapp:+1YOURNUMBER"
+            body: text,    // ✅ freeform body for Sandbox
         });
-
-        // You can also log msg.sid to verify
-        console.log("whatsapp message sid", msg.sid);
 
         return new Response(JSON.stringify({ ok: true, whatsappSid: msg.sid }), {
             status: 200, headers: { "Content-Type": "application/json" }

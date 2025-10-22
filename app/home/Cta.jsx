@@ -142,7 +142,7 @@ const Cta = () => {
         { id: 'dishwasher', label: 'Loading the Dishwasher', tooltipText: 'Loading/Unloading the dishwasher', description: 'Loading/Unloading the dishwasher', fee: 50 },
         { id: 'wall', label: 'Marks on Wall', tooltipText: 'Cleaning the marks on the Wall', description: 'Cleaning the marks on the Wall', fee: 80 },
         { id: 'windows', label: 'Windows', tooltipText: 'Cleaning the windows from inside', description: 'Cleaning the windows from inside', fee: 60 },
-        { id: 'baseboards', label: 'Cushion Steam Cleaning', tooltipText: 'Cushion Steam Cleaning', description: 'Cushion Steam Cleaning', fee: 70 },
+        { id: 'steam', label: 'Cushion Steam Cleaning', tooltipText: 'Cushion Steam Cleaning', description: 'Cushion Steam Cleaning', fee: 70 },
     ];
 
 

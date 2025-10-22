@@ -23,7 +23,7 @@ const Move = () => {
                 <CgCheckO color='#0071A8' /> Dust furniture <br />
                 <CgCheckO color='#0071A8' /> Clean hallways and staircases <br />
                 <CgCheckO color='#0071A8' /> Empty bins <br />
-                <CgCheckO color='#0071A8' /> Clean baseboards <br />
+                <CgCheckO color='#0071A8' /> Clean steam <br />
                 <CgCheckO color='#0071A8' /> Clean under furniture <br />
                 <CgCheckO color='#0071A8' /> Wipe window sills <br />
                 <CgCheckO color='#0071A8' /> Clean window frames <br />
@@ -45,7 +45,7 @@ const Move = () => {
                 <CgCheckO color='#0071A8' /> Clean stovetop <br />
                 <CgCheckO color='#0071A8' /> Empty bins <br />
                 <CgCheckO color='#0071A8' /> Clean microwave interior <br />
-                <CgCheckO color='#0071A8' /> Clean kitchen baseboards <br />
+                <CgCheckO color='#0071A8' /> Clean kitchen steam <br />
                 <CgCheckO color='#0071A8' /> Wipe and clean backsplash <br />
                 <CgCheckO color='#0071A8' /> Spot clean walls <br />
                 <CgCheckO color='#0071A8' /> Clean behind appliances <br />
@@ -67,7 +67,7 @@ const Move = () => {
                 <CgCheckO color='#0071A8' /> Clean shower faucets <br />
                 <CgCheckO color='#0071A8' /> Clean and scrub tub <br />
                 <CgCheckO color='#0071A8' /> Empty bins <br />
-                <CgCheckO color='#0071A8' /> Clean bathroom baseboards <br />
+                <CgCheckO color='#0071A8' /> Clean bathroom steam <br />
                 <CgCheckO color='#0071A8' /> Clean doors and cabinet exteriors <br />
             </span>
         </div>

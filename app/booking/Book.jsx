@@ -51,7 +51,7 @@ export default function Book() {
         }
     };
 
-    // NOTE: ensure IDs match what you used in Cta.jsx (e.g., 'baseboards' plural)
+    // NOTE: ensure IDs match what you used in Cta.jsx (e.g., 'steam' plural)
     const getCleaningItemsName = (id) => {
         switch (id) {
             case 'cupboardsin': return 'Cleaning Inside the Kitchen Cupboards';
@@ -61,7 +61,7 @@ export default function Book() {
             case 'dishwasher': return 'Loading / Unloading the Dishwasher';
             case 'wall': return 'Cleaning the Walls';
             case 'windows': return 'Cleaning the Windows Glass from Inside';
-            case 'baseboards': return 'Cushion Steam Cleaning';
+            case 'steam': return 'Cushion Steam Cleaning';
             default: return '';
         }
     };

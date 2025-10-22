@@ -4,6 +4,7 @@ import '../public/assets/css/main.css';
 import Footer from './components/Footer';
 import NavBar2 from './components/Navbar2';
 import { Analytics } from '@vercel/analytics/react';
+import FloatingSmsButton from './components/FloatingSmsButton';
 
 
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         {children}
         <Analytics />
         <Footer />
+        <FloatingSmsButton />
       </body>
     </html>
   )
