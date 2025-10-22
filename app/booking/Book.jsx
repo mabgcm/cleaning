@@ -61,7 +61,7 @@ export default function Book() {
             case 'dishwasher': return 'Loading / Unloading the Dishwasher';
             case 'wall': return 'Cleaning the Walls';
             case 'windows': return 'Cleaning the Windows Glass from Inside';
-            case 'baseboards': return 'Cleaning the Baseboards';
+            case 'baseboards': return 'Cushion Steam Cleaning';
             default: return '';
         }
     };

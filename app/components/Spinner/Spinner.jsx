@@ -5,7 +5,7 @@ const Spinner = ({ loading, loadingText }) => {
     return (
         <div className='spinner'>
             <HashLoader
-                color="#075F33"
+                color="blue"
                 size={60}
                 loading={loading}
             />

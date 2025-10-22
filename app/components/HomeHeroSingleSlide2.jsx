@@ -23,7 +23,7 @@ const HomeHeroSingleSlide2 = () => {
                                 <div className="tp-slider z-index">
 
                                     <div>
-                                        <h5 className="tp-slider-subtitle section__sm__title common-yellow-shape w-80 mb-35">The Cleaning Service that fits your schedule</h5>
+                                        <h5 className="tp-slider-subtitle section__sm__title common-yellow-shape w-80 mb-35">Deep cleaning beyond the surface.</h5>
                                     </div>
 
                                     <h1 className="tp-slider-title mb-45">
@@ -33,7 +33,7 @@ const HomeHeroSingleSlide2 = () => {
                                             distance={200}
                                             delay={0.5}
                                             speed={1}>
-                                            <div >Efortless!</div>
+                                            <div >Steam</div>
                                         </MotionAnimate>
 
                                         <MotionAnimate
@@ -42,7 +42,7 @@ const HomeHeroSingleSlide2 = () => {
                                             distance={200}
                                             delay={0.6}
                                             speed={1}>
-                                            <div >Stress-Free!</div>
+                                            <div >Powered</div>
                                         </MotionAnimate>
 
                                         <MotionAnimate
@@ -51,7 +51,7 @@ const HomeHeroSingleSlide2 = () => {
                                             distance={200}
                                             delay={0.7}
                                             speed={1}>
-                                            <div >Professional!</div>
+                                            <div >Freshness!</div>
                                         </MotionAnimate>
                                     </h1>
 
