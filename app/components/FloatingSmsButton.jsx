@@ -3,7 +3,7 @@ import React from 'react';
 import { FaSms } from 'react-icons/fa'; // optional icon
 
 export default function FloatingSmsButton({
-    phone = '+14372196444',
+    phone = '+19059047101',
     message = 'Hi! I’d like to book a cleaning service.',
 }) {
     const encodedMessage = encodeURIComponent(message);

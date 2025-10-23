@@ -88,7 +88,7 @@ function NavBar2() {
 
                         <li className="tp-footer-info-social mb-2">
                             <Link
-                                href="https://www.facebook.com/neatguys.ca"
+                                href="https://www.facebook.com/share/19wNWm5h3m/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{
@@ -114,7 +114,7 @@ function NavBar2() {
                                 <FaFacebookF size={18} />
                             </Link>
                             <Link
-                                href="https://www.instagram.com/neatguys.ca"
+                                href="https://www.instagram.com/brinovacleaning"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{

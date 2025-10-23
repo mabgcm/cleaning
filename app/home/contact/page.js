@@ -50,7 +50,7 @@ const Contact = () => {
                                         </div>
                                         <div className="tp-contact-info-text">
                                             <h4 className="tp-contact-info-title mb-15">Address</h4>
-                                            <p>10 Honeycrisp Cres,<br />Condord ON</p>
+                                            <p>4 Spice Way L9J 0M2<br />Barrie ON</p>
                                         </div>
                                     </div>
                                 </div>
@@ -61,7 +61,7 @@ const Contact = () => {
                                         </div>
                                         <div className="tp-contact-info-text">
                                             <h4 className="tp-contact-info-title mb-15">Phone</h4>
-                                            <a href="tel:4372196444">(437)219-6444</a>
+                                            <a href="tel:9059047101">(905)904-7101</a>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@ const Contact = () => {
                                         </div>
                                         <div className="tp-contact-info-text">
                                             <h4 className="tp-contact-info-title mb-15">Email</h4>
-                                            <a href="mailto:info@themepure.com">info@neatguys.ca</a>
+                                            <a href="mailto:info@themepure.com">brinovacleaning@gmail.com</a>
                                         </div>
                                     </div>
                                 </div>

@@ -17,12 +17,13 @@ const HeroSection = () => {
 
                     <Carousel interval={3000} fade={true} indicators={true}>
                         <Carousel.Item>
-                            <HomeHeroSingleSlide setOpen={setOpen} />
+                            <HomeHeroSingleSlide2 setOpen={setOpen} />
                         </Carousel.Item>
 
                         <Carousel.Item>
-                            <HomeHeroSingleSlide2 setOpen={setOpen} />
+                            <HomeHeroSingleSlide setOpen={setOpen} />
                         </Carousel.Item>
+
 
                         <Carousel.Item>
                             <HomeHeroSingleSlide3 setOpen={setOpen} />

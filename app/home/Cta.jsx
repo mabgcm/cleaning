@@ -96,7 +96,7 @@ const Cta = () => {
         const totalSqft = calculateTotalSqft();
 
         // Adjust the hourly rate based on the cleaning type
-        let hourlyRate = 50; // Default rate for regular cleaning
+        let hourlyRate = 25; // Default rate for regular cleaning
         if (cleaningType === 'deep' || cleaningType === 'movein') {
             hourlyRate = 80;
         } else if (cleaningType === 'onetime' || cleaningType === 'airbnb') {

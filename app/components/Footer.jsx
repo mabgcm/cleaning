@@ -22,14 +22,14 @@ const Footer = () => {
                                         <div className="tp-footer-info-logo mb-35">
                                             <Link href="/"><Image src={logo} className="img-fluid" alt="img not found" /></Link>
                                         </div>
-                                        <h4 className="mb-15"><a href="tel:4372196444"> <FaPhoneVolume /> (437)219-6444</a></h4>
-                                        <h6 className="mb-15 d-block"> <i> <FaEnvelopeOpen size='20px' /> </i><a href="mailto:info@neatguys.ca">info@neatguys.ca</a></h6>
-                                        <h6 className="mb-20"> <i> <FaMapMarkerAlt size='20px' /> </i> 10 Honeycrisp Cres, Concord ON</h6>
+                                        <h4 className="mb-15"><a href="tel:4372196444"> <FaPhoneVolume /> (905)904-7101</a></h4>
+                                        <h6 className="mb-15 d-block"> <i> <FaEnvelopeOpen size='20px' /> </i><a href="mailto:info@neatguys.ca">brinovacleaning@gmail.com</a></h6>
+                                        <h6 className="mb-20"> <i> <FaMapMarkerAlt size='20px' /> </i> 4 Spice Way Barrie L9J 0M2</h6>
 
                                         <div className="tp-footer-info-social" style={{ display: 'flex', gap: '8px' }}>
                                             {/* Facebook */}
                                             <a
-                                                href="https://www.facebook.com/neatguys.ca"
+                                                href="https://www.facebook.com/share/19wNWm5h3m/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Facebook"
@@ -58,7 +58,7 @@ const Footer = () => {
 
                                             {/* Instagram */}
                                             <a
-                                                href="https://www.instagram.com/neatguys.ca"
+                                                href="https://www.instagram.com/brinovacleaning"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label="Instagram"
