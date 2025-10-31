@@ -15,13 +15,13 @@ const Package5 = ({ title }) => {
                     </div>
                     <div className="tp-quality-text text-center">
                         <div className="tp-quality-text-icon mb-10">
-                            <Link href="/home/packages/onetime">
+                            <Link href="/">
                                 <Image className="tp-quality-text-icon1" src={icn1} alt="icon" />
                                 <i className="tp-quality-text-icon2"><HiPlus className="text-white" /></i>
                             </Link>
                         </div>
                         <span>Residential</span>
-                        <h4 className="tp-quality-text-title m-0"><Link href="/home/packages/onetime">{title}</Link></h4>
+                        <h4 className="tp-quality-text-title m-0"></h4>
                     </div>
                 </div>
             </div>
