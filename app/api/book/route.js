@@ -38,8 +38,8 @@ const buildCustomerEmail = ({ customer, booking }) => {
         `• Beds/Baths: ${fmt(booking.bedrooms)}/${fmt(booking.bathrooms)}\n` +
         `• Extras: ${list(booking.cleaningItems)}\n` +
         `• Estimate: C$${fmt(booking.totalAmount)}\n\n` +
-        `We’ll reach out if we need any more details.\n\n` +
-        `— Cleaning Team`;
+        `We will be in touch with you to confirm the estimate price.\n\n` +
+        `Brinova Cleaning Team`;
 
     return { subject, text };
 };
@@ -71,7 +71,7 @@ export async function POST(req) {
 
         const ownerEmail = buildOwnerEmail({ customer, booking });
         await transporter.sendMail({
-            from: `"Cleaning Website" <${GMAIL_USER}>`,
+            from: `"Brinova Cleaning" <${GMAIL_USER}>`,
             to: OWNER_EMAIL,
             subject: ownerEmail.subject,
             text: ownerEmail.text,
@@ -80,7 +80,7 @@ export async function POST(req) {
         if (customer?.email) {
             const customerEmail = buildCustomerEmail({ customer, booking });
             await transporter.sendMail({
-                from: `"Cleaning Website" <${GMAIL_USER}>`,
+                from: `"Brinova Cleaning" <${GMAIL_USER}>`,
                 to: customer.email,
                 replyTo: OWNER_EMAIL,
                 subject: customerEmail.subject,
