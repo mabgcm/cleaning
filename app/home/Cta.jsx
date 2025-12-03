@@ -7,23 +7,69 @@ import Link from 'next/link';
 import { CgCheckO } from 'react-icons/cg';
 import { addDays, subDays } from 'date-fns';
 
+const squareFeetMidpoints = {
+    '0 - 500': 250,
+    '500 - 1000': 750,
+    '1000 - 1500': 1250,
+    '1501 - 2000': 1750,
+    '2001 - 2500': 2250,
+    '2501 - 3000': 2750,
+    '3001 - 3500': 3250,
+};
+
+const parseSquareFeetRange = (squareFeetRange) => {
+    if (!squareFeetRange) return 0;
+
+    const trimmedRange = squareFeetRange.trim();
+    if (squareFeetMidpoints[trimmedRange]) {
+        return squareFeetMidpoints[trimmedRange];
+    }
+
+    const [min, max] = trimmedRange.split('-').map((value) => Number(value.trim()));
+    if (!Number.isNaN(min) && !Number.isNaN(max)) {
+        return (min + max) / 2;
+    }
+
+    return 0;
+};
+
+const calculateBasePrice = ({ cleaningType, bedrooms, bathrooms, squareFeetRange }) => {
+    const bedroomsTotal = Number(bedrooms) || 0;
+    const bathroomsTotal = Number(bathrooms) || 0;
+    const sqft = parseSquareFeetRange(squareFeetRange);
+
+    const regularPrice = 50 + bedroomsTotal * 40 + bathroomsTotal * 35 + sqft * 0.03;
+    const deepPrice = regularPrice + 100;
+    const movePrice = deepPrice + 50;
+
+    switch (cleaningType) {
+        case 'deep':
+            return deepPrice;
+        case 'movein':
+            return movePrice;
+        case 'regular':
+            return regularPrice;
+        default:
+            return regularPrice;
+    }
+};
 
 
 
 const Cta = () => {
 
     const [prediscount, setPrediscount] = useState(0);
-    const [selectedDate, setSelectedDate] = useState('');
+    const [selectedDate, setSelectedDate] = useState(null);
     const [showModal, setShowModal] = useState(false);
     const [totalAmount, setTotalAmount] = useState(0);
-    const [cleaningType, setCleaningType] = useState('regular');
+    const [cleaningType, setCleaningType] = useState('');
     const [formData, setFormData] = useState({
         cleaningType: '',
         bedrooms: '',
         bathrooms: '',
         squareFeetRange: '',
         city: '',
-        date: '',
+        date: null,
         cleaningItems: [],
     });
 
@@ -42,6 +88,10 @@ const Cta = () => {
     const handleInputChange = (name, value) => {
         if (name === 'cleaningType') {
             setCleaningType(value);
+            setFormData({
+                ...formData,
+                cleaningType: value,
+            });
         } else if (name === 'date') {
             setFormData({
                 ...formData,
@@ -57,6 +107,8 @@ const Cta = () => {
     };
 
     const filterTimes = (time) => {
+        if (!selectedDate) return true;
+
         const startTime = new Date(selectedDate);
         const endTime = new Date(selectedDate);
 
@@ -77,53 +129,25 @@ const Cta = () => {
         });
     };
 
-    const calculateTotalSqft = () => {
-        // Convert the number of bedrooms into sqft using the average sqft per room
-        const bedroomsSqft = formData.bedrooms ? formData.bedrooms * 300 : 0;
-        const bathroomsSqft = formData.bathrooms ? formData.bathrooms * 300 : 0;
-        const roomSqft = bedroomsSqft + bathroomsSqft;
-
-        // Compare the calculated bedrooms sqft with the entered sqft by the user
-        const totalSqft = Math.max(roomSqft, parseInt(formData.squareFeetRange.split('-')[1], 10));
-
-        return totalSqft;
-    };
-
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Calculate the total sqft based on the entered data
-        const totalSqft = calculateTotalSqft();
+        const basePrice = calculateBasePrice({
+            cleaningType,
+            bedrooms: formData.bedrooms,
+            bathrooms: formData.bathrooms,
+            squareFeetRange: formData.squareFeetRange,
+        });
 
-        // Adjust the hourly rate based on the cleaning type
-        let hourlyRate = 25; // Default rate for regular cleaning
-        if (cleaningType === 'deep' || cleaningType === 'movein') {
-            hourlyRate = 80;
-        } else if (cleaningType === 'onetime' || cleaningType === 'airbnb') {
-            hourlyRate = 60;
-        } else if (cleaningType === 'office') {
-            hourlyRate = 40;
-        }
-
-        // console.log("Total Sqft:", totalSqft);
-        // console.log("Hourly Rate:", hourlyRate);
-        // console.log("Cleaning Type:", cleaningType);
-        // console.log("Cleaning Date:", formData.date ? formatDateString(formData.date) : '');
-
-        // Calculate the total hours
-        let totalHours = Math.ceil(totalSqft / 500); // 1 hour for every 500 sqft
-        // Sum up the fees for selected cleaning items
         const additionalFee = formData.cleaningItems.reduce((acc, itemId) => {
             const selectedCleaningItem = cleaningItems.find(item => item.id === itemId);
             return acc + (selectedCleaningItem ? selectedCleaningItem.fee || 0 : 0);
         }, 0);
 
-        const base_fee = 50
-        // Adjust total hours and calculate the total amount
-        const totalPrice = base_fee + (totalHours * hourlyRate) + additionalFee;
-        setTotalAmount(totalPrice);
+        const finalPrice = basePrice + additionalFee;
+        setTotalAmount(finalPrice);
 
-        const prediscountValue = totalPrice / (1 - 25 / 100);;
+        const prediscountValue = finalPrice / (1 - 25 / 100);
         setPrediscount(prediscountValue);
 
         // Display the modal
@@ -214,8 +238,8 @@ const Cta = () => {
 
                         <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
-                                <Form.Select onChange={(e) => handleInputChange('cleaningType', e.target.value)} required>
-                                    <option selected disabled value="">Cleaning Type</option>
+                                <Form.Select value={formData.cleaningType} onChange={(e) => handleInputChange('cleaningType', e.target.value)} required>
+                                    <option disabled value="">Cleaning Type</option>
                                     <option value="deep">Deep Cleaning</option>
                                     <option value="movein">Move-in Cleaning</option>
                                     <option value="office">Office Cleaning</option>
@@ -228,8 +252,8 @@ const Cta = () => {
 
                         <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
-                                <Form.Select onChange={(e) => handleInputChange('bedrooms', e.target.value)} required>
-                                    <option selected disabled value="">Bedrooms</option>
+                                <Form.Select value={formData.bedrooms} onChange={(e) => handleInputChange('bedrooms', e.target.value)} required>
+                                    <option disabled value="">Bedrooms</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -242,8 +266,8 @@ const Cta = () => {
 
                         <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
-                                <Form.Select onChange={(e) => handleInputChange('bathrooms', e.target.value)} required>
-                                    <option selected disabled value="">Bathrooms</option>
+                                <Form.Select value={formData.bathrooms} onChange={(e) => handleInputChange('bathrooms', e.target.value)} required>
+                                    <option disabled value="">Bathrooms</option>
                                     <option value="0">-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -257,8 +281,8 @@ const Cta = () => {
 
                         <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
-                                <Form.Select onChange={(e) => handleInputChange('squareFeetRange', e.target.value)} required>
-                                    <option selected disabled value="">Square Feet Range</option>
+                                <Form.Select value={formData.squareFeetRange} onChange={(e) => handleInputChange('squareFeetRange', e.target.value)} required>
+                                    <option disabled value="">Square Feet Range</option>
                                     <option value="0 - 500">0 - 500 sqft</option>
                                     <option value="500 - 1000">500 - 1000 sqft</option>
                                     <option value="1000 - 1500">1000 - 1500 sqft</option>
@@ -271,8 +295,8 @@ const Cta = () => {
                         </div>
                         <div className="tp-appoint col-md-12 col-lg-3 custom-pad-10 mx-2">
                             <Form.Group className="row custom-mar-20">
-                                <Form.Select onChange={(e) => handleInputChange('city', e.target.value)} required>
-                                    <option selected disabled value="">Select City</option>
+                                <Form.Select value={formData.city} onChange={(e) => handleInputChange('city', e.target.value)} required>
+                                    <option disabled value="">Select City</option>
                                     {cities.map((city) => (
                                         <option key={city} value={city}>
                                             {city}

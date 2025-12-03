@@ -68,16 +68,6 @@ function NavBar2() {
                         <li className="nav-item">
                             <Link
                                 exact
-                                href="https://8fu286als2z.typeform.com/to/welhawPP"
-                                className={`nav-links ${currentPath === 'https://8fu286als2z.typeform.com/to/welhawPP' ? 'active' : ''}`}
-                                onClick={handleClick}
-                            >
-                                Careers
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                exact
                                 href="/home/contact"
                                 className={`nav-links ${currentPath === '/home/contact' ? 'active' : ''}`}
                                 onClick={handleClick}

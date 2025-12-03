@@ -1,10 +1,48 @@
 // app/api/book/route.js
 export const runtime = 'nodejs';
 
-import twilio from "twilio";
+import nodemailer from "nodemailer";
 
 const fmt = (v) => (v ?? "—");
 const list = (arr) => Array.isArray(arr) && arr.length ? arr.join(", ") : "—";
+
+const buildOwnerEmail = ({ customer, booking }) => {
+    const subject = `New booking: ${fmt(booking.cleaningType)} on ${fmt(booking.date)}`;
+    const text =
+        `🧹 New booking\n` +
+        `• Type: ${fmt(booking.cleaningType)}\n` +
+        `• City: ${fmt(booking.city)}\n` +
+        `• Date: ${fmt(booking.date)}\n` +
+        `• SqFt: ${fmt(booking.squareFeetRange)}\n` +
+        `• Beds/Baths: ${fmt(booking.bedrooms)}/${fmt(booking.bathrooms)}\n` +
+        `• Extras: ${list(booking.cleaningItems)}\n` +
+        `• Est: C$${fmt(booking.totalAmount)}\n` +
+        `• Name: ${fmt(customer.name)}\n` +
+        `• Phone: ${fmt(customer.phone)}\n` +
+        `• Email: ${fmt(customer.email)}\n` +
+        `• Addr: ${fmt(customer.address)} ${fmt(customer.postalCode)}`;
+
+    return { subject, text };
+};
+
+const buildCustomerEmail = ({ customer, booking }) => {
+    const subject = "Thanks! We received your cleaning request";
+    const text =
+        `Hi ${fmt(customer.name)},\n\n` +
+        `Thanks for choosing us. We’ve received your cleaning request and will confirm shortly.\n\n` +
+        `Summary:\n` +
+        `• Service: ${fmt(booking.cleaningType)}\n` +
+        `• Date/Time: ${fmt(booking.date)}\n` +
+        `• Location: ${fmt(booking.city)}\n` +
+        `• SqFt: ${fmt(booking.squareFeetRange)}\n` +
+        `• Beds/Baths: ${fmt(booking.bedrooms)}/${fmt(booking.bathrooms)}\n` +
+        `• Extras: ${list(booking.cleaningItems)}\n` +
+        `• Estimate: C$${fmt(booking.totalAmount)}\n\n` +
+        `We’ll reach out if we need any more details.\n\n` +
+        `— Cleaning Team`;
+
+    return { subject, text };
+};
 
 export async function POST(req) {
     try {
@@ -15,36 +53,42 @@ export async function POST(req) {
             return new Response(JSON.stringify({ ok: false, error: "Required booking fields missing" }), { status: 400 });
         }
 
-        // ✅ Read and validate envs up front (avoids the cryptic "params['to'] missing")
-        const FROM = process.env.TWILIO_WHATSAPP_FROM;   // e.g. "whatsapp:+14155238886" (Sandbox)
-        const TO = process.env.MY_WHATSAPP_TO;         // e.g. "whatsapp:+1YOURNUMBER"
-        if (!FROM || !TO) {
-            return new Response(JSON.stringify({ ok: false, error: "Missing FROM/TO WhatsApp env vars" }), { status: 400 });
+        const GMAIL_USER = process.env.GMAIL_USER;
+        const GMAIL_PASS = process.env.GMAIL_PASS;
+        const OWNER_EMAIL = process.env.OWNER_EMAIL || GMAIL_USER;
+
+        if (!GMAIL_USER || !GMAIL_PASS || !OWNER_EMAIL) {
+            return new Response(JSON.stringify({ ok: false, error: "Missing email env vars (GMAIL_USER, GMAIL_PASS, OWNER_EMAIL)" }), { status: 400 });
         }
 
-        const text =
-            `🧹 New booking
-• Type: ${fmt(booking.cleaningType)}
-• City: ${fmt(booking.city)}
-• Date: ${fmt(booking.date)}
-• SqFt: ${fmt(booking.squareFeetRange)}
-• Beds/Baths: ${fmt(booking.bedrooms)}/${fmt(booking.bathrooms)}
-• Extras: ${list(booking.cleaningItems)}
-• Est: C$${fmt(booking.totalAmount)}
-• Name: ${fmt(customer.name)}
-• Phone: ${fmt(customer.phone)}
-• Email: ${fmt(customer.email)}
-• Addr: ${fmt(customer.address)} ${fmt(customer.postalCode)}`;
-
-        const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
-
-        const msg = await client.messages.create({
-            from: FROM,    // "whatsapp:+14155238886"
-            to: TO,        // "whatsapp:+1YOURNUMBER"
-            body: text,    // ✅ freeform body for Sandbox
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: GMAIL_USER,
+                pass: GMAIL_PASS,
+            },
         });
 
-        return new Response(JSON.stringify({ ok: true, whatsappSid: msg.sid }), {
+        const ownerEmail = buildOwnerEmail({ customer, booking });
+        await transporter.sendMail({
+            from: `"Cleaning Website" <${GMAIL_USER}>`,
+            to: OWNER_EMAIL,
+            subject: ownerEmail.subject,
+            text: ownerEmail.text,
+        });
+
+        if (customer?.email) {
+            const customerEmail = buildCustomerEmail({ customer, booking });
+            await transporter.sendMail({
+                from: `"Cleaning Website" <${GMAIL_USER}>`,
+                to: customer.email,
+                replyTo: OWNER_EMAIL,
+                subject: customerEmail.subject,
+                text: customerEmail.text,
+            });
+        }
+
+        return new Response(JSON.stringify({ ok: true }), {
             status: 200, headers: { "Content-Type": "application/json" }
         });
     } catch (err) {

@@ -1,32 +1,72 @@
 'use client'
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelopeOpen } from 'react-icons/fa';
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import emailjs from '@emailjs/browser';
 
 
 
 
 const Contact = () => {
 
-    const notify = () =>
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
+    });
+    const [submitting, setSubmitting] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const notifySuccess = () =>
         toast.success("Message sent successfully!", {
             position: toast.POSITION.TOP_RIGHT
         });
 
-    const form = useRef();
+    const notifyError = (msg) =>
+        toast.error(msg || "Failed to send message. Please try again.", {
+            position: toast.POSITION.TOP_RIGHT
+        });
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
-
-        emailjs.sendForm('service_h8b9y09', 'template_lmphi3c2', form.current, 'XUWBIUrOxP9PFb04C')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
+        setSubmitting(true);
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    subject: formData.subject,
+                    message: formData.message,
+                }),
             });
-        form.current.reset();
+
+            if (!res.ok) {
+                const data = await res.json().catch(() => ({}));
+                throw new Error(data?.error || "Request failed");
+            }
+
+            notifySuccess();
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                subject: '',
+                message: '',
+            });
+        } catch (err) {
+            notifyError(err?.message);
+        } finally {
+            setSubmitting(false);
+        }
     };
     return (
         <>
@@ -80,28 +120,51 @@ const Contact = () => {
                         </div>
                         <div className="col-lg-8">
                             <div className="tp-contact-form">
-                                <form onSubmit={sendEmail} ref={form}>
+                                <form onSubmit={sendEmail}>
                                     <div className="row custom-mar-20">
                                         <div className="col-md-6 custom-pad-20">
                                             <div className="tp-contact-form-field mb-20">
-                                                <input type="text" placeholder="Full name" name='from_name' />
+                                                <input
+                                                    type="text"
+                                                    placeholder="Full name"
+                                                    name='name'
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
                                             </div>
                                         </div>
                                         <div className="col-md-6 custom-pad-20">
                                             <div className="tp-contact-form-field mb-20">
-                                                <input type="email" name="user_email" placeholder="Email Address" />
+                                                <input
+                                                    type="email"
+                                                    name="email"
+                                                    placeholder="Email Address"
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
                                             </div>
                                         </div>
                                         <div className="col-md-6 custom-pad-20">
                                             <div className="tp-contact-form-field mb-20">
-                                                <input type="text"
-                                                    name="user_phone" placeholder="Phone" />
+                                                <input
+                                                    type="text"
+                                                    name="phone"
+                                                    placeholder="Phone"
+                                                    value={formData.phone}
+                                                    onChange={handleChange}
+                                                />
                                             </div>
                                         </div>
                                         <div className="col-md-6 custom-pad-20">
                                             <div className="tp-contact-form-field mb-20">
-                                                <select name="subject">
-                                                    <option selected disabled value="">Choose Subject</option>
+                                                <select
+                                                    name="subject"
+                                                    value={formData.subject}
+                                                    onChange={handleChange}
+                                                >
+                                                    <option disabled value="">Choose Subject</option>
                                                     <option value="deep">Deep Cleaning</option>
                                                     <option value="move">Move-In / Move-Out Cleaning</option>
                                                     <option value="office">Office Cleaning</option>
@@ -115,12 +178,20 @@ const Contact = () => {
                                             <div className="tp-contact-form-field mb-20">
                                                 <textarea
                                                     name="message"
-                                                    placeholder="Your Message"></textarea>
+                                                    placeholder="Your Message"
+                                                    value={formData.message}
+                                                    onChange={handleChange}
+                                                    required
+                                                ></textarea>
                                             </div>
                                         </div>
                                         <div className="col-md-12 custom-pad-20">
                                             <div className="tp-contact-form-field">
-                                                <button type="submit" onClick={notify} className="theme-btn text-white">
+                                                <button
+                                                    type="submit"
+                                                    className="theme-btn text-white"
+                                                    disabled={submitting}
+                                                >
                                                     <i className="flaticon-enter"></i> Send Message
                                                 </button>
                                             </div>
