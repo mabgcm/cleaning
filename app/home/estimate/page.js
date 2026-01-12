@@ -1,10 +1,10 @@
 import React from 'react'
-import Cta from '../Cta'
+// import Cta from '../Cta'
 
 const Estimate = () => {
     return (
         <div>
-            <Cta />
+            {/* <Cta /> */}
         </div>
     )
 }
